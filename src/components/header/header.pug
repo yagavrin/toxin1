@@ -1,0 +1,19 @@
+include ../buttons/buttons
+
+mixin header
+    - 
+        var menuListValues = ['О нас', 'Услуги', 'Вакансии', 'Новости', 'Соглашения']
+    .menu
+        .wrapper
+            .logo
+                img.logo__item(src='/src/components/header/logo.svg')
+                img.logo__name(src='/src/components/header/TOXIN.svg')
+            ul.menu__list
+                each val in menuListValues 
+                    li.menu__item
+                        a.menu__link= val
+                else
+                    li Что-то пошло не так
+            .menu__buttons
+                +button('btn btn_entry', 'Войти')
+                +button('btn btn_reg', 'Зарегистрироваться')

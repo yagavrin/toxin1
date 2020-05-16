@@ -1,0 +1,21 @@
+// @import "fonts";
+
+// * {
+//     font-family: 'Montserrat', sans-serif;
+// }
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.wrapper {
+    width: 1160px;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+@import "menu";
+@import "promo";
+@import "buttons";

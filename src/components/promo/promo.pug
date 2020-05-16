@@ -1,0 +1,17 @@
+include ../buttons/buttons
+
+mixin promo
+    .promo
+        .wrapper
+            .search
+                h1.search__title Найдём номера под ваши пожелания
+                form.searh__form
+                    p Прибытие
+                    input.search__date-arrival
+                    p Выезд
+                    input.search__date-departure
+                    p Гости
+                    input.search__guests
+                    +button('btn btn_show-variants', 'Подобрать номер')
+            .subtitle
+                h2 Лучшие номера для вашей работы, отдыха и просто вдохновения

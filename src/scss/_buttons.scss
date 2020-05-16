@@ -1,0 +1,32 @@
+$main-color: #BC9CFF;
+
+.btn {
+    border-radius: 22px;
+    background: #FFFFFF;
+    border: 3px solid;
+    border-color: $main-color;
+    color: $main-color;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    &_entry {
+        width: 87px;
+        height: 34px;
+        margin-right: 20px;
+        // background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        
+    }
+    
+    &_reg {
+        width: 196px;
+        height: 34px;
+        box-shadow: none;
+        // background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    }
+
+    &_show-variants {
+        width: 320px;
+        height: 44px;
+    }
+}

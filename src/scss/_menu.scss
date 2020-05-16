@@ -1,0 +1,41 @@
+.menu {
+    height: 70px;
+    
+    &__list{
+        list-style-type: none;
+        display: flex;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__item {
+        margin-right: 20px;
+    }
+
+    &__link {
+        font-size: 14px;
+        line-height: 17px;
+        text-decoration: none;
+        color: rgba(31, 32, 65, 0.5);
+    }
+
+    &__buttons{
+        display: flex;
+    }
+
+}
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    &__name {
+        margin-left: 12.5px;
+    }
+}
+
+
