@@ -1,6 +1,6 @@
 .menu {
-    height: 70px;
-    
+    position: relative;
+    background-color: #ffff;
     &__list{
         list-style-type: none;
         display: flex;
@@ -25,6 +25,10 @@
 
 }
 .wrapper {
+    width: 1160px;
+    margin: 0 auto;
+    position: relative;
+    height: 70px;
     display: flex;
     align-items: center;
     justify-content: space-between;
