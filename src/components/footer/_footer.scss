@@ -5,15 +5,17 @@
     height: 372px;
 }
 
-.wrapper-f {
-    width: 1160px;
-    margin: 0 auto;
-    position: relative;
-}
 
 .footer {
+    &__wrapper{
+        width: 1160px;
+        margin: 0 auto;
+        position: relative;
+    }
     h3 {
         font-size: 14px;
+        font-style: normal;
+        font-weight: normal;
         line-height: 24px;
         color: rgba(31, 32, 65, 0.75);
     }
@@ -48,7 +50,27 @@
                 height: 24px;
                 width: 24px;
             }
-    };
+    }
+    &__form {
+        input {
+            width: 260px;
+            height: 44px;
+            border: 1px solid rgba(31, 32, 65, 0.25);
+            border-radius: 4px;
+            padding-left: 15px;
+            font-size: 14px;
+            line-height: 24px;
+            color: rgba(31, 32, 65, 0.25);
+        }
+        button {
+            position: relative;
+            left: -40px;
+            border: none;
+            background: #FFFFFF;
+        }
+        
+    }
+
 }
 
 .copyright {
@@ -56,4 +78,12 @@
     justify-content: space-between;
     align-items: center;
     height: 70px;
+    border-top: 1px solid rgba(31, 32, 65, 0.75);
+    h5 {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        color: rgba(31, 32, 65, 0.75);
+    }
 }

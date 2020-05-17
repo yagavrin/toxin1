@@ -2,13 +2,14 @@ include ../buttons/buttons
 
 mixin promo
     .promo
+        .promo__wrapper
             .search
                 h1.search__title Найдём номера под ваши пожелания
                 form.searh__form
                     p Прибытие
-                    input.search__date-arrival
+                    input(type="date").search__date-arrival
                     p Выезд
-                    input.search__date-departure
+                    input(type="date").search__date-departure
                     p Гости
                     input.search__guests
                     +button('btn btn_show-variants', 'Подобрать номер')

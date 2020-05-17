@@ -29,4 +29,11 @@ $main-color: #BC9CFF;
         width: 320px;
         height: 44px;
     }
+
+    &_accept-reg {
+        width: 320px;
+        height: 44px;
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        color: #FFFFFF;
+    }
 }

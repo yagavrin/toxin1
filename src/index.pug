@@ -1,6 +1,7 @@
 include ./components/header/header
 include ./components/promo/promo
 include ./components/footer/footer
+include ./components/registration/reg
 
 doctype html
 html(lang="en")
@@ -11,6 +12,8 @@ html(lang="en")
         link(rel="stylesheet" type="text/css" href="bootstrap-reboot.min.css")
     body
         +header
-        +promo
+        //-
+            +promo
+        +reg
         +footer
     

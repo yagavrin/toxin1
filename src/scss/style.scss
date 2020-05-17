@@ -8,14 +8,10 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-.wrapper {
-    width: 1160px;
-    margin: 0 auto;
-    position: relative;
-}
-
 
 @import "menu";
-@import "promo";
+@import "../components/logo/logo";
 @import "buttons";
+@import "promo";
+@import "../components/registration/reg";
 @import "../components/footer/footer"
