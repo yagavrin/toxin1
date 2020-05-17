@@ -36,4 +36,11 @@ $main-color: #BC9CFF;
         background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
         color: #FFFFFF;
     }
+
+    &_sign-in {
+        width: 320px;
+        height: 44px;
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        color: #FFFFFF;  
+    }
 }
