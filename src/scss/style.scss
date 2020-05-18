@@ -1,11 +1,11 @@
-// @import "fonts";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
-// * {
-//     font-family: 'Montserrat', sans-serif;
-// }
 
 * {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    
+    font-style: normal;
+    font-weight: normal;
 }
 
 
@@ -18,4 +18,6 @@
 @import "../components/room_filter/filter";
 @import "../components/search_page/search_page";
 @import "../components/search-item/search-item";
+@import "../components/room-details/room-details";
+@import "../components/booking/booking";
 @import "../components/footer/footer"

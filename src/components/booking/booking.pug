@@ -1,0 +1,23 @@
+include ../search-item/search-item
+include ../promo/promo
+include ../buttons/buttons
+
+mixin booking
+    .booking
+        +search-item__container
+        +searh__form
+        .booking__calculate
+            .booking__container
+                .booking__price
+                .booking__total-price
+            .booking__container
+                .booking__service-charge
+                .booking__service-charge-price
+            .booking__container
+                .booking__add-services
+                .booking__add-services-price
+            .booking__container
+                p
+                .booking__divider
+                .booking__total-sum
+        +button('btn', 'забронировать')

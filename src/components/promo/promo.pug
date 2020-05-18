@@ -5,13 +5,16 @@ mixin promo
         .promo__wrapper
             .search
                 h1.search__title Найдём номера под ваши пожелания
-                form.searh__form
-                    p Прибытие
-                    input(type="date").search__date-arrival
-                    p Выезд
-                    input(type="date").search__date-departure
-                    p Гости
-                    input.search__guests
+                +searh__form
                     +button('btn btn_show-variants', 'Подобрать номер')
             .subtitle
                 h2 Лучшие номера для вашей работы, отдыха и просто вдохновения
+mixin searh__form
+
+    form.searh__form
+        p Прибытие
+        input(type="date").search__date-arrival
+        p Выезд
+        input(type="date").search__date-departure
+        p Гости
+        input.search__guests
