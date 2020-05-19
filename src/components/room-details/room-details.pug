@@ -14,16 +14,31 @@ mixin room-details
                 .room-details__container
                     .room-details
                         .room-details__subtitle Сведения о номере
-                        p Комфорт
-                        p Шумоглощаюшие стены
+                            .room-details__item
+                                img(src="/src/components/room-details/insert_emoticon.svg", alt="smile")
+                                div
+                                    span Комфорт
+                                    p Шумопоглощающие стены
+                            .room-details__item
+                                img(src="/src/components/room-details/location_city.svg", alt="city")
+                                div
+                                    span Удобство
+                                    p Окно в каждой спальне
+                            .room-details__item
+                                img(src="/src/components/room-details/whatshot.svg", alt="fire")
+                                div
+                                    span Уют
+                                    p Номер оснащен камином
 
-                        p Удобство
-                        p Окно в каждой спальне
 
-                        p Уют
-                        p Номер оснащен камином
                     .room-details
                         .room-details__subtitle Впечатления от номера
+                        img(src="", alt="")
+                        ul
+                            li Великолепно
+                            li Хорошо
+                            li Удовлетворительно
+                            li Разочарован
                 .reviews
                     .reviews__subtitle 
                         p Отзывы посетителей номера
