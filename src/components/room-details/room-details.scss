@@ -35,11 +35,12 @@
         display: flex;
         padding-top: 20px;
         width: 280px;
+        height: 89px;
         border-bottom: 2px solid rgba(31, 32, 65, 0.1);
         img {
             position: absolute;
-            width: 48px;
-            height: 48px;
+            padding-top: 2px;
+            padding-left: 7px;
         }
         div {
             padding-left: 58px;
@@ -52,4 +53,110 @@
         }
     }
 
+    &__diagram {
+        padding-left: 82px;
+    }
+
+    &__rules {
+        padding-left: 20px;
+        ul {
+            padding: 0;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 24px;
+            color: rgba(31, 32, 65, 0.75);
+            li {
+                width: 242.56px;
+            }
+        }
+    }
+
+    &__cancel {
+        padding-left: 99px;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        color: rgba(31, 32, 65, 0.75);
+    }
+}
+
+.reviews {
+    padding-top: 11px;
+
+    &__subtitle {
+        font-weight: bold;
+        font-size: 19px;
+        line-height: 24px;
+        color: #1F2041;
+        p {
+            position: relative;
+            margin: 0;
+            left: -71px;
+            top: -16px;
+            font-size: 14px;
+            line-height: 14px;
+            text-align: right;
+            color: rgba(31, 32, 65, 0.5);
+        }
+    }
+
+    &__item {
+        height: 153px;
+        padding-top: 8px;
+        display: flex;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        color: rgba(31, 32, 65, 0.75);
+    }
+
+    &__block {
+        padding-left: 10px;
+    }
+    
+    &__avatar {
+        width: 47.67px;
+        height: 47.67px;
+        border: 2px solid #FFFFFF;
+        box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.1);
+        border-radius: 32px;
+        margin-bottom: 12px;
+    }
+
+    &__like-count {
+        display: flex;
+        width: 40px;
+        height: 20px;
+        margin-left: 3px;
+        border-radius: 10px;
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        padding: 3px;
+        padding-left: 5px;
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 12px;
+        color: rgba(31, 32, 65, 0.25);
+    }
+
+    &__like-count_selected {
+        display: flex;
+        width: 40px;
+        height: 20px;
+        margin-left: 3px;
+        border-radius: 10px;
+        border: 1px solid #BC9CFF;
+        padding-left: 5px;
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 12px;
+        color: #BC9CFF;
+    }
+
+    &__name {
+        font-weight: bold;
+    }
+
+    &__descr {
+        margin-top: 10px;
+    }
 }

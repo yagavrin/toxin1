@@ -31,7 +31,7 @@ mixin room-details
                                     p Номер оснащен камином
 
 
-                    .room-details
+                    .room-details__diagram
                         .room-details__subtitle Впечатления от номера
                         img(src="", alt="")
                         ul
@@ -40,19 +40,28 @@ mixin room-details
                             li Удовлетворительно
                             li Разочарован
                 .reviews
-                    .reviews__subtitle 
-                        p Отзывы посетителей номера
+                    .reviews__subtitle Отзывы посетителей номера
                         p 2 отзыва
                     .reviews__item
-                        img(src="", alt="")
-                        .reviews__name Мурад Сарафанов
-                        .reviews__review-date 5 дней назад
-                        .reviews__descr Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
+                        .reviews__container
+                            img.reviews__avatar(src="/src/components/room-details/avatar1.jpg", alt="avatar")
+                            .reviews__like-count_selected
+                                img(src="/src/components/room-details/favorite.svg", alt="heart")
+                                p 12
+                        .reviews__block
+                            .reviews__name Мурад Сарафанов
+                            .reviews__review-date 5 дней назад
+                            .reviews__descr Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
                     .reviews__item
-                        img(src="", alt="")
-                        .reviews__name Патрисия Стёклышкова
-                        .reviews__review-date Неделю назад
-                        .reviews__descr Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент
+                        .reviews__container
+                            img.reviews__avatar(src="/src/components/room-details/avatar2.jpg", alt="avatar")
+                            .reviews__like-count
+                                img(src="/src/components/room-details/favorite_border.svg", alt="heart")
+                                p 2
+                        .reviews__block
+                            .reviews__name Патрисия Стёклышкова
+                            .reviews__review-date Неделю назад
+                            .reviews__descr Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент
 
                 .room-details__container
                     .room-details__rules
