@@ -1,2 +1,6 @@
 mixin button(buttonClassName, name)
     button(class = buttonClassName)= name
+
+mixin buttonArrow(buttonClassName, name)
+    button(class = buttonClassName)= name
+        img(src="/src/components/buttons/arrow_forward.svg", alt="arrow")

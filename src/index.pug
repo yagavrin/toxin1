@@ -5,6 +5,7 @@ include ./components/registration/reg
 include ./components/sign-in/sign-in
 include ./components/search_page/search_page
 include ./components/room-details/room-details
+include ./components/cards/cards
 
 doctype html
 html(lang="en")
@@ -14,12 +15,14 @@ html(lang="en")
         title Toxin
         link(rel="stylesheet" type="text/css" href="bootstrap-reboot.min.css")
     body
-        +header
+        //- +header
         //-
             +promo
         //- +reg
         //- +sign-in
         //- +search_page
-        +room-details
-        +footer
+        //- +room-details
+        //- +footer
+
+        +cards
     

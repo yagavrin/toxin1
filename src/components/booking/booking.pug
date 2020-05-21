@@ -8,16 +8,21 @@ mixin booking
         +searh__form
         .booking__calculate
             .booking__container
-                .booking__price
-                .booking__total-price
+                .booking__price 9 990₽ х 4 суток 
+                .booking__total-price 39960₽
             .booking__container
-                .booking__service-charge
-                .booking__service-charge-price
+                .booking__service-charge Сбор за услуги: скидка 2179₽
+                    .booking__info i
+                .booking__service-charge-price 0₽
             .booking__container
-                .booking__add-services
-                .booking__add-services-price
+                .booking__add-services Сбор за дополнительные услуги
+                    .booking__info i
+                .booking__add-services-price 300₽
             .booking__container
-                p
+                span Итого
                 .booking__divider
                 .booking__total-sum
-        +button('btn', 'забронировать')
+                    span 38 081₽
+        +buttonArrow('btn btn_arrow', 'забронировать')
+
+        
