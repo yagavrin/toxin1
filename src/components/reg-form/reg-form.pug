@@ -1,0 +1,31 @@
+include ../buttons/buttons
+
+mixin reg-form
+
+    .reg
+        .reg__title Регистрация аккаунта
+        form.reg__form
+            input(type="text", name="" value='Имя').reg__input
+            input(type="text", name="" value='Фамилия').reg__input
+            .reg__container
+                label.custom-radio
+                    input(type='radio' name='gender' value='Мужчина').reg__checkbox
+                    span Мужчина
+                label.custom-radio
+                    input(type='radio' name='gender' value='Женщина').reg__checkbox 
+                    span Женщина
+            .reg__subtitle Дата рождения
+            input(class= 'reg__input reg__input_margin-bottom' type='date')
+            .reg__subtitle Данные для входа в сервис
+            input(type="text", name="" value='Email').reg__input
+            input(type="text", name="" value='Пароль').reg__input
+            div(class= 'reg__container reg__container_spec-offer')
+                label.custom-checkbox
+                    input(type='checkbox' )
+                    span 
+                p Получать спецпредложения
+            +buttonArrow('btn btn_arrow', 'Перейти к оплате')
+        .reg__sign-in
+            div(class= 'reg__container reg__container_sign-in')
+                p Уже есть аккаунт на Toxin
+                +button('btn btn_entry', 'Войти')

@@ -1,8 +1,15 @@
 .cards {
-    &__container {
+    &__wrapper {
         width: 1160px;
         margin: 0 auto;
         padding-top: 150px;
+        display: flex;
+    }
+    &__container {
+        margin-top: 40px;;
     }
 
+    &__block {
+        margin-right: 40px;
+    }
 }

@@ -1,11 +1,11 @@
 include ../search-item/search-item
-include ../promo/promo
+include ../search-form/search-form
 include ../buttons/buttons
 
 mixin booking
     .booking
-        +search-item__container
-        +searh__form
+        +search-item__room-number('888', '9 900', true)
+        +search-form
         .booking__calculate
             .booking__container
                 .booking__price 9 990₽ х 4 суток 
@@ -18,7 +18,7 @@ mixin booking
                 .booking__add-services Сбор за дополнительные услуги
                     .booking__info i
                 .booking__add-services-price 300₽
-            .booking__container
+            .booking__result
                 span Итого
                 .booking__divider
                 .booking__total-sum

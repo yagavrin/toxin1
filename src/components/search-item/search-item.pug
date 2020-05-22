@@ -4,17 +4,20 @@ mixin search-item
         .search-item__slider
             img(src="/src/components/search-item/image.jpg", alt="")
         .search-item__block
-            +search-item__container
+            +search-item__room-number
             .search-item__divider
             .search-item__container
                 .search-item__room-rating
                     img(src="/src/components/search-item/star.svg", alt="")
                 .search-item__room-reviews 145 отзывов
 
-mixin search-item__container
-
+mixin search-item__room-number(roomNumber, roomPrice, isLux)
+    -
+        var className = 'search-item__lux'
+        className += isLux ? '' : ' hidden'
     .search-item__container
-        .search-item__room-number № 888
-            .search-item__lux люкс
-        .search-item__room-price 9 990 р в сутки
+        .search-item__room-number № 
+            p #{roomNumber}
+            div(class = className) люкс
+        .search-item__room-price #{roomPrice}₽ в сутки
     

@@ -1,7 +1,16 @@
 include ../search-form/search-form
+include ../booking/booking
+include ../reg-form/reg-form
 
 mixin cards
 
     .cards
-        .cards__container
-            +search-block
+        .cards__wrapper
+            .cards__block
+                +search-block
+                .cards__container
+                    +reg-form
+            .cards__block    
+                +booking    
+                .cards__container
+                

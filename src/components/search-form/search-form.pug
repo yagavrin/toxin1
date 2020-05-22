@@ -6,17 +6,19 @@ mixin search-block
         h1.search-room__title Найдём номера под ваши пожелания
         form.search-room__form
             +search-form
-            +buttonArrow('btn btn_arrow', 'Подобрать номер')
+            .search-room__block
+                +buttonArrow('btn btn_arrow', 'Подобрать номер')
  
 mixin search-form
+
     .search-room__wrapper
         .search-room__container
-            span Прибытие
+            .search-room__subtitle Прибытие
             input(type="date").search-room__date-arrival
         .search-room__container
-            span Выезд
+            .search-room__subtitle Выезд
             input(type="date").search-room__date-departure
-    span Гости
+    .search-room__subtitle Гости
     select.search-room__guests 
         option(disabled selected) Сколько гостей
         option Взрослые

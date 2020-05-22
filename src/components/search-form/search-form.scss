@@ -12,10 +12,13 @@
     font-size: 12px;
     line-height: 15px;
     color: #1F2041;
-    span {
+
+    &__subtitle {
+        font-size: 12px;
+        line-height: 15px;
+        color: #1F2041;
         font-weight: bold;
         text-transform: uppercase;
-
     }
 
 
@@ -25,6 +28,10 @@
         line-height: 30px;
         color: #1F2041;
         margin-bottom: 20px;
+    }
+
+    &__block {
+        margin-top: 31px;
     }
 
     &__wrapper {
@@ -47,7 +54,6 @@
         margin-top: 5px;
         border: 1px solid rgba(31, 32, 65, 0.25);
         border-radius: 4px;
-        margin-bottom: 31px;
         padding-left: 15px;
         
         option {
