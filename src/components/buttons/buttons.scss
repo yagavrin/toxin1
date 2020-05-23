@@ -1,6 +1,8 @@
 $main-color: #BC9CFF;
 
 .btn {
+    width: 99px;
+    height: 44px;
     border-radius: 22px;
     background: #FFFFFF;
     border: 3px solid;
@@ -25,24 +27,6 @@ $main-color: #BC9CFF;
         // background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     }
 
-    &_show-variants {
-        width: 320px;
-        height: 44px;
-    }
-
-    &_accept-reg {
-        width: 320px;
-        height: 44px;
-        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-        color: #FFFFFF;
-    }
-
-    &_sign-in {
-        width: 320px;
-        height: 44px;
-        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-        color: #FFFFFF;  
-    }
 
     &_arrow {
         width: 100%;

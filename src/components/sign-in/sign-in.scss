@@ -1,26 +1,29 @@
 .sign-in {
-    background: url('/src/components/registration/reg_bg.jpg') center (center / cover) no-repeat;
-    height: 830px;
-    position: relative;
-    padding-top: 163px;
-    &__wrapper {
-        position: relative;;
-        margin: 0 auto;
-        width: 380px;
-        height: 358px;
-        padding: 40px 30px 30px 30px;
-        background: #FFFFFF;
-        border: 1px solid rgba(0, 0, 0, 0.12);
-        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-        border-radius: 4px;
-    }
+    width: 380px;
+    height: 358px;
+    padding: 40px 30px 30px 30px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
 
     &__container {
         display: flex;
         margin-top: 30px;
         p {
-            margin-right: 57px;
+            margin-top: 12px;
+            margin-right: 64px;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 18px;
+            display: flex;
+            align-items: center;
+            color: #000000;
         }
+    }
+
+    &__container_btn {
+        margin-top: 10px;
     }
 
     &__form {
@@ -32,6 +35,10 @@
             border-radius: 4px;
             padding-left: 15px;
             margin-bottom: 10px;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 24px;
+            color: rgba(31, 32, 65, 0.25);
         }
     }
 

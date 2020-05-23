@@ -27,7 +27,11 @@
     }
 
     &__container_sign-in {
-        margin-top: 40px;
+        margin-top:25px;
+        p {
+            margin-top:9px;
+            margin-right: 43px;
+        }
     }
 
     &__title {
@@ -48,6 +52,12 @@
     }
 
     &__form {
+        input {
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 18px;
+            color: rgba(31, 32, 65, 0.25);
+        }
         p {
             margin-bottom: 5px;
         }
@@ -75,9 +85,6 @@
 
     &__sign-in {
         margin-top: 30px;
-        p {
-            margin-right: 30px;
-        }
     }
 }
 
