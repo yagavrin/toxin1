@@ -1,23 +1,42 @@
-mixin search-item
+mixin search-item(roomNumber, roomPrice, isLux, isLarge, starsCount)
+    -
+        var i = 0
+        var n = 0
+        var emptyStarsCount = 5 - starsCount;
 
     .search-item
         .search-item__slider
-            img(src="/src/components/search-item/image.jpg", alt="")
+            img(src="/src/components/search-item/image.jpg", alt="room")
         .search-item__block
-            +search-item__room-number
+            +search-item__room-number(roomNumber, roomPrice, isLux, isLarge)
             .search-item__divider
             .search-item__container
                 .search-item__room-rating
-                    img(src="/src/components/search-item/star.svg", alt="")
-                .search-item__room-reviews 145 отзывов
+                    while i < starsCount
+                        .stars= i++
+                            +rating-star
+                    while n < emptyStarsCount
+                        .stars= n++
+                            +empty-star
+                .search-item__room-reviews <span>145</span> отзывов
 
-mixin search-item__room-number(roomNumber, roomPrice, isLux)
+mixin search-item__room-number(roomNumber, roomPrice, isLux, isLarge)
     -
-        var className = 'search-item__lux'
-        className += isLux ? '' : ' hidden'
+        var clsNameLux = 'search-item__lux'
+        var clsNameRoomNbr = 'search-item__room-number'
+        clsNameLux += isLux ? '' : ' hidden'
+        clsNameRoomNbr += isLarge ? ' large' : ''
     .search-item__container
-        .search-item__room-number № 
-            p #{roomNumber}
-            div(class = className) люкс
-        .search-item__room-price #{roomPrice}₽ в сутки
+        .search-item__room № 
+            p(class= clsNameRoomNbr) #{roomNumber}
+            div(class = clsNameLux) люкс
+        .search-item__room-price <span>#{roomPrice}₽</span> в сутки
     
+
+mixin rating-star
+
+    img(src="/src/components/search-item/star.svg", alt='star')
+
+mixin empty-star
+
+    img(src="/src/components/search-item/star_border.svg", alt='empty_star')

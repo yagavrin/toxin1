@@ -1,4 +1,5 @@
 .cards {
+    background: #E5E5E5;
     &__wrapper {
         width: 1160px;
         margin: 0 auto;
@@ -6,7 +7,7 @@
         display: flex;
     }
     &__container {
-        margin-top: 40px;;
+        margin-top: 40px;
     }
 
     &__block {
