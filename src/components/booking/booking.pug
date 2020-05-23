@@ -4,7 +4,8 @@ include ../buttons/buttons
 
 mixin booking
     .booking
-        +search-item__room-number('888', '9 900', true, true)
+        .booking__search-container
+            +search-item__room-number('888', '9 900', true, true)
         +search-form
         .booking__calculate
             .booking__container

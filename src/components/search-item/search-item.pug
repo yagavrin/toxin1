@@ -20,17 +20,22 @@ mixin search-item(roomNumber, roomPrice, isLux, isLarge, starsCount)
                             +empty-star
                 .search-item__room-reviews <span>145</span> отзывов
 
-mixin search-item__room-number(roomNumber, roomPrice, isLux, isLarge)
+mixin search-item__room-number(roomNumber, roomPrice, isLux, isBooking)
     -
         var clsNameLux = 'search-item__lux'
+        var clsNameRoom = 'search-item__room'
         var clsNameRoomNbr = 'search-item__room-number'
+        var clsNameRoomPrice = 'search-item__room-price'
         clsNameLux += isLux ? '' : ' hidden'
-        clsNameRoomNbr += isLarge ? ' large' : ''
+        clsNameRoom += isBooking ? ' increaseLineHeight' : ''
+        clsNameRoomPrice += isBooking ? ' increaseLineHeight' : ''
+        clsNameLux += isBooking ? ' increaseLineHeight' : ''
+        clsNameRoomNbr += isBooking ? ' large' : ''
     .search-item__container
-        .search-item__room № 
+        div(class= clsNameRoom) № 
             p(class= clsNameRoomNbr) #{roomNumber}
             div(class = clsNameLux) люкс
-        .search-item__room-price <span>#{roomPrice}₽</span> в сутки
+        div(class= clsNameRoomPrice) <span>#{roomPrice}₽</span> в сутки
     
 
 mixin rating-star
