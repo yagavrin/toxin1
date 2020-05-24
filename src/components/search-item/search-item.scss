@@ -24,6 +24,7 @@
 
     &__room {
         display: flex;
+        font-family: 'Open Sans', sans-serif;
         font-weight: bold;
         font-size: 14px;
         line-height: 17px;
@@ -32,6 +33,7 @@
     }
         
     &__room-number {
+        font-family: 'Open Sans', sans-serif;
         padding-left: 7px;
         font-size: 19px;
         font-weight: bold;

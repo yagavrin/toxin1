@@ -1,0 +1,27 @@
+@font-face {
+	font-family: 'Montserrat';
+	src: url('/src/components/fonts/Montserrat-Bold.eot');
+	src: local('Montserrat Bold'), url('/src/components/fonts/Montserrat-Bold.woff') format('woff'), url('/src/components/fonts/Montserrat-Bold.ttf') format('truetype'), url('/src/components/fonts/Montserrat-Bold.svg') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url('/src/components/fonts/Montserrat-Regular.eot');
+	src: local('Montserrat Regular'), url('/src/components/fonts/Montserrat-Regular.woff') format('woff'), url('/src/components/fonts/Montserrat-Regular.ttf') format('truetype'), url('/src/components/fonts/Montserrat-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('/src/components/fonts/OpenSans-Bold.eot');
+    src: local('Open Sans Bold'), local('OpenSans-Bold'),
+        url('/src/components/fonts/OpenSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('/src/components/fonts/OpenSans-Bold.woff') format('woff'),
+        url('/src/components/fonts/OpenSans-Bold.ttf') format('truetype'),
+        url('/src/components/fonts/OpenSans-Bold.svg#OpenSans-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}

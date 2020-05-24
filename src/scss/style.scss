@@ -1,10 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
-
+$darkShade100: #1F2041;
+$darkShade75: rgba(31, 32, 65, 0.75);
+$darkShade50: rgba(31, 32, 65, 0.5);
+$darkShade25: rgba(31, 32, 65, 0.25);
+$darkShade5: rgba(31, 32, 65, 0.05);
+$purple: #BC9CFF;
+$green: #6FCF97;
 
 * {
-    font-family: 'Open Sans', sans-serif;
-    
-    font-style: normal;
-    font-weight: normal;
+    font-family: 'Montserrat', sans-serif;
 }
 
+h1 {
+    font-family: 'Open Sans', sans-serif;
+}

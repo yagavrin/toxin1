@@ -54,7 +54,10 @@
     }
 
     &__divider {
-        width: 178px;
+        display: inline-block;
+        flex-shrink: 0.5;
+        flex-basis: auto;
+        width: 174px;
         height: 18px;
         margin-left: 5px;
         margin-right: 5px;
@@ -62,9 +65,16 @@
     }
 
     &__result {
+        font-family: 'Open Sans', sans-serif;
         display: flex;
         justify-content: space-between;
+        flex-wrap: nowrap;
         margin-top: 44px;
     }
 
+    &__total-sum {
+        span {
+            font-family: 'Open Sans', sans-serif;
+        }
+    }
 }

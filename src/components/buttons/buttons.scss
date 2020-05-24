@@ -12,6 +12,7 @@ $main-color: #BC9CFF;
     font-size: 12px;
     line-height: 15px;
     text-transform: uppercase;
+    text-align: center;
     &_entry {
         width: 87px;
         height: 34px;
@@ -36,6 +37,7 @@ $main-color: #BC9CFF;
         border-radius: 22px;
         color: #FFFFFF;
         padding-right: 11px;
+        padding-left: 30px;
         img {
             float: right;
         }
