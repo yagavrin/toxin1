@@ -1,0 +1,111 @@
+.colors-and-types {
+
+    &__wrapper {
+        width: 1160px;
+        margin: 0 auto;
+        padding-top: 67px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__colors-block {
+        padding-left: 10px;
+    }
+
+    &__types-block {
+        padding-right: 50px;
+    }
+}
+
+.colors-item {
+    display: flex;
+    &__color-preview {
+        width: 70px;
+        height: 70px;
+        border-radius: 6px;
+        margin-right: 40px;
+        margin-bottom: 20px;
+    }
+
+    &__container {
+        padding-top: 8px;
+    }
+    &__title {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
+        font-size: 19px;
+    }
+    &__subtitle {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: normal;
+        font-size: 19px;
+    }
+}
+
+.types-item {
+    display: flex;
+    margin-bottom: 50px;
+    line-height: 1;
+    
+
+    &__tag {
+        margin-right: 30px;
+        color: rgba(31, 32, 65, 0.25);
+        text-align: right;
+        width: 34px;
+    }
+
+    &__descr {
+        width: 336px;
+    }
+
+    &__tag_h1{
+        font-size: 24px;
+        line-height: 30px;
+        text-transform: uppercase;
+    }
+    &__descr_h1{
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 30px;
+        color: #1F2041;
+    }
+
+    &__tag_h2{
+        font-size: 19px;
+        line-height: 24px;
+        text-transform: uppercase;
+    }
+    &__descr_h2{
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
+        font-size: 19px;
+        line-height: 24px;
+        color: #1F2041;
+    }
+
+    &__tag_h3{
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+    }
+    &__descr_h3{
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        color: #1F2041;
+        text-transform: uppercase;
+    }
+
+    &__tag_body{
+        font-size: 14px;
+        line-height: 24px;
+    }
+    &__descr_body{
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        color: rgba(31, 32, 65, 0.75);      
+    }
+}

@@ -14,7 +14,7 @@
             '</div>',
         defaults = {
             classes: '',
-            inline: true,
+            inline: false,
             language: 'ru',
             startDate: new Date(),
             firstDay: '',
@@ -39,13 +39,13 @@
             selectOtherYears: true,
             moveToOtherYearsOnSelect: true,
 
-            minDate: '',
+            minDate: new Date(),
             maxDate: '',
             disableNavWhenOutOfRange: true,
 
-            multipleDates: 2, // Boolean or Number
+            multipleDates: false, // Boolean or Number
             multipleDatesSeparator: ',',
-            range: true,
+            range: false,
 
             todayButton: false,
             clearButton: true,

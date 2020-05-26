@@ -1,8 +1,12 @@
-mixin calendar
+mixin calendar(dates)
+    -
+        var attributes = {};
+    -   attributes.class="datepicker-here";
+        
 
     .calendar
         form.calendar__form
-            div(class="datepicker-here")
+            input&attributes(attributes)
             button.calendar__btn Применить
         script(defer src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
         script(defer src='/src/components/calendar/datepicker.js')

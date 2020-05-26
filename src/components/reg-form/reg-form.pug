@@ -1,4 +1,5 @@
 include ../buttons/buttons
+include ../calendar/calendar
 
 mixin reg-form
 
@@ -15,7 +16,8 @@ mixin reg-form
                     input(type='radio' name='gender' value='Женщина').reg__checkbox 
                     span Женщина
             .reg__subtitle Дата рождения
-            input(class= 'reg__input reg__input_margin-bottom' type='date')
+            div(class= 'reg__input reg__input_margin-bottom')
+                +calendar
             .reg__subtitle Данные для входа в сервис
             input(type="text", name="" value='Email').reg__input
             input(type="text", name="" value='Пароль').reg__input

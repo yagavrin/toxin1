@@ -46,7 +46,8 @@
           justify-content: center;
   width: 39.88px;
   height: 40px;
-  z-index: 1; }
+  z-index: 1;
+  color: rgba(31, 32, 65, 0.5); }
   .datepicker--cell.-focus- {
     min-width: 40px;
     min-height: 40px;
@@ -67,13 +68,11 @@
     .datepicker--cell.-current-.-in-range- {
       color: black; }
   .datepicker--cell.-in-range- {
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    // opacity: 0.25;
+    background: rgba(188, 156, 255, 0.25);
     font-size: 12px;
-    color: rgba(31, 32, 65, 1);
     border-radius: 0; }
     .datepicker--cell.-in-range-.-focus- {
-      background-color: rgba(92, 196, 239, 0.2); }
+      border: none; }
   .datepicker--cell.-disabled- {
     cursor: default;
     color: #aeaeae; }
@@ -87,22 +86,26 @@
     min-width: 40px;
     min-height: 40px;
     color: #fff;
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    border-radius: 22px 0 0 22px; }
+    background: rgba(188, 156, 255, 0.25);
+    background-image: url(/src/components/calendar/Rectangle.svg);
+    border-radius: 22px 0 0 22px;
+    border: none; }
   .datepicker--cell.-range-to- {
     min-width: 40px;
     min-height: 40px;
     color: #fff;
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    border-radius: 0 22px 22px 0; }
+    background: rgba(188, 156, 255, 0.25);
+    background-image: url(/src/components/calendar/Rectangle.svg);
+    border-radius: 0 22px 22px 0;
+    border: none; }
   .datepicker--cell.-range-from-.-range-to- {
     border-radius: 22px; }
   .datepicker--cell.-selected- {
     min-width: 40px;
     min-height: 40px;
     color: #fff;
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    border-radius: 22px;
+    background: rgba(188, 156, 255, 0.25);
+    background-image: url(/src/components/calendar/Rectangle.svg);
     border: none; }
     .datepicker--cell.-selected-.-current- {
       min-width: 40px;

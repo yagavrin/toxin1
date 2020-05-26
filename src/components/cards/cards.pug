@@ -4,14 +4,12 @@ include ../reg-form/reg-form
 include ../sign-in/sign-in
 include ../calendar/calendar
 include ../search-item/search-item
+include ../logo/logo
 
 mixin cards
 
-    
-
     .cards
-        .cards__logo
-            img(src="/src/components/cards/logo_gray.svg", alt="logo")
+        +logo_gray
         .cards__wrapper
             .cards__block
                 +search-block
