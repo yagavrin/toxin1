@@ -1,44 +1,93 @@
 include ../logo/logo
 
-mixin footer
+mixin footer(footerVersion)
+    -
+        var navigationRu = ['О нас', 'Новости', 'Служба поддержки', 'Услуги']
+        var aboutUsRu = ['О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы']
+        var supporRu = ['Соглашения', 'Сообщества', 'Связь с нами']
+        var navigationEng = ['About Us', 'News', 'Support', 'Products']
+        var aboutUsEng = ['Who we are', 'Our team', 'Careers', 'Investors']
+        var supporEng = ['Documentation', 'Community', 'Get in Touch']
     .footer
         .footer__wrapper
+            .footer__logo
+                +logo
+                case footerVersion
+                    when 'eng'
+                        h3 Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
+                    when 'ru'
+                        h3 Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
             .container
-                .footer__logo
-                    +logo
-                    h3 Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
-                .footer__block
-                    h4.footer__subtitle Навигация
-                    a.footer__item О нас
-                    a.footer__item Новости
-                    a.footer__item Служба поддержки
-                    a.footer__item Услуги
-                .footer__block
-                    h4.footer__subtitle О нас
-                    a.footer__item О сервисе
-                    a.footer__item Наша команда
-                    a.footer__item Вакансии
-                    a.footer__item Инвесторы
-                .footer__block
-                    h4.footer__subtitle Служба поддержки
-                    a.footer__item Соглашения
-                    a.footer__item Сообщества
-                    a.footer__item Связь с нами
-                .footer__block
-                    h4.footer__subtitle Подписка
-                    a.footer__item Получайте специальные предложения и новости сервиса
-                    a.footer__item
+                case footerVersion
+                    when 'eng'
+                        .footer__block
+                            .footer__subtitle Navigation
+                            each item in navigationEng
+                                a(href='#').footer__item= item
+                        .footer__block
+                            .footer__subtitle ABOUT US
+                            each item in aboutUsEng
+                                a(href='#').footer__item= item
+                        .footer__block
+                            .footer__subtitle Support
+                            each item in supporEng
+                                a(href='#').footer__item= item
+                    when 'ru'
+                        .footer__block
+                            .footer__subtitle Навигация
+                            each item in navigationRu
+                                a(href='#').footer__item= item
+                        .footer__block
+                            .footer__subtitle О нас
+                            each item in aboutUsRu
+                                a(href='#').footer__item= item
+                        .footer__block
+                            .footer__subtitle Служба поддержки
+                            each item in supporRu
+                                a(href='#').footer__item= item
+
+            case footerVersion
+                when 'eng'
+                    .footer__subscribe-block
+                        .footer__subtitle Subscribe to our newsletter
+                        .footer__subscribe-descr Receive our latest news and promotions in your inbox!
                         form.footer__form
-                            input(value='Email')
+                            input(value='Your email address')
                             button
                                 img(src='/src/components/footer/arrow_forward.svg')
+                when 'ru'
+                    .footer__subscribe-block
+                        .footer__subtitle Подписка
+                        a.footer__item Получайте специальные предложения и новости сервиса
+                        a.footer__item
+                            form.footer__form
+                                input(value='Email')
+                                button
+                                    img(src='/src/components/footer/arrow_forward.svg')
+
+        .footer__divider
         .footer__wrapper
-            div.copyright
-                h5 Copyright © 2018 Toxin отель. Все права защищены.
-                .footer__links
-                    a(href='#').footer__link
-                        img(src='/src/components/footer/twi.svg')
-                    a(href='#').footer__link
-                        img(src='/src/components/footer/facebook.svg')
-                    a(href='#').footer__link
-                        img(src='/src/components/footer/instagram.svg')
+            .footer__copyright-block
+                case footerVersion
+                    when 'eng'
+                        .footer__copyright Copyright © 2018 Toxin UI Kit. All rights reserved.
+                    when 'ru'
+                        .footer__copyright Copyright © 2018 Toxin отель. Все права защищены.
+                +social-links
+                
+mixin social-links
+
+    .footer__links
+        a(href='#').footer__link
+            img(src='/src/components/footer/twi.svg')
+        a(href='#').footer__link
+            img(src='/src/components/footer/facebook.svg')
+        a(href='#').footer__link
+            img(src='/src/components/footer/instagram.svg')
+
+mixin footer-min
+
+    .footer-min
+        +logo
+        .footer-min__descr Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
+        +social-links

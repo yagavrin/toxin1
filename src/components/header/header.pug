@@ -1,25 +1,46 @@
 include ../logo/logo
 include ../buttons/buttons
 
-mixin header
+mixin header(headerVersion)
+    -
+        var headerEngText = ['Home', 'About Us', 'Services', 'Careers', 'News', 'Documentation']
     
     .header
         .header__wrapper
             +logo  
             .menu
-                ul.menu__list
-                    li.menu__item
-                        a.menu__link О нас
-                    li.menu__item
-                        a.menu__link Услуги
-                        img(src='/src/components/header/expand_more.svg')
-                    li.menu__item
-                        a.menu__link Вакансии
-                    li.menu__item
-                        a.menu__link Новости
-                    li.menu__item
-                        a.menu__link Соглашения
-                        img(src='/src/components/header/expand_more.svg')
-                .menu__buttons
-                    +button('btn btn_entry', 'Войти')
-                    +button('btn btn_reg', 'Зарегистрироваться')
+                case headerVersion
+                    when 'eng'
+                        ul(class= 'menu__list menu__list_eng')
+                            each item in headerEngText
+                                li(class= 'menu__item menu__item_eng')
+                                    a(href="#" class= 'menu__link menu__link_eng')= item
+                        .menu__buttons
+                            +buttonEntry('btn btn_entry', 'login')
+                            +button('btn btn_reg', 'register')
+                    when 'eng_v2'
+                        ul(class= 'menu__list menu__list_eng')
+                            each item in headerEngText
+                                li(class= 'menu__item menu__item_eng')
+                                    a(href="#" class= 'menu__link menu__link_eng')= item
+                        .menu__divider
+                        .menu__block Cosmin Negoita
+                    when 'ru'
+                        ul.menu__list
+                            li.menu__item
+                                a.menu__link О нас
+                            li.menu__item
+                                a.menu__link Услуги
+                                img(src='/src/components/header/expand_more.svg')
+                            li.menu__item
+                                a.menu__link Вакансии
+                            li.menu__item
+                                a.menu__link Новости
+                            li.menu__item
+                                a.menu__link Соглашения
+                                img(src='/src/components/header/expand_more.svg')
+                        .menu__buttons
+                            +button('btn btn_entry', 'Войти')
+                            +button('btn btn_reg', 'Зарегистрироваться')
+
+                

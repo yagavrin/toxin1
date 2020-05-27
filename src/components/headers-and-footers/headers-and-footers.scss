@@ -1,0 +1,14 @@
+body {
+    
+}
+
+.headers-and-footers {
+    background: #E5E5E5;
+    &__wrapper {
+        margin-top: 72px;
+    }
+
+    &__container {
+        margin-bottom: 40px;
+    }
+}

@@ -1,0 +1,18 @@
+include ../logo/logo
+include ../header/header
+include ../footer/footer
+
+mixin headers-and-footers
+
+    
+    .headers-and-footers
+        +logo_gray
+        .headers-and-footers__wrapper
+            .headers-and-footers__container
+                +header('eng')
+            .headers-and-footers__container
+                +header('eng_v2')
+            .headers-and-footers__container
+                +footer('eng')
+            .headers-and-footers__container
+                +footer-min

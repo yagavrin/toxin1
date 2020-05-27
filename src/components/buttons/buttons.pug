@@ -4,3 +4,7 @@ mixin button(buttonClassName, name)
 mixin buttonArrow(buttonClassName, name)
     button(class = buttonClassName)= name
         img(src="/src/components/buttons/arrow_forward.svg", alt="arrow")
+
+mixin buttonEntry(buttonClassName, name)
+    button(class = buttonClassName)
+        .btn__container= name

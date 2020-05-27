@@ -14,18 +14,30 @@ $main-color: #BC9CFF;
     text-transform: uppercase;
     text-align: center;
     &_entry {
-        width: 87px;
+        width: 79px;
         height: 34px;
         margin-right: 20px;
-        // background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        border: none;
         
+    }
+
+    &__container {
+        position: relative;
+        left: -4px;
+        width: 75px;
+        height: 30px;
+        background: #FFFFFF;
+        border-radius: 22px;
+        line-height: 30px;
     }
     
     &_reg {
-        width: 196px;
         height: 34px;
         box-shadow: none;
-        // background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        border: none;
+        color: #FFFFFF;
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     }
 
 

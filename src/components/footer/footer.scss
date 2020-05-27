@@ -1,35 +1,44 @@
 .container {
     display: flex;
     justify-content: space-between;
-    padding-top: 100px;
-    height: 372px;
+    
+    padding-left: 40px;
+    width: 55.2%;
 }
 
-
 .footer {
+    padding-top: 104px;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
     &__wrapper{
+        display: flex;
         width: 1160px;
         margin: 0 auto;
         position: relative;
     }
     h3 {
+        margin-top: 18px;
         font-size: 14px;
         font-style: normal;
         font-weight: normal;
         line-height: 24px;
         color: rgba(31, 32, 65, 0.75);
     }
-    h4 {
+
+    &__subtitle {
         font-weight: bold;
         font-size: 12px;
         line-height: 15px;
         text-transform: uppercase;
         color: #1F2041;
+        margin-bottom: 21px;
     }
     &__logo {
+        margin-top: -5px;
         width: 260px;
     }
     &__block {
+        margin-right: 87px;
         display: flex;
         flex-direction: column;
     }
@@ -37,6 +46,11 @@
     &__item {
         font-size: 14px;
         line-height: 17px;
+        color: rgba(31, 32, 65, 0.5);
+        margin-bottom: 21px;
+    }
+
+    &__item:hover {
         color: rgba(31, 32, 65, 0.5);
     }
     &__links {
@@ -46,14 +60,26 @@
     }
     &__link {
         padding-right: 20px;
-            img {
-                height: 24px;
-                width: 24px;
+        img {
+            height: 24px;
+            width: 24px;
             }
     }
+
+    &__subscribe-block {
+        width: 260px;
+    }
+
+    &__subscribe-descr {
+        font-size: 14px;
+        line-height: 24px;
+        color: rgba(31, 32, 65, 0.75);
+    }
+
     &__form {
+        margin-top: 20px;
         input {
-            width: 260px;
+            width: 100%;
             height: 44px;
             border: 1px solid rgba(31, 32, 65, 0.25);
             border-radius: 4px;
@@ -64,22 +90,29 @@
         }
         button {
             position: relative;
-            left: -40px;
+            left: 224px;
+            top: -35px;
             border: none;
             background: #FFFFFF;
         }
         
     }
 
-}
+    &__divider {
+        width: 100vw;
+        border-bottom: 1px solid rgba(31, 32, 65, 0.05);
+    }
 
-.copyright {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 70px;
-    border-top: 1px solid rgba(31, 32, 65, 0.75);
-    h5 {
+    &__copyright-block {
+        width: 100%;
+        background: #FFFFFF;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
+    }
+    
+    &__copyright {
         font-style: normal;
         font-weight: normal;
         font-size: 14px;
@@ -87,3 +120,27 @@
         color: rgba(31, 32, 65, 0.75);
     }
 }
+
+.footer .footer__wrapper:first-child{
+    height: 268px;
+}
+
+.footer-min {
+    padding-top: 100px;
+    height: 367px;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__descr {
+        width: 560px;
+        margin-top: 20px;
+        margin-bottom: 25px;
+        font-size: 14px;
+        line-height: 24px;
+        text-align: center;
+        color: rgba(31, 32, 65, 0.75)
+    }
+}
+   
