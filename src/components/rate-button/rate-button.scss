@@ -1,0 +1,14 @@
+.rate-button {
+    display: flex;
+    width: 120px;
+}
+
+.stars {
+    visibility: hidden;
+    img {
+        position: relative;
+        // top: -28px;
+        left: 3px;
+        visibility: visible;
+    }
+}

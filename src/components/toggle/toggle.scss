@@ -1,0 +1,58 @@
+.toggle {
+    display: flex;
+    color: rgba(31, 32, 65, 0.75);
+}
+
+.custom-toggle>input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.custom-toggle>span {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    width: 40px;
+    height: 20px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 10px;
+    transition: 0.5s;
+    margin-right: 0.6em;
+    cursor: pointer;
+}
+  
+.custom-toggle>span::before {
+    content: '';
+    position: absolute; 
+    width: 12px;
+    height: 12px;
+    background: rgba(31, 32, 65, 0.25);
+    border-radius: 10px;
+    left: 3px; 
+    top: 3px; 
+    
+    transition: 0.5s; /* Время движения квадратика */
+}
+  
+  
+  /* стили для чекбокса, находящегося в фокусе */
+.custom-toggle>input:focus+span::before {
+    box-shadow: 0 0 0 0.2rem rgba(188, 156, 255, 0.5);
+}
+  
+  /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+.custom-toggle>input:focus:not(:checked)+span::before {
+    box-shadow: 0 0 0 0.2rem rgba(31, 32, 65, 0.1); 
+}
+  
+  /* стили для чекбокса, находящегося в состоянии checked */
+.custom-toggle>input:checked+span::before {
+    left: 23px;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+  
+.custom-toggle>input:checked+span {
+    border: 1px solid #BC9CFF;
+    border-radius: 10px;
+}

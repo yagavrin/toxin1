@@ -1,5 +1,7 @@
 include ../buttons/buttons
 include ../calendar/calendar
+include ../radio-buttons/radio-buttons
+include ../toggle/toggle
 
 mixin reg-form
 
@@ -9,12 +11,7 @@ mixin reg-form
             input(type="text", name="" value='Имя').reg__input
             input(type="text", name="" value='Фамилия').reg__input
             .reg__container
-                label.custom-radio
-                    input(type='radio' name='gender' value='Мужчина').reg__checkbox
-                    span Мужчина
-                label.custom-radio
-                    input(type='radio' name='gender' value='Женщина').reg__checkbox 
-                    span Женщина
+                +radio-buttons
             .reg__subtitle Дата рождения
             div(class= 'reg__input reg__input_margin-bottom')
                 +calendar
@@ -22,10 +19,7 @@ mixin reg-form
             input(type="text", name="" value='Email').reg__input
             input(type="text", name="" value='Пароль').reg__input
             div(class= 'reg__container reg__container_spec-offer')
-                label.custom-checkbox
-                    input(type='checkbox' )
-                    span 
-                p Получать спецпредложения
+                +toggle
             +buttonArrow('btn btn_arrow', 'Перейти к оплате')
         .reg__sign-in
             div(class= 'reg__container reg__container_sign-in')

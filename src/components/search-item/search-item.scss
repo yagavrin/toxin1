@@ -59,10 +59,7 @@
         }
     }
 
-    &__room-rating {
-        display: flex;
-        width: 120px;
-    }
+    
 
     &__room-reviews {
         font-weight: normal;
@@ -89,12 +86,3 @@
     line-height: 36px
 }
 
-.stars {
-    visibility: hidden;
-    img {
-        position: relative;
-        top: -28px;
-        left: 3px;
-        visibility: visible;
-    }
-}

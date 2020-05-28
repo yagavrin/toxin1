@@ -1,0 +1,37 @@
+include ../logo/logo
+include ../checkbox/checkbox
+include ../radio-buttons/radio-buttons
+include ../toggle/toggle
+include ../like-button/like-button
+include ../rate-button/rate-button
+
+mixin form-elements
+
+    +logo_gray
+    .form-elements
+        .form-elements__wrapper
+            .form-elements__block
+                .form-elements__container
+                    .form-elements__subtitle Checkbox Buttons
+                    +checkbox('', '', 'Можно курить')
+                    +checkbox('', '', 'Можно с питомцами')
+                    +checkbox('', '', 'Можно пригласить гостей (до 10 человек)')
+                .form-elements__container
+                    .form-elements__subtitle Radio Buttons
+                    +radio-buttons({firstDescr: 'Мужчина', secondDescr: 'Женщина'})
+                .form-elements__container
+                    .form-elements__subtitle Toggle
+                    +toggle({descr: 'Получать спецпредложения '})
+                    +toggle({descr: 'Получать спецпредложения '})
+                .form-elements__container
+                    .form-elements__subtitle like button
+                    .form-elements__like-container
+                        .form-elements__like-container
+                            +like-button({isSelected: false, likeCount: 2})
+                        +like-button({isSelected: true, likeCount: 12})
+                .form-elements__container
+                    .form-elements__subtitle rate button
+                    +rate-button(5)
+                    +rate-button(4)
+
+                

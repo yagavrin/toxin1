@@ -1,8 +1,6 @@
+include ../rate-button/rate-button
+
 mixin search-item(roomNumber, roomPrice, isLux, isLarge, starsCount)
-    -
-        var i = 0
-        var n = 0
-        var emptyStarsCount = 5 - starsCount;
 
     .search-item
         .search-item__slider
@@ -11,13 +9,7 @@ mixin search-item(roomNumber, roomPrice, isLux, isLarge, starsCount)
             +search-item__room-number(roomNumber, roomPrice, isLux, isLarge)
             .search-item__divider
             .search-item__container
-                .search-item__room-rating
-                    while i < starsCount
-                        .stars= i++
-                            +rating-star
-                    while n < emptyStarsCount
-                        .stars= n++
-                            +empty-star
+                +rate-button
                 .search-item__room-reviews <span>145</span> отзывов
 
 mixin search-item__room-number(roomNumber, roomPrice, isLux, isBooking)
@@ -38,10 +30,3 @@ mixin search-item__room-number(roomNumber, roomPrice, isLux, isBooking)
         div(class= clsNameRoomPrice) <span>#{roomPrice}₽</span> в сутки
     
 
-mixin rating-star
-
-    img(src="/src/components/search-item/star.svg", alt='star')
-
-mixin empty-star
-
-    img(src="/src/components/search-item/star_border.svg", alt='empty_star')

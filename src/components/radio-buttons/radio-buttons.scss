@@ -1,0 +1,56 @@
+.custom-radio {
+    margin: 0;
+    margin-right: 19px;
+    padding-top: 1px;
+}
+
+.custom-radio>input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+  
+.custom-radio>span {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+  
+.custom-radio>span::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 50%;
+    margin-right: 0.6em;
+    background-repeat: no-repeat;
+    background-position: 2.5px 2.5px;
+    background-size: 70% 70%;
+    cursor: pointer;
+}
+  
+  /* стили при наведении курсора на радио */
+.custom-radio>input:not(:disabled):not(:checked)+span:hover::before {
+    border-color: #BC9CFF;
+}
+  
+  /* стили для активной радиокнопки (при нажатии на неё) */
+.custom-radio>input:not(:disabled):active+span::before {
+    background-color: #bc9cff;
+    color: rgba(31, 32, 65, 0.75);
+    box-shadow: 0 0 0 0.2rem rgba(188, 156, 255, 0.5);
+}
+  
+  /* стили для радиокнопки, находящейся в состоянии checked */
+.custom-radio>input:checked+span::before {
+    border-color: #BC9CFF;
+    
+    background-image: url(/src/components/reg-form/input_radio.svg);
+}
+
+.custom-radio>input:checked+span {
+    color: rgba(31, 32, 65, 0.75);
+}

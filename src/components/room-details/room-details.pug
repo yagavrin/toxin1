@@ -1,4 +1,5 @@
 include ../booking/booking
+include ../like-button/like-button
 
 mixin room-details
 
@@ -45,9 +46,7 @@ mixin room-details
                     .reviews__item
                         .reviews__container
                             img.reviews__avatar(src="/src/components/room-details/avatar1.jpg", alt="avatar")
-                            .reviews__like-count_selected
-                                img(src="/src/components/room-details/favorite.svg", alt="heart")
-                                p 12
+                            +like-button({isSelected: true, likeCount: 12})
                         .reviews__block
                             .reviews__name Мурад Сарафанов
                             .reviews__review-date 5 дней назад
@@ -55,9 +54,7 @@ mixin room-details
                     .reviews__item
                         .reviews__container
                             img.reviews__avatar(src="/src/components/room-details/avatar2.jpg", alt="avatar")
-                            .reviews__like-count
-                                img(src="/src/components/room-details/favorite_border.svg", alt="heart")
-                                p 2
+                            +like-button({isSelected: false, likeCount: 2})
                         .reviews__block
                             .reviews__name Патрисия Стёклышкова
                             .reviews__review-date Неделю назад

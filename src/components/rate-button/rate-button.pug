@@ -1,0 +1,21 @@
+mixin rate-button(starsCount)
+    -
+        var i = 0
+        var n = 0
+        var emptyStarsCount = 5 - starsCount;
+
+    .rate-button
+        while i < starsCount
+            .stars= i++
+                +rating-star
+        while n < emptyStarsCount
+            .stars= n++
+                +empty-star
+
+mixin rating-star
+
+    img(src="/src/components/search-item/star.svg", alt='star')
+
+mixin empty-star
+
+    img(src="/src/components/search-item/star_border.svg", alt='empty_star')
