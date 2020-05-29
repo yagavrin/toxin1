@@ -1,0 +1,28 @@
+mixin dropdown
+
+    .dropdown
+        .dropdown__input Сколько гостей
+        .dropdown__block(hidden)
+            .dropdown__item 
+                .dropdown__descr взрослые
+                .dropdown__container
+                    button(class='dropdown__button dropdown__minus') -
+                    div(class='dropdown__counter adultCounter') 0
+                    button(class='dropdown__button dropdown__plus') +
+            .dropdown__item
+                .dropdown__descr дети
+                .dropdown__container
+                    button(class='dropdown__button dropdown__minus') -
+                    div(class='dropdown__counter childCounter') 0
+                    button(class='dropdown__button dropdown__plus') +
+            .dropdown__item
+                .dropdown__descr младенцы
+                .dropdown__container
+                    button(class='dropdown__button dropdown__minus') -
+                    div(class='dropdown__counter babyCounter') 0
+                    button(class='dropdown__button dropdown__plus') +
+            .dropdown__dawdad
+                button.dropdown__clear-btn(hidden) Очистить
+                button.dropdown__submit-btn Применить
+
+

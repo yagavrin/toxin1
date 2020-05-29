@@ -4,12 +4,27 @@ include ../radio-buttons/radio-buttons
 include ../toggle/toggle
 include ../like-button/like-button
 include ../rate-button/rate-button
+include ../dropdown/dropdown
 
 mixin form-elements
 
     +logo_gray
+    <span class="icon icon-star"></span>
     .form-elements
         .form-elements__wrapper
+            .form-elements__block
+                .form-elements__subtitle Text Field
+                    p default
+                input(class='input' type="text")
+                .form-elements__subtitle Text Field
+                    p Hover / Focus
+                input(class='input' type="text")
+                .form-elements__subtitle Dropdown
+                    p default
+                +dropdown
+                .form-elements__subtitle masked text field
+                    p default
+
             .form-elements__block
                 .form-elements__container
                     .form-elements__subtitle Checkbox Buttons
@@ -31,7 +46,12 @@ mixin form-elements
                         +like-button({isSelected: true, likeCount: 12})
                 .form-elements__container
                     .form-elements__subtitle rate button
-                    +rate-button(5)
-                    +rate-button(4)
+                    .form-elements__stars-container
+                        .form-elements__stars-container
+                            +rate-button(4)
+                        +rate-button(5)
+                    
+                            
 
+                    
                 

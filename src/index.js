@@ -25,3 +25,6 @@ import radioButtons from "./components/radio-buttons/radio-buttons"
 import toggle from "./components/toggle/toggle"
 import likeButton from "./components/like-button/like-button"
 import rateButton from "./components/rate-button/rate-button"
+import dropdown from "./components/dropdown/dropdown"
+
+dropdown();
