@@ -1,16 +1,18 @@
 import './dropdown.scss'
 
-export default function dropdown () {
-    const dropdown = document.querySelector('.dropdown');
+export default function dropdown() {
     const dropdownInput = document.querySelector('.dropdown__input');
     const dropdownBlock = document.querySelector('.dropdown__block');
     const dropdownClearBtn = document.querySelector('.dropdown__clear-btn');
     const dropdownSubmitBtn = document.querySelector('.dropdown__submit-btn');
-    let adultCount, childCount, babyCount, guestCount;
+    const dropdownTitle = document.querySelector('.dropdown__title');
+    let adultCount = document.querySelector('.adultCounter'),
+        childCount = document.querySelector('.childCounter'),
+        babyCount = document.querySelector('.babyCounter'),
+        guestSum = 0;
     
     document.addEventListener('click', function(event) {
-
-        if (event.target === dropdownInput) {
+        if (event.target === dropdownInput || event.target === document.querySelector('.dropdown__expand-more')) {
             toggleDropdownBlock()
         }
         
@@ -20,6 +22,10 @@ export default function dropdown () {
             if (n > 0) {
                 n--;
                 event.target.nextElementSibling.textContent= n;
+            } 
+
+            if (n == 0) {
+                event.target.classList.add('dropdown__gray-btn');
             }
             guestCounter();
         }
@@ -27,18 +33,26 @@ export default function dropdown () {
         if (event.target.classList.contains('dropdown__plus')) {
 
             let n = event.target.previousElementSibling.textContent;
-            if (n >= 0) {
-                n++;
-                event.target.previousElementSibling.textContent= n;
-            }
+
+            n++;
+            event.target.previousElementSibling.textContent= n;
+            
             guestCounter();
+
+            if (n > 0) {
+               event.target.previousElementSibling.previousElementSibling.classList.remove('dropdown__gray-btn');
+            }
+
         }
 
         if (event.target === dropdownClearBtn) {
-            document.querySelector('.adultCounter').textContent = 0;
-            document.querySelector('.childCounter').textContent = 0;;
-            document.querySelector('.babyCounter').textContent = 0;
+            adultCount.textContent = 0;
+            childCount.textContent = 0;
+            babyCount.textContent = 0;
             guestCounter();
+            for (let btn of document.querySelectorAll('.dropdown__minus')) {
+                btn.classList.add('dropdown__gray-btn');
+            }
         }
 
         if (event.target === dropdownSubmitBtn) {
@@ -47,28 +61,27 @@ export default function dropdown () {
         
     })
 
+    
+
     function toggleDropdownBlock() {
         dropdownBlock.hasAttribute('hidden') ? dropdownBlock.removeAttribute('hidden') : dropdownBlock.setAttribute('hidden', '')
     }
+
     
     function guestCounter() {
-        adultCount = document.querySelector('.adultCounter').textContent;
-        childCount = document.querySelector('.childCounter').textContent;
-        babyCount = document.querySelector('.babyCounter').textContent;
-        guestCount = 0;
-        guestCount = +adultCount + +childCount + +babyCount;
-        if (guestCount > 0) {
-            dropdownInput.textContent= wordEnding(guestCount);
+        guestSum = +adultCount.textContent + +childCount.textContent + +babyCount.textContent;
+        if (guestSum > 0) {
+            dropdownTitle.textContent= wordEnding(guestSum);
             dropdownClearBtn.removeAttribute('hidden');
         }
 
-        if (guestCount == 0) {
-            dropdownInput.textContent= 'Сколько гостей';
+        if (guestSum == 0) {
+            dropdownTitle.textContent= 'Сколько гостей';
             dropdownClearBtn.setAttribute('hidden', '');
         }
     }
 
-    function wordEnding (num) {
+    function wordEnding(num) {
         let word;
         if (num % 100 > 10 && num % 100 < 20) {
             word= 'гостей';

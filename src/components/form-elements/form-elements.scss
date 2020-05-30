@@ -3,19 +3,29 @@
     line-height: 18px;
     color: rgba(31, 32, 65, 0.5);
     padding-top: 65px;
+
     &__wrapper {
         width: 1160px;
         margin: 0 auto;
         display: flex;
+        justify-content: space-between;
+    }
+
+    &__wrapper:nth-child(2) {
+        margin-top: 100px;  
     }
 
     &__block {
-        width: 750px;
+        width: 320px;
         .form-elements__container:nth-child(2) {
             margin-bottom: 37px;
         }
         .form-elements__container:nth-child(3) {
             margin-bottom: 35px;
+        }
+
+        .form-elements__input-container:nth-child(3){
+            margin-bottom: 24px;
         }
     }
 
@@ -34,22 +44,36 @@
     }
 
     &__subtitle {
-        width: 320px;
+        width: 100%;
         font-weight: bold;
         font-size: 12px;
         line-height: 15px;
         text-transform: uppercase;
         color: #1F2041;
-        margin-bottom: 16.56px;
         display: flex;
         justify-content: space-between;
+        margin-bottom: 5px;
         p {
+            margin: 0;
             font-weight: normal;
             text-transform: uppercase;
             color: rgba(31, 32, 65, 0.5);
         }
     }
     
+    &__subtitle_with-mr-bottom {
+        margin-bottom: 16.56px;
+    }
+
+    &__input-container {
+        margin-bottom: 20px;
+    }
+
+    &__date-container{
+        width: 320px;
+        margin-top: 40px;
+        
+    }
 }
 
 .input {
@@ -58,9 +82,29 @@
     background: #FFFFFF;
     border: 1px solid rgba(31, 32, 65, 0.25);
     border-radius: 4px;
+    padding-left: 14px;
+    color: rgba(31, 32, 65, 0.25);
+}
+
+.input_date {
+    width: 150px;
 }
 
 .input:focus, .input:hover {
     outline: none;
     border: 1px solid rgba(31, 32, 65, 0.5);
+    color: rgba(31, 32, 65, 0.75)
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.block1 {
+    margin-right: 126px;
+}
+
+.block2 {
+    margin-right: 72px;
 }

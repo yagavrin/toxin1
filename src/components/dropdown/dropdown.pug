@@ -1,27 +1,29 @@
 mixin dropdown
 
     .dropdown
-        .dropdown__input Сколько гостей
+        .dropdown__input 
+            .dropdown__title Сколько гостей
+            span(class="dropdown__expand-more icon-expand_more")
         .dropdown__block(hidden)
             .dropdown__item 
                 .dropdown__descr взрослые
                 .dropdown__container
-                    button(class='dropdown__button dropdown__minus') -
+                    button(class='dropdown__button dropdown__minus dropdown__gray-btn') -
                     div(class='dropdown__counter adultCounter') 0
                     button(class='dropdown__button dropdown__plus') +
             .dropdown__item
                 .dropdown__descr дети
                 .dropdown__container
-                    button(class='dropdown__button dropdown__minus') -
+                    button(class='dropdown__button dropdown__minus dropdown__gray-btn') -
                     div(class='dropdown__counter childCounter') 0
                     button(class='dropdown__button dropdown__plus') +
             .dropdown__item
                 .dropdown__descr младенцы
                 .dropdown__container
-                    button(class='dropdown__button dropdown__minus') -
+                    button(class='dropdown__button dropdown__minus dropdown__gray-btn') -
                     div(class='dropdown__counter babyCounter') 0
                     button(class='dropdown__button dropdown__plus') +
-            .dropdown__dawdad
+            .dropdown__btn-block
                 button.dropdown__clear-btn(hidden) Очистить
                 button.dropdown__submit-btn Применить
 
