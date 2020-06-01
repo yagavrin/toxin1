@@ -1,6 +1,19 @@
 /* для элемента input c type="checkbox" */
 .checkbox {
-    margin-bottom: 7px;
+    margin-bottom: 6px;
+    display: flex;
+    width: 260px;
+    &__title {
+      font-weight: bold;
+      font-size: 14px;
+      color: rgba(31, 32, 65, 0.75);
+      margin-bottom: 6px;
+    }
+
+    &__descr_fz12 {
+      font-size: 12px;
+      line-height: 14px;
+    }
 }
 
 .custom-checkbox {
@@ -16,7 +29,6 @@
   
   /* для элемента label, связанного с .custom-checkbox */
   .custom-checkbox>span {
-    display: flex;
     user-select: none;
   }
   

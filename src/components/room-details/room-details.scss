@@ -31,27 +31,7 @@
         color: #1F2041;
     }
 
-    &__item {
-        display: flex;
-        padding-top: 20px;
-        width: 280px;
-        height: 89px;
-        border-bottom: 2px solid rgba(31, 32, 65, 0.1);
-        img {
-            position: absolute;
-            padding-top: 2px;
-            padding-left: 7px;
-        }
-        div {
-            padding-left: 58px;
-            font-size: 14px;
-            line-height: 24px;
-            color: rgba(31, 32, 65, 0.75);
-            span {
-                font-weight: bold;
-            }
-        }
-    }
+
 
     &__diagram {
         padding-left: 82px;

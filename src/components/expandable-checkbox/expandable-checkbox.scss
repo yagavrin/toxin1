@@ -1,0 +1,29 @@
+.expandable-checkbox {
+  &__btn {
+    font-weight: bold;
+    color: #1F2041;
+    font-size: 12px;
+    line-height: 14px;
+    border: none;
+    background-color: #ffffff;
+    text-transform: uppercase;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  &__btn::after {
+    font-family: 'icomoon', sans-serif;
+    content: "\e900";
+    color: rgba(31, 32, 65, 0.5);
+    font-size: 8px;
+    margin-left: 47px;
+  }
+
+  &__btn_up::after {
+    content: '\e915';
+  }
+
+  &__block {
+    padding-top: 17.4px;
+  }
+}

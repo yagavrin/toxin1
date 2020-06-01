@@ -1,6 +1,15 @@
-mixin checkbox(checkboxValue, checkboxName, checkboxText)
+mixin checkbox(checkboxOptions)
 
-    .checkbox
-        label.custom-checkbox
-            input(type="checkbox" name= checkboxName value= checkboxValue) 
-            span= checkboxText
+  .checkbox
+    label.custom-checkbox
+      input(type="checkbox" 
+        name= checkboxOptions.checkboxName 
+        value= checkboxOptions.checkboxValue) 
+      span
+    case checkboxOptions.isRich
+      when true
+        .checkbox__container
+          .checkbox__title= checkboxOptions.checkboxTitle
+          div(class='checkbox__descr checkbox__descr_fz12')= checkboxOptions.checkboxText
+      default
+        .checkbox__descr= checkboxOptions.checkboxText

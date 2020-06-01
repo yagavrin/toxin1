@@ -1,0 +1,19 @@
+.bullet-list {
+    margin: 0;
+    width: 253px;
+    padding-left: 0px;
+    color: rgba(31, 32, 65, 0.75);
+    &__item {
+        display: flex;
+        margin-bottom: 10px;
+        list-style-type: none;
+        line-height: 24px;
+    }
+    &__item::before {
+        font-family: 'icomoon', sans-serif;
+        font-size: 11px;
+        content: "\e90c";
+        padding-right: 10px;
+        color: rgba(31, 32, 65, 0.25);
+    }
+}

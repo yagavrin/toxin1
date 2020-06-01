@@ -12,7 +12,8 @@ export default function dropdown() {
         guestSum = 0;
     
     document.addEventListener('click', function(event) {
-        if (event.target === dropdownInput || event.target === document.querySelector('.dropdown__expand-more')) {
+        if (event.target === dropdownInput || 
+            event.target === document.querySelector('.dropdown__expand-more')) {
             toggleDropdownBlock()
         }
         

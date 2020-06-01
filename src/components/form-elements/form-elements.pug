@@ -5,97 +5,106 @@ include ../toggle/toggle
 include ../like-button/like-button
 include ../rate-button/rate-button
 include ../dropdown/dropdown
+include ../expandable-checkbox/expandable-checkbox
+include ../bullet-list/bullet-list
+include ../room-details-item/room-details-item
 
 mixin form-elements
 
-    +logo_gray
-    <span class="icon icon-star"></span>
-    .form-elements
-        .form-elements__wrapper
-            div(class='form-elements__block block1')
-                .form-elements__input-container
-                    .form-elements__subtitle Text Field
-                        p default
-                    input(class='input' type="text" name='email' value='Email')
-                .form-elements__input-container
-                    .form-elements__subtitle Text Field
-                        p Hover / Focus
-                    input(class='input' type="text" value='This is pretty awesome')
-                .form-elements__input-container
-                    .form-elements__subtitle Dropdown
-                        p default
-                    +dropdown
-                .form-elements__input-container
-                    .form-elements__subtitle masked text field
-                        p default
-                    input(class='input' type="text", name="")
-                div(class='form-elements__date-container flex-container')
-                    .form-elements__date
-                        .form-elements__subtitle date Dropdown
-                        input(class='input input_date' type="text", name="")
-                    .form-elements__date
-                        .form-elements__subtitle date Dropdown
-                        input(class='input input_date' type="text", name="")
-                .form-elements__date-container
-                    .form-elements__subtitle filter date dropdown
-                    input(class='input' type="text", name="")
-                .form-elements__date-container
-                    .form-elements__subtitle subscription text field
-                    input(class='input' type="text", name="")
-            div(class='form-elements__block block2')
-                .form-elements__container
-                    div(class= 'form-elements__subtitle form-elements__subtitle_with-mr-bottom') Checkbox Buttons
-                    +checkbox('', '', 'Можно курить')
-                    +checkbox('', '', 'Можно с питомцами')
-                    +checkbox('', '', 'Можно пригласить гостей (до 10 человек)')
-                .form-elements__container
-                    div(class= 'form-elements__subtitle form-elements__subtitle_with-mr-bottom') Radio Buttons
-                    +radio-buttons({firstDescr: 'Мужчина', secondDescr: 'Женщина'})
-                .form-elements__container
-                    div(class= 'form-elements__subtitle form-elements__subtitle_with-mr-bottom') Toggle
-                    +toggle({descr: 'Получать спецпредложения '})
-                    +toggle({descr: 'Получать спецпредложения '})
-                .form-elements__container
-                    div(class= 'form-elements__subtitle form-elements__subtitle_with-mr-bottom') like button
-                    .form-elements__like-container
-                        .form-elements__like-container
-                            +like-button({isSelected: false, likeCount: 2})
-                        +like-button({isSelected: true, likeCount: 12})
-                .form-elements__container
-                    div(class= 'form-elements__subtitle form-elements__subtitle_with-mr-bottom') rate button
-                    .form-elements__stars-container
-                        .form-elements__stars-container
-                            +rate-button(4)
-                        +rate-button(5)
-            div(class='form-elements__block')
-        .form-elements__wrapper          
-            div(class='form-elements__block block1')
-                .form-elements__subtitle Dropdown
-                    p default              
-                +dropdown
-                .form-elements__subtitle expandable checkbox list
-                .form-elements__subtitle expandable checkbox list
-                +checkbox('', '', 'Можно курить')
-                +checkbox('', '', 'Можно курить')
-                +checkbox('', '', 'Можно курить')
-                +checkbox('', '', 'Можно курить')
-                +checkbox('', '', 'Можно курить')
-                +checkbox('', '', 'Можно курить')
-                +checkbox('', '', 'Можно курить')
-                +checkbox('', '', 'Можно курить')
-            div(class='form-elements__block block2')
-                .form-elements__subtitle Dropdown  
-                +dropdown
-                div(class= 'form-elements__subtitle form-elements__subtitle_with-mr-bottom') Rich Checkbox Buttons
-                    +checkbox('', '', 'Можно курить')
-                    +checkbox('', '', 'Можно курить')
-            div(class='form-elements__block')
-                .form-elements__subtitle Dropdown         
-                +dropdown
-                div(class= 'form-elements__subtitle form-elements__subtitle_with-mr-bottom') Bullet list
-                    ul
-                        li Нельзя с питомцами
-                        li Без вечеринок и мероприятий
-                        li Время прибытия — после 13:00, а выезд до 12:00
-                    
-                
+  +logo_gray
+  <span class="icon icon-star"></span>
+  .form-elements
+    .form-elements__wrapper
+      div(class='form-elements__block block1')
+        .form-elements__input-container
+          .form-elements__subtitle Text Field
+            p default
+          input(class='input' type="text" name='email' value='Email')
+        .form-elements__input-container
+          .form-elements__subtitle Text Field
+            p Hover / Focus
+          input(class='input' type="text" value='This is pretty awesome')
+        .form-elements__input-container
+          .form-elements__subtitle Dropdown
+            p default
+          +dropdown
+        .form-elements__input-container
+          .form-elements__subtitle masked text field
+            p default
+          input(class='input' type="text", name="")
+        div(class='form-elements__date-container flex-container')
+          .form-elements__date
+            .form-elements__subtitle date Dropdown
+            input(class='input input_date' type="text", name="")
+          .form-elements__date
+            .form-elements__subtitle date Dropdown
+            input(class='input input_date' type="text", name="")
+        .form-elements__date-container
+          .form-elements__subtitle filter date dropdown
+          input(class='input' type="text", name="")
+        .form-elements__date-container
+          .form-elements__subtitle subscription text field
+          input(class='input' type="text", name="")
+      div(class='form-elements__block block2')
+        .form-elements__container
+          div(class= 'form-elements__subtitle form-elements__subtitle_with-mr-bottom') Checkbox Buttons
+          +checkbox({checkboxText: 'Можно курить'})
+          +checkbox({checkboxText: 'Можно с питомцами'})
+          +checkbox({checkboxText: 'Можно пригласить гостей (до 10 человек)'})
+        .form-elements__container
+          div(class= 'form-elements__subtitle form-elements__subtitle_with-mr-bottom') Radio Buttons
+          +radio-buttons({firstDescr: 'Мужчина', secondDescr: 'Женщина'})
+        .form-elements__container
+          div(class= 'form-elements__subtitle form-elements__subtitle_with-mr-bottom') Toggle
+          +toggle({descr: 'Получать спецпредложения '})
+          +toggle({descr: 'Получать спецпредложения '})
+        .form-elements__container
+          div(class= 'form-elements__subtitle form-elements__subtitle_with-mr-bottom') like button
+          .form-elements__like-container
+            .form-elements__like-container
+              +like-button({isSelected: false, likeCount: 2})
+            +like-button({isSelected: true, likeCount: 12})
+        .form-elements__container
+            div(class= 'form-elements__subtitle form-elements__subtitle_with-mr-bottom') rate button
+            .form-elements__stars-container
+              .form-elements__stars-container
+                +rate-button(4)
+              +rate-button(5)
+      div(class='form-elements__block')
+    div(class='form-elements__wrapper')
+      div(class='form-elements__block block1')
+        .form-elements__subtitle Dropdown
+          p default
+        +dropdown  
+      div(class='form-elements__block block2')
+        .form-elements__subtitle Dropdown  
+        +dropdown
+      div(class='form-elements__block')
+        .form-elements__subtitle Dropdown         
+        +dropdown
+    .form-elements__wrapper
+      div(class='form-elements__block block1')
+        +expandable-checkbox({descr: 'expandable checkbox list'})
+        .form-elements__expandable-container
+          +expandable-checkbox({descr: 'expandable checkbox list'})
+
+      div(class='form-elements__block block2')
+        div(class= 'form-elements__subtitle form-elements__subtitle_with-mr-bottom') Rich Checkbox Buttons
+        +checkbox({
+          checkboxText: 'Ширина коридоров в номере не менее 91 см.', 
+          isRich: true, 
+          checkboxTitle: 'Широкий коридор'})
+        +checkbox({checkboxText: 'На 1 этаже вас встретит специалист и проводит до номера.', 
+          isRich: true,
+          checkboxTitle: 'Помощник для инвалидов'})
+      div(class='form-elements__block')
+        div(class= 'form-elements__subtitle form-elements__subtitle_with-mr-bottom') Bullet list
+        .form-elements__list-container
+          +bullet-list(['Нельзя с питомцами', 
+          'Без вечеринок и мероприятий', 
+          'Время прибытия — после 13:00, а выезд до 12:00'])
+    .form-elements__wrapper
+      div(class='form-elements__block block1')
+        +room-details-item('comfort')
+        +room-details-item('windows')
+      div(class='form-elements__block block2')
