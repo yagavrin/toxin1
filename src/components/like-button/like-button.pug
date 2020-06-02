@@ -1,11 +1,4 @@
 mixin like-button(likeBtnOptions)
 
-    case likeBtnOptions.isSelected
-        when true 
-            button(class= 'like-button like-button_selected')
-                div(class="icon icon-favorite")
-                p= likeBtnOptions.likeCount
-        when false 
-            button(class= 'like-button')
-                div(class="icon icon-favorite_border")
-                p= likeBtnOptions.likeCount
+  button(class= 'like-button')
+    span.like-button__like-count= likeBtnOptions.likeCount

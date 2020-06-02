@@ -2,19 +2,17 @@ mixin room-details-item(itemName)
 
   case itemName
     when 'comfort'
-      .room-details-item
-        img(src="/src/components/room-details/insert_emoticon.svg", alt="smile")
+      div(class= 'room-details-item room-details-item_comfort')
         div
           span Комфорт
           p Шумопоглощающие стены
     when 'windows'
-      .room-details-item
-        img(src="/src/components/room-details/location_city.svg", alt="city")
+      div(class= 'room-details-item room-details-item_windows')
         div
           span Удобство
           p Окно в каждой из спален
     when 'fireplace'
-      .room-details__item
+      div(class= 'room-details-item room-details-item_fireplace')
         img(src="/src/components/room-details/whatshot.svg", alt="fire")
         div
           span Уют

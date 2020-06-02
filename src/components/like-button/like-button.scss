@@ -1,35 +1,41 @@
 .like-button {
-        display: flex;
-        justify-content: space-between;
-        width: 40px;
-        height: 20px;
-        background: #ffffff;
-        border-radius: 10px;
-        border: 1px solid rgba(31, 32, 65, 0.25);
-        padding: 3px;
-        padding-left: 4px;
-        font-weight: normal;
-        font-size: 10px;
-        line-height: 12px;
-        color: rgba(31, 32, 65, 0.25);
-        text-align: center;
-        padding-right: 11px;
-    }
+  display: flex;
+  justify-content: space-between;
+  width: 40px;
+  height: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  padding: 3px;
+  padding-left: 4px;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 12px;
+  color: rgba(31, 32, 65, 0.25);
+  text-align: center;
+  padding-right: 11px;
+}
    
 .like-button_selected {
-    border: 1px solid #BC9CFF;
-    color: #BC9CFF;
+  border: 1px solid #BC9CFF;
+  color: #BC9CFF;
 }
 
-.icon {
-    font-family: 'icomoon', sans-serif;
-    font-size: 8px;
-}
-
-.icon-favorite:before {
-    content: "\e90a";
+.like-button:before {
+  font-family: 'icomoon', sans-serif;
+  font-size: 8px;
+  content: "\e90b";
   }
 
-.icon-favorite_border:before {
-    content: "\e90b";
+.like-button_selected:before {
+  content: "\e90a";
+}
+
+.like-button:focus {
+  outline: none;
+}
+
+.like-button:hover {
+  border: 1px solid #BC9CFF;
+  color: #BC9CFF;
 }

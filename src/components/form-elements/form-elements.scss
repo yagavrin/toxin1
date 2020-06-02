@@ -17,6 +17,10 @@
         height: 320px;
     }
 
+    &__wrapper:nth-child(3) {
+        height: 345px;
+    }
+
     &__block {
         width: 320px;
         .form-elements__container:nth-child(2) {
@@ -117,4 +121,10 @@
 
 .block2 {
     margin-right: 72px;
+}
+
+.review-block {
+    padding-left: 40px;
+    padding-top: 22px;
+    width: auto;
 }

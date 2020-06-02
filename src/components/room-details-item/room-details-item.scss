@@ -3,14 +3,13 @@
   padding-top: 20px;
   width: 280px;
   height: 89px;
-  border-bottom: 2px solid rgba(31, 32, 65, 0.1);
+  border-bottom: 1px solid rgba(31, 32, 65, 0.1);
   img {
     position: absolute;
     padding-top: 2px;
     padding-left: 7px;
   }
   div {
-    padding-left: 58px;
     font-size: 14px;
     line-height: 24px;
     color: rgba(31, 32, 65, 0.75);
@@ -18,4 +17,28 @@
       font-weight: bold;
     }
   }
+}
+
+.room-details-item::before {
+  padding-top: 15px;
+  padding-left: 4px;
+  margin-right: 15px;
+  font-family: 'icomoon', sans-serif;
+  font-size: 40px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #BC9CFF;
+}
+
+.room-details-item_comfort::before {
+  content: "\e907";
+}
+
+.room-details-item_windows::before {
+  content: "\e906";
+}
+
+.room-details-item_fireplace::before {
+  content: "\e905";
 }
