@@ -4,6 +4,7 @@ include ../radio-buttons/radio-buttons
 include ../toggle/toggle
 include ../like-button/like-button
 include ../rate-button/rate-button
+include ../range-slider/range-slider
 include ../dropdown/dropdown
 include ../expandable-checkbox/expandable-checkbox
 include ../bullet-list/bullet-list
@@ -72,6 +73,7 @@ mixin form-elements
                 +rate-button(4)
               +rate-button(5)
       div(class='form-elements__block')
+        +range-slider({title: 'Range Slider'})
     div(class='form-elements__wrapper')
       div(class='form-elements__block block1')
         .form-elements__subtitle Dropdown

@@ -1,0 +1,11 @@
+mixin range-slider(sliderOptions)
+
+  .range-slider
+    .range-slider__title= sliderOptions.title
+      .range-slider__range
+        .range-slider__bottom 0 - 
+        .range-slider__top 15000
+    .range-slider__block
+      div(class= 'range-slider__point range-slider__point_start')
+      div(class= 'range-slider__point range-slider__point_finish')
+    .range-slider__colored-block

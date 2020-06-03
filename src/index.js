@@ -30,7 +30,9 @@ import expandableCheckbox from "./components/expandable-checkbox/expandable-chec
 import bulletList from "./components/bullet-list/bullet-list"
 import roomDetailsItem from "./components/room-details-item/room-details-item"
 import roomReview from "./components/room-review/room-review"
+import rangeSlider from "./components/range-slider/range-slider"
 
 likeButton();
+rangeSlider();
 dropdown();
 expandableCheckbox ();
