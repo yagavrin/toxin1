@@ -31,8 +31,13 @@ import bulletList from "./components/bullet-list/bullet-list"
 import roomDetailsItem from "./components/room-details-item/room-details-item"
 import roomReview from "./components/room-review/room-review"
 import rangeSlider from "./components/range-slider/range-slider"
+import pagination from "./components/pagination/pagination"
 
+buttons();
 likeButton();
 rangeSlider();
 dropdown();
 expandableCheckbox ();
+pagination();
+
+formElements();

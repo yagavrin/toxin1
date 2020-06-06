@@ -10,6 +10,7 @@ include ../expandable-checkbox/expandable-checkbox
 include ../bullet-list/bullet-list
 include ../room-details-item/room-details-item
 include ../room-review/room-review
+include ../pagination/pagination
 
 mixin form-elements
 
@@ -78,15 +79,17 @@ mixin form-elements
         .form-elements__container
           div(class= 'form-elements__subtitle form-elements__subtitle_with-mr-bottom') buttons
           .form-elements__btn-container
-            +button('btn', 'click me')
-            +button('btn', 'click me')
+            +button({btnType: '', name: 'click me'})
+            +button({btnType: '', name: 'click me'})
           .form-elements__btn-container
-            +button('btn', 'click me')
-            +button('btn', 'click me')
+            +button({btnType: 'border', name: 'click me'})
+            +button({btnType: 'border', name: 'click me'})
           .form-elements__btn-container
-            +button('btn', 'click me')
-            +button('btn', 'click me')
-          +button('btn', 'перейти к оплате')
+            +button({btnType: 'noBorder', name: 'click me'})
+            +button({btnType: 'noBorder', name: 'click me'})
+          +button({btnType: 'arrow', name: 'перейти к оплате'})
+        div(class= 'form-elements__subtitle form-elements__subtitle_with-mr-bottom') pagination
+        +pagination
     div(class='form-elements__wrapper')
       div(class='form-elements__block block1')
         .form-elements__subtitle Dropdown

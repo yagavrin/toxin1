@@ -1,10 +1,24 @@
-mixin button(buttonClassName, name)
-    button(class = buttonClassName)= name
+//- mixin button(buttonClassName, name)
+//-   button(class = buttonClassName)= name
 
-mixin buttonArrow(buttonClassName, name)
-    button(class = buttonClassName)= name
-        img(src="/src/components/buttons/arrow_forward.svg", alt="arrow")
+//- mixin buttonArrow(buttonClassName, name)
+//-   button(class = buttonClassName)= name
+//-     img(src="/src/components/buttons/arrow_forward.svg", alt="arrow")
 
-mixin buttonEntry(buttonClassName, name)
-    button(class = buttonClassName)
-        .btn__container= name
+//- mixin buttonEntry(buttonClassName, name)
+//-   button(class = buttonClassName)
+//-     .btn__container= name
+
+mixin button(btnOptions)
+
+  case btnOptions.btnType
+    when "border"
+      button(class= 'btn btn_border')
+        .btn__container= btnOptions.name
+    when "arrow"
+      button(class= 'btn btn_arrow')= btnOptions.name
+    when "noBorder"
+      button(class= 'no-border-btn')= btnOptions.name
+    default
+      button(class= 'btn')= btnOptions.name
+      
