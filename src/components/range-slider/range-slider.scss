@@ -1,5 +1,13 @@
 .range-slider {
   width: 266px;
+  height: 47px;
+  margin: 0;
+  &__block {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
   &__title {
     display: flex;
     justify-content: space-between;
@@ -15,7 +23,11 @@
     display: flex;
   }
 
-  &__block {
+  &__top {
+    margin-left: 0.3em;
+  }
+
+  &__scale {
     z-index: 0;
     width: 266px;
     height: 6px;
@@ -26,10 +38,10 @@
     display: flex;
   }
 
-  &__colored-block {
+  &__scale_colored {
     z-index: 1;
     position: relative;
-    top: -6px;
+    top: -38px;
     width: 266px;
     height: 6px;
     background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
@@ -46,13 +58,16 @@
     background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
     border: 2px solid #FFFFFF;
     border-radius: 10px;
+    cursor: pointer;
   }
 
   &__point_start {
-    left: -7px;
+    left: -8px;
+    top: -11px;
   }
 
   &__point_finish {
-    left: 242px;
+    top: -27px;
+    left: 258px;
   }
 }
