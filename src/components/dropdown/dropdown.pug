@@ -1,30 +1,42 @@
-mixin dropdown
+mixin dropdown(dropdownOptions)
 
-  .dropdown
-    .dropdown__input 
-        .dropdown__title Сколько гостей
-        span(class="dropdown__expand-more icon-expand_more")
-    .dropdown__block(hidden)
-      .dropdown__item 
-        .dropdown__descr взрослые
-        .dropdown__container
-          button(class='dropdown__button dropdown__minus dropdown__gray-btn') -
-          div(class='dropdown__counter adultCounter') 0
-          button(class='dropdown__button dropdown__plus') +
-      .dropdown__item
-        .dropdown__descr дети
-        .dropdown__container
-          button(class='dropdown__button dropdown__minus dropdown__gray-btn') -
-          div(class='dropdown__counter childCounter') 0
-          button(class='dropdown__button dropdown__plus') +
-      .dropdown__item
-        .dropdown__descr младенцы
-        .dropdown__container
-          button(class='dropdown__button dropdown__minus dropdown__gray-btn') -
-          div(class='dropdown__counter babyCounter') 0
-          button(class='dropdown__button dropdown__plus') +
-      .dropdown__btn-block
-        button.dropdown__clear-btn(hidden) Очистить
-        button.dropdown__submit-btn Применить
+  - var guestValues= [{descr: 'взрослые', class: ' adultCounter'}, {descr: 'дети', class: ' childCounter'}, {descr: 'младенцы', class: ' babyCounter'}];
+  - var roomValues= [{descr: 'спальни', class: ' bedroomCounter'}, {descr: 'кровати', class: ' bedCounter'}, {descr: 'ванные комнаты', class: ' bathCounter'}];
+  - var counterClsName= 'dropdown__counter';
+
+  
+    case dropdownOptions.dropdownType
+      when 'guest'
+        div(class="dropdown dropdown_guest")
+          .dropdown__input 
+              .dropdown__title Сколько гостей
+              span(class="dropdown__expand-more icon-expand_more")
+          .dropdown__block(hidden)
+            each value in guestValues
+              .dropdown__item 
+                .dropdown__descr= value.descr
+                .dropdown__container
+                  button(class='dropdown__button dropdown__minus dropdown__gray-btn') -
+                  - counterClsName += value.class
+                  div(class= counterClsName) 0
+                  button(class='dropdown__button dropdown__plus') +
+            .dropdown__btn-block
+              button.dropdown__clear-btn(hidden) Очистить
+              button.dropdown__submit-btn Применить
+      when 'room'
+        div(class="dropdown dropdown_room")
+          div(class="dropdown__input dropdown__input_room")
+              div(class="dropdown__title dropdown__title_room") Выберите удобства
+              span(class="dropdown__expand-more icon-expand_more")
+          div(class="dropdown__block dropdown__block_room" hidden)
+            each value in roomValues
+              .dropdown__item 
+                .dropdown__descr= value.descr
+                .dropdown__container
+                  button(class='dropdown__button dropdown__minus dropdown__gray-btn') -
+                  - counterClsName += value.class
+                  div(class= counterClsName) 0
+                  button(class='dropdown__button dropdown__plus') +
+
 
 

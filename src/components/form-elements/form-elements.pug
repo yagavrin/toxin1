@@ -30,7 +30,7 @@ mixin form-elements
         .form-elements__input-container
           .form-elements__subtitle Dropdown
             p default
-          +dropdown
+          +dropdown({dropdownType: 'guest'})
         .form-elements__input-container
           .form-elements__subtitle masked text field
             p default
@@ -94,13 +94,13 @@ mixin form-elements
       div(class='form-elements__block block1')
         .form-elements__subtitle Dropdown
           p default
-        +dropdown  
+        +dropdown({dropdownType: 'room'})
       div(class='form-elements__block block2')
         .form-elements__subtitle Dropdown  
-        +dropdown
+        +dropdown({dropdownType: 'guest'})
       div(class='form-elements__block')
         .form-elements__subtitle Dropdown         
-        +dropdown
+        +dropdown({dropdownType: 'guest'})
     .form-elements__wrapper
       div(class='form-elements__block block1')
         +expandable-checkbox({descr: 'expandable checkbox list'})

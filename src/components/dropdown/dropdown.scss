@@ -1,6 +1,7 @@
 .dropdown {
+    width: 320px;
     &__input {
-        width: 320px;
+        width: 100%;
         height: 44px;
         background: #FFFFFF;
         border: 1px solid rgba(31, 32, 65, 0.5);
@@ -17,7 +18,7 @@
         border: 1px solid rgba(31, 32, 65, 0.5);
         border-top: none;
         border-radius: 0 0 4px 4px;
-        width: 320px;
+        width: 100%;
         height: 158px;
         padding: 6px 6px 0 14px;
     }
@@ -91,6 +92,16 @@
     &__clear-btn {   
         color: rgba(31, 32, 65, 0.5);
     }
+
+    &__title_room {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__block_room {
+        height: auto;
+    }
 }
 
 .icon-expand_more:before {
@@ -98,3 +109,7 @@
     font-size: 8px;
     content: "\e900";
   }
+
+.dropdown_room {
+    width: 266px;
+}
