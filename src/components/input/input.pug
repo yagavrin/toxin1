@@ -1,0 +1,30 @@
+mixin input(inputOptions)
+  -
+    var inputClsName= 'input';
+    var inputTitleClsName= 'input__title'
+
+  case inputOptions.inputType
+    when 'date'
+      div(class= 'input__title input__title_date')= inputOptions.title
+      - inputOptions.clsName? inputClsName += inputOptions.clsName : ''
+      input(class= inputClsName
+        type= "text",
+        name= inputOptions.name
+        placeholder= inputOptions.placeholder
+        )
+    when 'subscribe'
+      form(action="").subscribe
+        input(class= 'input input_subscribe'
+        type= "text",
+        name= inputOptions.name
+        placeholder= inputOptions.placeholder
+        )
+        button.subscribe__btn
+    default
+      div(class= 'input__title')= inputOptions.title
+      - inputOptions.clsName? inputClsName += inputOptions.clsName : ''
+      input(class= inputClsName
+        type= "text",
+        name= inputOptions.name
+        placeholder= inputOptions.placeholder
+        )

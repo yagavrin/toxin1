@@ -1,0 +1,86 @@
+.input {
+  width: 320px;
+  height: 44px;
+  background: #FFFFFF;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  padding-left: 14px;
+  color: rgba(31, 32, 65, 0.25);
+
+  &__title {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #1F2041;
+    margin-bottom: 5px;
+  }
+}
+
+.input::-moz-placeholder {
+    color: rgba(31, 32, 65, 0.25) /* Цвет подсказывающего текста */
+   }
+.input::-webkit-input-placeholder {color: rgba(31, 32, 65, 0.25)}
+.input:-ms-input-placeholder { color: rgba(31, 32, 65, 0.25)}
+.input::-ms-input-placeholder {color: rgba(31, 32, 65, 0.25)}
+.input::placeholder {color: rgba(31, 32, 65, 0.25)} 
+
+.input:hover::-moz-placeholder {color: rgba(31, 32, 65, 0.25)}
+.input:hover::-webkit-input-placeholder {color: rgba(31, 32, 65, 0.75)}
+.input:hover:-ms-input-placeholder { color: rgba(31, 32, 65, 0.75)}
+.input:hover::-ms-input-placeholder {color: rgba(31, 32, 65, 0.75)}
+.input:hover::placeholder {color: rgba(31, 32, 65, 0.75)} 
+
+.input:focus, .input:hover {
+  outline: none;
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.input_date {
+  width: 150px;
+}
+
+.input_subscribe {
+  width: 100%;
+}
+
+.input__title_date::after{
+  float: right;
+  position: relative;
+  top: 35px;
+  left: -16px;
+  font-family: 'Icomoon', sans-serif;
+  font-size: 8px;
+  content: "\e900";
+  font-weight: normal;
+  color: rgba(31, 32, 65, 0.25);
+}
+
+.subscribe { 
+  width: 267px;
+  &__btn {
+    height: 2em;
+    width: 2em;
+    padding: 0;
+    position: relative;
+    float: right;
+    top: -35px;
+    border: none;
+    background: #FFFFFF;
+    margin-right: 13px;
+  }
+}
+
+.subscribe__btn::after {
+  float: right;
+  position: relative;
+  font-family: 'Icomoon', sans-serif;
+  font-size: 19px;
+  content: "\e901";
+  font-weight: normal;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #BC9CFF;
+}

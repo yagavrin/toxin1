@@ -1,10 +1,21 @@
 .dropdown {
     width: 320px;
+    &__title {
+        width: 100%;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        color: #1F2041;
+        margin-bottom: 5px;
+    }
+
     &__input {
         width: 100%;
         height: 44px;
         background: #FFFFFF;
-        border: 1px solid rgba(31, 32, 65, 0.5);
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        color: rgba(31, 32, 65, 0.75);
         box-sizing: border-box;
         border-radius: 4px 4px 0 0;
         font-size: 14px;
@@ -104,10 +115,11 @@
     }
 }
 
-.icon-expand_more:before {
+.dropdown__expand-more::before{
     font-family: 'icomoon', sans-serif;
     font-size: 8px;
     content: "\e900";
+    color: rgba(31, 32, 65, 0.5);
   }
 
 .dropdown_room {

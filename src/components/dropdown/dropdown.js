@@ -30,18 +30,18 @@ export default function dropdown() {
   
   document.addEventListener('click', function(event) { 
     let parent = event.target.closest('.dropdown');
-    let dropdownInput = event.target.closest('.dropdown__input');
-
+    
     if (!parent) {
       return
     }
 
+    let dropdownInput = parent.querySelector('.dropdown__input');
     let dropdownBlock = parent.querySelector('.dropdown__block');
     let dropdownClearBtn = parent.querySelector('.dropdown__clear-btn');
-    let dropdownTitle = parent.querySelector('.dropdown__title');
+    let dropdownSubtitle = parent.querySelector('.dropdown__subtitle');
     let counters = dropdownBlock.querySelectorAll('.dropdown__counter');
 
-    if (dropdownInput) {
+    if (event.target.closest('.dropdown__input')) {
       toggleDropdownBlock()
     }
     
@@ -75,13 +75,18 @@ export default function dropdown() {
 
     }
 
-    if (event.target.classList.contains('dropdown__submit-btn')) {
+    if (dropdownInput && event.target.classList.contains('dropdown__submit-btn')) {
       toggleDropdownBlock();
     }
     
     function toggleDropdownBlock() {
-      dropdownBlock.hasAttribute('hidden') ? 
-      dropdownBlock.removeAttribute('hidden') : dropdownBlock.setAttribute('hidden', '')
+      if (dropdownBlock.hasAttribute('hidden')) {
+        dropdownBlock.removeAttribute('hidden');
+        dropdownInput.style.borderColor= 'rgba(31, 32, 65, 0.5)';
+      } else {
+        dropdownBlock.setAttribute('hidden', '');
+        dropdownInput.style.borderColor= 'rgba(31, 32, 65, 0.25)';
+      } 
     }
 
     function changeInputText(event) {
@@ -102,20 +107,20 @@ export default function dropdown() {
         }
         switch (arr.length) {
           case 1:
-            dropdownTitle.textContent = arr.join();
+            dropdownSubtitle.textContent = arr.join();
             break;
           case 2:
-            dropdownTitle.textContent = arr.join(', ');
+            dropdownSubtitle.textContent = arr.join(', ');
             break;
           case 3:
-            dropdownTitle.textContent = `${arr[0]}, ${arr[1]}...`
+            dropdownSubtitle.textContent = `${arr[0]}, ${arr[1]}...`
             break;
         }
 
       }
     
       if (facilitiesSum == 0) {
-        dropdownTitle.textContent = 'Выберите удобства';
+        dropdownSubtitle.textContent = 'Выберите удобства';
       }
 
     }
@@ -127,12 +132,12 @@ export default function dropdown() {
       }
 
       if (guestSum > 0) {
-        dropdownTitle.textContent = changeWordEnding(guestSum, guestDeclension);
+        dropdownSubtitle.textContent = changeWordEnding(guestSum, guestDeclension);
         dropdownClearBtn.removeAttribute('hidden');
       }
 
       if (guestSum == 0) {
-        dropdownTitle.textContent = 'Сколько гостей';
+        dropdownSubtitle.textContent = 'Сколько гостей';
         dropdownClearBtn.setAttribute('hidden', '');
       }
 

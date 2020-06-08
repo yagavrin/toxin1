@@ -1,16 +1,17 @@
+
 mixin dropdown(dropdownOptions)
 
   - var guestValues= [{descr: 'взрослые', class: ' adultCounter'}, {descr: 'дети', class: ' childCounter'}, {descr: 'младенцы', class: ' babyCounter'}];
   - var roomValues= [{descr: 'спальни', class: ' bedroomCounter'}, {descr: 'кровати', class: ' bedCounter'}, {descr: 'ванные комнаты', class: ' bathCounter'}];
   - var counterClsName= 'dropdown__counter';
 
-  
     case dropdownOptions.dropdownType
       when 'guest'
+        .dropdown__title= dropdownOptions.title
         div(class="dropdown dropdown_guest")
           .dropdown__input 
-              .dropdown__title Сколько гостей
-              span(class="dropdown__expand-more icon-expand_more")
+              .dropdown__subtitle Сколько гостей
+              span.dropdown__expand-more
           .dropdown__block(hidden)
             each value in guestValues
               .dropdown__item 
@@ -24,9 +25,10 @@ mixin dropdown(dropdownOptions)
               button.dropdown__clear-btn(hidden) Очистить
               button.dropdown__submit-btn Применить
       when 'room'
+        .dropdown__title= dropdownOptions.title
         div(class="dropdown dropdown_room")
           div(class="dropdown__input dropdown__input_room")
-              div(class="dropdown__title dropdown__title_room") Выберите удобства
+              div(class="dropdown__subtitle dropdown__subtitletitle_room") Выберите удобства
               span(class="dropdown__expand-more icon-expand_more")
           div(class="dropdown__block dropdown__block_room" hidden)
             each value in roomValues
