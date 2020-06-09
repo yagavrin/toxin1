@@ -2,8 +2,7 @@ mixin button(btnOptions)
 
   case btnOptions.btnType
     when "border"
-      button(class= 'btn btn_border')
-        .btn__container= btnOptions.name
+      button(class= 'btn btn_border')= btnOptions.name
     when "arrow"
       button(class= 'btn btn_arrow')= btnOptions.name
     when "noBorder"

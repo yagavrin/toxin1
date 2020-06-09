@@ -11,19 +11,11 @@
   line-height: 15px;
   text-transform: uppercase;
   text-align: center;
-  transition: all 0.75s;
+  transition: opacity 0.75s;
   padding: 2px;
   outline: none;
-
-  &__container {
-    padding-top: 4px;
-    color: #BC9CFF;
-    width: 100%;
-    height: 100%;
-    background: #FFFFFF;
-    border-radius: 22px;
-    line-height: 30px;
-    background-position: center;
+  &:focus {
+    outline: none;
   }
 
   &_arrow {
@@ -33,6 +25,38 @@
     color: #FFFFFF;
     padding-right: 13px;
     padding-left: 30px;
+    &::after {
+      font-family: 'Icomoon', sans-serif;
+      font-weight: normal;
+      font-size: 17px;
+      content: "\e901";
+      float: right;
+    }
+  }
+
+  &_border {
+    position: relative;
+    $border: 2px;
+    color: #BC9CFF;
+    background: #FFF;
+    background-clip: padding-box; /* !important */
+    border: solid $border transparent; /* !important */
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+      z-index: -1;
+      margin: -$border; /* !important */
+      border-radius: inherit; /* !important */
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    }
+  }
+
+  &_border_toggled {
+    &::before {
+      opacity: 0.5;
+    }
   }
 }
 
@@ -45,17 +69,8 @@
   font-size: 12px;
   color: #BC9CFF;
   text-transform: uppercase;
-  transition: all 0.5s;
+  transition: color 0.5s;
 }
 
-.btn:focus{
-  outline: none;
-}
 
-.btn_arrow::after {
-  font-family: 'Icomoon', sans-serif;
-  font-weight: normal;
-  font-size: 17px;
-  content: "\e901";
-  float: right;
-}
+
