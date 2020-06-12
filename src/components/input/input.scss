@@ -5,7 +5,7 @@
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
   padding-left: 14px;
-  color: rgba(31, 32, 65, 0.25);
+  color: rgba(31, 32, 65, 0.75);
 
   &__title {
     font-weight: bold;
@@ -14,6 +14,35 @@
     text-transform: uppercase;
     color: #1F2041;
     margin-bottom: 5px;
+  }
+
+  &__filter-container {
+    width: 266px;
+  }
+
+  &_filter {
+    width: 100%;
+    background: transparent;
+  }
+
+  &__block {
+    width: 320px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__datepicker {
+    margin-top: 5.5px;
+    position: absolute;
+    left: -100000px;
+    z-index: 100;
+    opacity: 0;
+    transition: all 0.5s;
+  }
+
+  &__datepicker_active {
+    opacity: 1;
+    left: auto;
   }
 }
 
@@ -37,7 +66,8 @@
   color: rgba(31, 32, 65, 0.75);
 }
 
-.input_date {
+.input__date {
+  background: transparent;
   width: 150px;
 }
 
@@ -46,6 +76,7 @@
 }
 
 .input__title_date::after{
+  z-index: -1;
   float: right;
   position: relative;
   top: 35px;

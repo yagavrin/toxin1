@@ -2,16 +2,40 @@ mixin input(inputOptions)
   -
     var inputClsName= 'input';
     var inputTitleClsName= 'input__title'
+    var filterAttributes = {
+      'data-range': "true",
+      'data-date-format': 'dd M',
+      }
 
+  script(defer src= "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
+  script(defer src='/src/components/calendar/datepicker.js')
+  script(defer src='/src/components/calendar/jquery.maskedinput.js')
   case inputOptions.inputType
     when 'date'
-      div(class= 'input__title input__title_date')= inputOptions.title
-      - inputOptions.clsName? inputClsName += inputOptions.clsName : ''
-      input(class= inputClsName
-        type= "text",
-        name= inputOptions.name
-        placeholder= inputOptions.placeholder
-        )
+      .input__block
+        .input__container
+          div(class= 'input__title input__title_date')= inputOptions.firstTitle
+          input(class= 'input input__date first_date'
+            type= "text",
+            name= inputOptions.name
+            placeholder= 'ДД.ММ.ГГГГ'
+            )
+        .input__container
+          div(class= 'input__title input__title_date')= inputOptions.secondTitle
+          input(class= 'input input__date second_date'
+            type= "text",
+            name= inputOptions.name
+            placeholder= 'ДД.ММ.ГГГГ'
+            )
+      .input__datepicker
+    when 'filter-date'
+      .input__filter-container
+        div(class= 'input__title input__title_date')= inputOptions.title
+        input(class= 'input input_filter datepicker-here'
+          type= "text",
+          name= inputOptions.name
+          placeholder= inputOptions.placeholder
+          )&attributes(filterAttributes)
     when 'subscribe'
       form(action="").subscribe
         input(class= 'input input_subscribe'

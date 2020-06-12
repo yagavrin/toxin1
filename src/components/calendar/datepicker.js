@@ -20,8 +20,8 @@
             firstDay: '',
             weekends: [6, 0],
             dateFormat: '',
-            altField: $('.some-block'),
-            altFieldDateFormat: 'dd.mm.yyyy',
+            altField: '',
+            altFieldDateFormat: '',
             toggleSelected: true,
             keyboardNav: true,
 
@@ -44,11 +44,12 @@
             disableNavWhenOutOfRange: true,
 
             multipleDates: false, // Boolean or Number
-            multipleDatesSeparator: ',',
+            multipleDatesSeparator: ' - ',
             range: false,
 
             todayButton: false,
             clearButton: true,
+            submitButton: true,
 
             showEvent: 'focus',
             autoClose: false,
@@ -1479,9 +1480,10 @@
             daysShort: ['Вос','Пон','Вто','Сре','Чет','Пят','Суб'],
             daysMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
             months: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
-            monthsShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
+            monthsShort: ['янв', 'фев', 'мар', 'апр', 'май', 'июн', 'июл', 'авг', 'сен', 'окт', 'ноя', 'дек'],
             today: 'Сегодня',
             clear: 'Очистить',
+            hide: 'Применить',
             dateFormat: 'dd.mm.yyyy',
             timeFormat: 'hh:ii',
             firstDay: 1
@@ -1850,6 +1852,9 @@
             }
             if (this.opts.clearButton) {
                 this._addButton('clear')
+            }
+            if (this.opts.submitButton) {
+                this._addButton('hide')
             }
         },
 
