@@ -39,14 +39,15 @@ mixin form-elements
         .form-elements__input-container
           .form-elements__descr default
           +input({
+            inputType: 'single-date',
             title: 'masked text field',
-            clsName: ' datepicker-here',
+            clsName: ' select_date',
             name: 'date',
             placeholder: 'ДД.ММ.ГГГГ',
           })
         .form-elements__date-container
           +input({
-          inputType: 'date',
+          inputType: 'range-date',
           firstTitle: 'date Dropdown',
           secondTitle: 'date Dropdown',
           name: 'date',
@@ -56,7 +57,7 @@ mixin form-elements
             inputType: 'filter-date',
             clsName: '',
             title: 'filter date dropdown',
-            name: '',
+            name: 'filter-date',
             placeholder: 'Выберите даты проживания',
           })
         .form-elements__date-container
@@ -66,7 +67,6 @@ mixin form-elements
             name: 'Email',
             placeholder: 'Email',
           })
-          <input id="date" maxlength="10" type="text" />
       div(class='form-elements__block block2')
         .form-elements__container
           div(class= 'form-elements__subtitle form-elements__subtitle_with-mr-bottom') Checkbox Buttons

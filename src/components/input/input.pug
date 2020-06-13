@@ -1,18 +1,13 @@
 mixin input(inputOptions)
   -
     var inputClsName= 'input';
-    var inputTitleClsName= 'input__title'
-    var filterAttributes = {
-      'data-range': "true",
-      'data-date-format': 'dd M',
-      }
 
   script(defer src= "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
   script(defer src='/src/components/calendar/datepicker.js')
   script(defer src='/src/components/calendar/jquery.maskedinput.js')
   case inputOptions.inputType
-    when 'date'
-      .input__block
+    when 'range-date'
+      div(class= 'input__block input__block_range')
         .input__container
           div(class= 'input__title input__title_date')= inputOptions.firstTitle
           input(class= 'input input__date first_date'
@@ -27,15 +22,17 @@ mixin input(inputOptions)
             name= inputOptions.name
             placeholder= 'ДД.ММ.ГГГГ'
             )
-      .input__datepicker
+      div(class= 'input__datepicker input__datepicker_range')
     when 'filter-date'
-      .input__filter-container
-        div(class= 'input__title input__title_date')= inputOptions.title
-        input(class= 'input input_filter datepicker-here'
-          type= "text",
-          name= inputOptions.name
-          placeholder= inputOptions.placeholder
-          )&attributes(filterAttributes)
+      div(class= 'input__block input__block_filter')
+        .input__filter-container
+          div(class= 'input__title input__title_date')= inputOptions.title
+          input(class= 'input input_filter'
+            type= "text",
+            name= inputOptions.name
+            placeholder= inputOptions.placeholder
+            )
+      div(class= 'input__datepicker input__datepicker_filter')
     when 'subscribe'
       form(action="").subscribe
         input(class= 'input input_subscribe'
@@ -44,6 +41,16 @@ mixin input(inputOptions)
         placeholder= inputOptions.placeholder
         )
         button.subscribe__btn
+    when 'single-date'
+      div(class= 'input__title')= inputOptions.title
+      - inputOptions.clsName? inputClsName += inputOptions.clsName : ''
+      div(class= 'input__block input__block_single')
+        input(class= inputClsName
+          type= "text",
+          name= inputOptions.name
+          placeholder= inputOptions.placeholder
+          )
+      .input__datepicker
     default
       div(class= 'input__title')= inputOptions.title
       - inputOptions.clsName? inputClsName += inputOptions.clsName : ''
@@ -52,3 +59,4 @@ mixin input(inputOptions)
         name= inputOptions.name
         placeholder= inputOptions.placeholder
         )
+      
