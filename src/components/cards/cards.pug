@@ -2,29 +2,36 @@ include ../search-form/search-form
 include ../booking/booking
 include ../reg-form/reg-form
 include ../sign-in/sign-in
-include ../calendar/calendar
 include ../search-item/search-item
 include ../logo/logo
 
 mixin cards
 
-    .cards
-        +logo_gray
-        .cards__wrapper
-            .cards__block
-                +search-block
-                .cards__container
-                    +reg-form
-            .cards__block    
-                +booking    
-                .cards__container
-                    +sign-in
-            .cards__block
-                +calendar
-                .cards__container
-                    +search-item('888', '9 990', true, false, 5)
-                .cards__container
-                    +search-item('840', '9 900', false, false, 4)
+  +button({
+    btnStyle: 'border',
+    name: 'войти',
+  })
+  .cards
+    +logo_gray
+    .cards__wrapper
+      +button({
+        btnStyle: 'border',
+        name: 'войти',
+      })
+      //- .cards__block
+      //-   +search-block
+      //-   .cards__container
+      //-     +reg-form
+      //- .cards__block    
+      //-   +booking    
+      //-   .cards__container
+      //-     +sign-in
+      //- .cards__block
+      //-   +calendar
+      //-   .cards__container
+      //-     +search-item('888', '9 990', true, false, 5)
+      //-   .cards__container
+      //-     +search-item('840', '9 900', false, false, 4)
 
 
                 

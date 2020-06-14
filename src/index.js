@@ -1,14 +1,19 @@
-
+import jquery from "./components/input/jquery.min";
+jquery();
+import maskedInput from "./components/calendar/jquery.maskedinput";
+maskedInput();
+import datepicker from "./components/calendar/datepicker";
+datepicker();
 import fonts from "./components/fonts/fonts"
 
 import "./scss/style.scss";
+
 
 import searchForm from "./components/search-form/search-form"
 import cards from "./components/cards/cards"
 import regForm from "./components/reg-form/reg-form"
 import buttons from "./components/buttons/buttons"
 import signIn from "./components/sign-in/sign-in"
-import calendar from "./components/calendar/calendar"
 import booking from "./components/booking/booking"
 import searchItem from "./components/search-item/search-item"
 import header from "./components/header/header"

@@ -1,5 +1,6 @@
 .dropdown {
     width: 320px;
+    position: relative;
     &__title {
         width: 100%;
         font-weight: bold;
@@ -26,12 +27,22 @@
     }
 
     &__block {
+        position: absolute;
+        left: -1000000px;
+        opacity: 0;
         border: 1px solid rgba(31, 32, 65, 0.5);
         border-top: none;
         border-radius: 0 0 4px 4px;
         width: 100%;
         height: 158px;
         padding: 6px 6px 0 14px;
+        background: #FFFFFF;
+        transition: all 0.5s;
+    }
+
+    &__block_active {
+        left: auto;
+        opacity: 1;
     }
 
     &__item {

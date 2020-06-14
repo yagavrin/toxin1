@@ -1,8 +1,8 @@
 mixin radio-buttons(radioOptions)
 
     label.custom-radio
-        input(type='radio' name='gender' value='Мужчина').reg__checkbox
+        input(type='radio' name=radioOptions.name value=radioOptions.firstValue).reg__checkbox
         span= radioOptions.firstDescr
     label.custom-radio
-        input(type='radio' name='gender' value='Женщина').reg__checkbox 
+        input(type='radio' name=radioOptions.name value=radioOptions.secondValue).reg__checkbox 
         span= radioOptions.secondDescr

@@ -1,5 +1,7 @@
+import './datepicker.scss'
 
-
+export default function datepicker() {
+    
 ;(function (window, $, undefined) { ;(function () {
     var VERSION = '2.2.3',
         pluginName = 'datepicker',
@@ -2241,3 +2243,4 @@
     };
 })();
  })(window, jQuery);
+}

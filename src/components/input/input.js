@@ -1,16 +1,7 @@
 import './input.scss'
 
 export default function input() {
-  // function loadScript(src) {
-  //   let mainScript = document.querySelector('script');
-  //   let script = document.createElement('script');
-  //   script.src = src;
-  //   script.async = false;
-  //   mainScript.before(script);
-  // }
-  // loadScript('/src/components/calendar/jquery.maskedinput.js');
-  // loadScript('/src/components/calendar/datepicker.js');
-  // loadScript("https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js");
+  
   document.addEventListener('DOMContentLoaded', function() {
 
     
@@ -21,7 +12,6 @@ export default function input() {
       $("[name='filter-date']").mask("99.99.9999 - 99.99.9999", {placeholder: "ДД.ММ.ГГГГ - ДД.ММ.ГГГГ", 
       completed: function() {
           filterDate = this.val();
-          console.log(filterDate.length)
         }  
       });
       
@@ -49,6 +39,7 @@ export default function input() {
       });
 
       document.addEventListener('click', function(event) {
+
         let input = event.target.closest('.input__block');
         if (input) {
           input.nextElementSibling.classList.add('input__datepicker_active')
@@ -56,10 +47,16 @@ export default function input() {
     
         if (event.target.closest('[data-action="hide"]')) {
           event.target.closest('.input__datepicker').classList.remove('input__datepicker_active')
+
         }
       })
 
       document.addEventListener('keyup', function(event) {
+        selectOneDate(event);
+        selectTwoDates(event);
+      })
+
+      document.addEventListener('input', function(event) {
         selectOneDate(event);
         selectTwoDates(event);
       })

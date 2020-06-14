@@ -1,4 +1,5 @@
-/*
+export default function maskedInput() {
+    /*
     jQuery Masked Input Plugin
     Copyright (c) 2007 - 2015 Josh Bush (digitalbush.com)
     Licensed under the MIT license (http://digitalbush.com/projects/masked-input-plugin/#license)
@@ -180,3 +181,4 @@
         }
     });
 });
+}

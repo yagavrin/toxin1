@@ -1,10 +1,13 @@
 mixin button(btnOptions)
 
-  case btnOptions.btnType
+  case btnOptions.btnStyle
     when "border"
       button(class= 'btn btn_border')= btnOptions.name
     when "arrow"
-      button(class= 'btn btn_arrow')= btnOptions.name
+      button(
+      class= 'btn btn_arrow'
+      type= btnOptions.type
+      )= btnOptions.name
     when "noBorder"
       button(class= 'no-border-btn')= btnOptions.name
     default

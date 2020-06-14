@@ -12,18 +12,18 @@ mixin dropdown(dropdownOptions)
           .dropdown__input 
               .dropdown__subtitle Сколько гостей
               span.dropdown__expand-more
-          .dropdown__block(hidden)
+          .dropdown__block()
             each value in guestValues
               .dropdown__item 
                 .dropdown__descr= value.descr
                 .dropdown__container
-                  button(class='dropdown__button dropdown__minus dropdown__gray-btn') -
+                  button(class='dropdown__button dropdown__minus dropdown__gray-btn' type='button') -
                   - counterClsName += value.class
                   div(class= counterClsName) 0
-                  button(class='dropdown__button dropdown__plus') +
+                  button(class='dropdown__button dropdown__plus' type='button') +
             .dropdown__btn-block
-              button.dropdown__clear-btn(hidden) Очистить
-              button.dropdown__submit-btn Применить
+              button(type='button' hidden).dropdown__clear-btn Очистить
+              button(type='button').dropdown__submit-btn Применить
       when 'room'
         .dropdown__title= dropdownOptions.title
         div(class="dropdown dropdown_room")
@@ -35,10 +35,10 @@ mixin dropdown(dropdownOptions)
               .dropdown__item 
                 .dropdown__descr= value.descr
                 .dropdown__container
-                  button(class='dropdown__button dropdown__minus dropdown__gray-btn') -
+                  button(class='dropdown__button dropdown__minus dropdown__gray-btn' type='button') -
                   - counterClsName += value.class
                   div(class= counterClsName) 0
-                  button(class='dropdown__button dropdown__plus') +
+                  button(class='dropdown__button dropdown__plus' type='button') +
 
 
 

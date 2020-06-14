@@ -80,12 +80,12 @@ export default function dropdown() {
     }
     
     function toggleDropdownBlock() {
-      if (dropdownBlock.hasAttribute('hidden')) {
-        dropdownBlock.removeAttribute('hidden');
-        dropdownInput.style.borderColor= 'rgba(31, 32, 65, 0.5)';
-      } else {
-        dropdownBlock.setAttribute('hidden', '');
+      if (dropdownBlock.classList.contains('dropdown__block_active')) {
+        dropdownBlock.classList.remove('dropdown__block_active');
         dropdownInput.style.borderColor= 'rgba(31, 32, 65, 0.25)';
+      } else {
+        dropdownBlock.classList.add('dropdown__block_active');
+        dropdownInput.style.borderColor= 'rgba(31, 32, 65, 0.5)';
       } 
     }
 

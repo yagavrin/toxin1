@@ -1,27 +1,26 @@
+include ../input/input
+include ../dropdown/dropdown
 include ../buttons/buttons
 
 mixin search-block
 
-    .search-room
-        h1.search-room__title Найдём номера под ваши пожелания
-        form.search-room__form
-            +search-form
-            .search-room__block
-                +buttonArrow('btn btn_arrow', 'Подобрать номер')
- 
-mixin search-form
-
-    .search-room__wrapper
-        .search-room__container
-            .search-room__subtitle Прибытие
-            input(type="date").search-room__date-arrival
-        .search-room__container
-            .search-room__subtitle Выезд
-            input(type="date").search-room__date-departure
-    .search-room__subtitle Гости
-    select.search-room__guests 
-        option(disabled selected) Сколько гостей
-        option Взрослые
-        option Дети
-        option Младенцы
+  .search-room
+    h1.search-room__title Найдём номера под ваши пожелания
+    form().search-room__form
+      .search-room__block1
+        +input({
+          inputType: 'range-date',
+          firstTitle: 'прибытие',
+          secondTitle: 'выезд',
+          name: 'date',
+        })
+      +dropdown({
+        dropdownType: 'guest',
+        title: 'гости',
+      })
+      .search-room__block2
+        +button({
+          btnStyle: 'arrow',
+          name: 'подобрать номер',
+        })
         

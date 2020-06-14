@@ -9,8 +9,9 @@ export default function rangeSlider () {
   let top = document.querySelector('.range-slider__top');
   const upperLimit = 16000;
   let newLeft;
-  
+  if (!startPoint) return;
   startPoint.onmousedown = function(event) {
+    
     event.preventDefault();
     let shiftX = event.clientX - startPoint.getBoundingClientRect().left;
 

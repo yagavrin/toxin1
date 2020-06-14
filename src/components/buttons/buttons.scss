@@ -53,6 +53,29 @@
     }
   }
 
+  // &_border {
+  //   z-index: 0;
+  //   $border: 2px;
+  //   position: relative;
+  //   margin: -$border; /* !important */
+  //    /* !important */
+  //   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+
+  //   &::after {
+      
+  //     color: #BC9CFF;
+  //     background: #FFF;
+  //     background-clip: padding-box; /* !important */
+  //     border: solid $border transparent; /* !important */
+  //     content: '';
+  //     position: absolute;
+  //     border-radius: inherit;
+  //     top: 0; right: 0; bottom: 0; left: 0;
+  //     z-index: -1;
+     
+  //   }
+  // }
+
   &_border_toggled {
     &::before {
       opacity: 0.5;
