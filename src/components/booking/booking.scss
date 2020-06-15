@@ -1,80 +1,84 @@
 .booking {
-    width: 380px;
-    height: 511px;
-    background: #FFFFFF;
-    border: 1px solid rgba(0, 0, 0, 0.12);
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    padding: 40px 30px 30px 30px;
-    font-weight: normal;
-    font-size: 14px;
+  width: 380px;
+  height: 511px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 40px 30px 30px 30px;
+  font-weight: normal;
+  font-size: 14px;
+  color: rgba(31, 32, 65, 0.75);
+  span {
+    font-weight: bold;
+    font-size: 19px;
+
+    color: #1F2041;
+  }
+
+  &__calculate {
+    margin-top: 20px;
+    height: 179px;
     line-height: 24px;
-    color: rgba(31, 32, 65, 0.75);
+  }
+
+  &__search-container {
+    margin-bottom: 7px;
+  }
+
+  &__dropdown-container {
+    margin-top: 20px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  &__info {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    border-radius: 50%;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 18px;
+    color: rgba(31, 32, 65, 0.25);
+  }
+
+  &__service-charge {
+    display: flex;
+  }
+
+  &__add-services {
+    display: flex;
+  }
+
+  &__divider {
+    display: inline-block;
+    flex-shrink: 0.5;
+    flex-basis: auto;
+    width: 174px;
+    height: 18px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-bottom: 1px dashed rgba(31, 32, 65, 0.25);
+  }
+
+  &__result {
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin-top: 44px;
+  }
+
+  &__total-sum {
     span {
-        font-weight: bold;
-        font-size: 19px;
-        line-height: 24px;
-        color: #1F2041;
+      font-family: 'Open Sans', sans-serif;
     }
-
-    &__search-container {
-        margin-bottom: 7px;
-    }
-
-    &__calculate {
-        margin-top: 20px;
-        height: 179px;
-    }
-
-    &__container {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 10px;
-    }
-
-    &__info {
-        width: 20px;
-        height: 20px;
-        margin-left: 5px;
-        border-radius: 50%;
-        border: 1px solid rgba(31, 32, 65, 0.25);
-        text-align: center;
-        font-weight: bold;
-        font-size: 12px;
-        line-height: 18px;
-        color: rgba(31, 32, 65, 0.25);
-    }
-
-    &__service-charge {
-        display: flex;
-    }
-
-    &__add-services {
-        display: flex;
-    }
-
-    &__divider {
-        display: inline-block;
-        flex-shrink: 0.5;
-        flex-basis: auto;
-        width: 174px;
-        height: 18px;
-        margin-left: 5px;
-        margin-right: 5px;
-        border-bottom: 1px dashed rgba(31, 32, 65, 0.25);
-    }
-
-    &__result {
-        font-family: 'Open Sans', sans-serif;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: nowrap;
-        margin-top: 44px;
-    }
-
-    &__total-sum {
-        span {
-            font-family: 'Open Sans', sans-serif;
-        }
-    }
+  }
 }

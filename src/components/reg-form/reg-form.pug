@@ -8,33 +8,36 @@ mixin reg-form
   .reg
     .reg__title Регистрация аккаунта
     form.reg__form
-      +input({placeholder: 'Имя'})
-      +input({placeholder: 'Фамилия'})
-      .reg__container
-        +radio-buttons({
-            firstDescr: 'Мужчина',
-            secondDescr: 'Женщина',
-            name: 'gender',
-        })
-      +input({
-        inputType: 'single-date',
-        title: 'Дата рождения',
-        placeholder: 'ДД.ММ.ГГГГ',
-        clsName: ' select_date',
-        name: 'date',
-        })
-      +input({title: 'Данные для входа в сервис', placeholder: 'Email'})
-      +input({placeholder: 'Пароль'})
-      div(class= 'reg__container reg__container_spec-offer')
+      .reg__input-container
+        +input({placeholder: 'Имя'})
+      .reg__input-container
+        +input({placeholder: 'Фамилия'})
+      +radio-buttons({
+          firstDescr: 'Мужчина',
+          secondDescr: 'Женщина',
+          name: 'gender',
+      })
+      .reg__b-day-container
+        +input({
+          inputType: 'single-date',
+          title: 'Дата рождения',
+          placeholder: 'ДД.ММ.ГГГГ',
+          clsName: ' select_date',
+          name: 'date',
+          })
+      .reg__input-container
+        +input({title: 'Данные для входа в сервис', placeholder: 'Email'})
+      .reg__input-container
+        +input({placeholder: 'Пароль'})
+      .reg__toggle-container  
         +toggle({descr: 'Получать спецпредложения'})
       +button({
         btnStyle: 'arrow',
         name: 'Перейти к оплате',
       })
-    .reg__sign-in
-      div(class= 'reg__container reg__container_sign-in')
-        p Уже есть аккаунт на Toxin
-    +button({
-          btnStyle: 'border',
-          name: 'войти',
-        })
+    .reg__sign-in-container
+      p Уже есть аккаунт на Toxin
+      +button({
+        btnStyle: 'border',
+        name: 'войти',
+      })

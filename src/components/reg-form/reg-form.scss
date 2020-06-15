@@ -1,92 +1,42 @@
 .reg {
-    padding: 40px 30px 30px 30px;
-    width: 380px;
-    height: 646px;
-    background: #FFFFFF;
-    border: 1px solid rgba(0, 0, 0, 0.12);
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
+  padding: 40px 30px 30px 30px;
+  width: 380px;
+  height: 646px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 
-    &__container {
-        display: flex;
-        margin-bottom: 7px;
-        p {
-            font-weight: normal;
-            font-size: 14px;
-            line-height: 22px;
-            color: #000000;
-        }
-    }
+  &__title {
+    margin-bottom: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    color: #1F2041;
+  }
 
-    &__container_spec-offer {
-        margin-bottom: 12px;
-        p {
-            margin-left: 10px;
-            color: rgba(31, 32, 65, 0.75);
-        }
-    }
+  &__input-container {
+    margin-bottom: 10px;
+  }
 
-    &__container_sign-in {
-        margin-top:25px;
-        p {
-            margin-top:9px;
-            margin-right: 43px;
-        }
+  &__b-day-container {
+    margin-top: 17.5px;
+    margin-bottom: 20px;
+  }
+  &__toggle-container {
+    margin-bottom: 18px;
+  }
+  &__sign-in-container {
+    display: flex;
+    margin-top: 30px;
+    p {
+      font-size: 14px;
+      padding-top: 10px;
+      margin-right: 34px;
     }
+  }
 
-    &__title {
-        margin-bottom: 20px;
-        font-family: 'Open Sans', sans-serif;
-        font-weight: bold;
-        font-size: 24px;
-        line-height: 30px;
-        color: #1F2041;
-    }
-
-    &__subtitle {
-        margin-bottom: 5px;
-        font-weight: bold;
-        font-size: 12px;
-        line-height: 15px;
-        text-transform: uppercase;
-        color: #1F2041;
-    }
-
-    &__form {
-        // // input {
-        // //     font-weight: normal;
-        // //     font-size: 14px;
-        // //     line-height: 18px;
-        // //     color: rgba(31, 32, 65, 0.25);
-        // }
-        p {
-            margin-bottom: 5px;
-        }
-    }
-
-    &__input {
-        width: 100%;
-        height: 44px;
-        margin-bottom: 10px;
-        border: 1px solid rgba(31, 32, 65, 0.25);
-        border-radius: 4px;
-        padding-left: 15px;
-    }
-
-    &__input_margin-bottom {
-        margin-bottom: 20px;
-    }
-
-    &__checkbox {
-        width: 20px;
-        height: 20px;
-        border: 1px solid #BC9CFF;
-        border-radius: 10px;
-    }
-
-    &__sign-in {
-        margin-top: 30px;
-    }
 }
 
 

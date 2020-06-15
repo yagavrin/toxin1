@@ -7,23 +7,15 @@ include ../logo/logo
 
 mixin cards
 
-  +button({
-    btnStyle: 'border',
-    name: 'войти',
-  })
   .cards
     +logo_gray
     .cards__wrapper
-      +button({
-        btnStyle: 'border',
-        name: 'войти',
-      })
-      //- .cards__block
-      //-   +search-block
-      //-   .cards__container
-      //-     +reg-form
-      //- .cards__block    
-      //-   +booking    
+      .cards__block
+        +search-block
+        .cards__container
+          +reg-form
+      .cards__block
+        +booking
       //-   .cards__container
       //-     +sign-in
       //- .cards__block

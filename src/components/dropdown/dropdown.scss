@@ -124,15 +124,29 @@
     &__block_room {
         height: auto;
     }
+
+    &__expand-more {
+        line-height: 1;
+        &::before{
+            font-family: 'icomoon', sans-serif;
+            font-size: 8px;
+            content: "\e900";
+            color: rgba(31, 32, 65, 0.5);
+          }
+    }
+
+    &_room {
+        width: 266px;
+    }
 }
 
-.dropdown__expand-more::before{
-    font-family: 'icomoon', sans-serif;
-    font-size: 8px;
-    content: "\e900";
-    color: rgba(31, 32, 65, 0.5);
-  }
+// .dropdown__expand-more::before{
+//     font-family: 'icomoon', sans-serif;
+//     font-size: 8px;
+//     content: "\e900";
+//     color: rgba(31, 32, 65, 0.5);
+//   }
 
-.dropdown_room {
-    width: 266px;
-}
+// .dropdown_room {
+    
+// }

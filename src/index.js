@@ -47,4 +47,5 @@ dropdown();
 expandableCheckbox ();
 pagination();
 input();
+booking();
 

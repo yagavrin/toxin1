@@ -21,7 +21,7 @@ export default function input() {
           $('.select_date').val(fd)
         }
       })
-
+      
       $('.input__datepicker_range').datepicker({
         range: true,
         onSelect: function (fd, d, picker) { 
@@ -134,5 +134,5 @@ export default function input() {
       }
     }
   })
-
+  
 }

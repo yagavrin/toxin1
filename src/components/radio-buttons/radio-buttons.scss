@@ -1,7 +1,7 @@
 .custom-radio {
     margin: 0;
     margin-right: 19px;
-    padding-top: 1px;
+    line-height: 0;
 }
 
 .custom-radio>input {
@@ -11,6 +11,7 @@
 }
   
 .custom-radio>span {
+    font-size: 14px;
     display: inline-flex;
     align-items: center;
     user-select: none;
