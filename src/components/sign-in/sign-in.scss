@@ -1,53 +1,41 @@
 .sign-in {
-    width: 380px;
-    height: 358px;
-    padding: 40px 30px 30px 30px;
-    background: #FFFFFF;
-    border: 1px solid rgba(0, 0, 0, 0.12);
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
+  width: 380px;
+  height: 358px;
+  padding: 40px 30px 30px 30px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 
-    &__container {
-        display: flex;
-        margin-top: 30px;
-        p {
-            margin-top: 12px;
-            margin-right: 64px;
-            font-weight: normal;
-            font-size: 14px;
-            line-height: 18px;
-            display: flex;
-            align-items: center;
-            color: #000000;
-        }
-    }
+  &__input-container {
+    margin-bottom: 10px;
+  }
 
-    &__container_btn {
-        margin-top: 10px;
+  &__reg-container {
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+    p {
+    font-size: 14px;
+    padding-top: 10px;
+    margin-right: 34px;
     }
+  }
 
-    &__form {
-        input {
-            width: 320px;
-            height: 44px;
-            border: 1px solid rgba(31, 32, 65, 0.25);
-            box-sizing: border-box;
-            border-radius: 4px;
-            padding-left: 15px;
-            margin-bottom: 10px;
-            font-weight: normal;
-            font-size: 14px;
-            line-height: 24px;
-            color: rgba(31, 32, 65, 0.25);
-        }
-    }
+  &__btn-container {
+    margin-top: 20px;
+  }
 
-    &__title {
-        font-family: 'Open Sans', sans-serif;
-        font-weight: bold;
-        font-size: 24px;
-        line-height: 30px;
-        color: #1F2041;
-        margin-bottom: 20px;
-    }
+  &__form {
+
+  }
+
+  &__title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    color: #1F2041;
+    margin-bottom: 20px;
+  }
 }

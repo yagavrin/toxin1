@@ -47,10 +47,10 @@ export default function booking () {
         daysCell.textContent = changeWordEnding(daysCount, daysDeclension);
         let price = extractNum(priceCell)
         totalPrice.textContent = (price * daysCount).toLocaleString('ru') + '₽';
-        totalSum.textContent = price * daysCount - 
+        totalSum.textContent = (price * daysCount - 
         extractNum(serviceChargeSale) +
         extractNum(serviceCharge) + 
-        extractNum(additionalServices);
+        extractNum(additionalServices)).toLocaleString('ru') + '₽';
       }
     }
   }

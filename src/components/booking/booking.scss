@@ -9,12 +9,6 @@
   font-weight: normal;
   font-size: 14px;
   color: rgba(31, 32, 65, 0.75);
-  span {
-    font-weight: bold;
-    font-size: 19px;
-
-    color: #1F2041;
-  }
 
   &__calculate {
     margin-top: 20px;
@@ -48,7 +42,7 @@
     line-height: 18px;
     color: rgba(31, 32, 65, 0.25);
   }
-
+  
   &__service-charge {
     display: flex;
   }
@@ -58,27 +52,28 @@
   }
 
   &__divider {
-    display: inline-block;
-    flex-shrink: 0.5;
-    flex-basis: auto;
-    width: 174px;
+    display: flex;
+    flex: 1 1 auto;
+    // flex-shrink: 0.5;
+    // flex-basis: auto;
+    // width: 174px;
     height: 18px;
     margin-left: 5px;
     margin-right: 5px;
-    border-bottom: 1px dashed rgba(31, 32, 65, 0.25);
+    border-bottom: 1px dotted rgba(31, 32, 65, 0.25);
   }
 
-  &__result {
-    font-family: 'Open Sans', sans-serif;
+  &__result-block {
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
     margin-top: 44px;
   }
 
-  &__total-sum {
-    span {
-      font-family: 'Open Sans', sans-serif;
-    }
+  &__result, &__total-sum {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 19px;
+    color: #1F2041;
   }
 }

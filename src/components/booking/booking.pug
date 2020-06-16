@@ -3,42 +3,39 @@ include ../search-form/search-form
 include ../buttons/buttons
 
 mixin booking
-    .booking
-        .booking__search-container
-            +search-item__room-number('888', '9 900', true, true)
-        +input({
-          inputType: 'range-date',
-          firstTitle: 'прибытие',
-          secondTitle: 'выезд',
-          name: 'date',
-        })
-        .booking__dropdown-container
-            +dropdown({
-                dropdownType: 'guest',
-                title: 'гости',
-            })
-        .booking__calculate
-            .booking__container
-                .booking__price 9 990₽ х 
-                    span.booking__days-count 1 сутки 
-                .booking__total-price 9 990₽
-            .booking__container
-                .booking__service-charge Сбор за услуги: cкидка 
-                    span.booking__service-charge-sale 2 179₽
-                    .booking__info i
-                .booking__service-charge-price 0₽
-            .booking__container
-                .booking__add-services Сбор за дополнительные услуги
-                    .booking__info i
-                .booking__add-services-price 300₽
-            .booking__result
-                span Итого
-                .booking__divider
-                .booking__total-sum 9 990₽
-                    span 
-        +button({
-          btnStyle: 'arrow',
-          name: 'забронировать',
-        })
-
-        
+  .booking
+    .booking__search-container
+      +search-item__room-number('888', '9 900', true, true)
+    +input({
+      inputType: 'range-date',
+      firstTitle: 'прибытие',
+      secondTitle: 'выезд',
+      name: 'date',
+    })
+    .booking__dropdown-container
+      +dropdown({
+        dropdownType: 'guest',
+        title: 'гости',
+      })
+    .booking__calculate
+      .booking__container
+        .booking__price 9 990₽ х 
+          span.booking__days-count 1 сутки 
+        .booking__total-price 9 990₽
+      .booking__container
+        .booking__service-charge Сбор за услуги: cкидка 
+          span.booking__service-charge-sale 2 179₽
+          .booking__info i
+        .booking__service-charge-price 0₽
+      .booking__container
+        .booking__add-services Сбор за дополнительные услуги
+          .booking__info i
+        .booking__add-services-price 300₽
+      .booking__result-block
+        .booking__result Итого
+        .booking__divider
+        .booking__total-sum 9 990₽
+    +button({
+      btnStyle: 'arrow',
+      name: 'забронировать',
+    })

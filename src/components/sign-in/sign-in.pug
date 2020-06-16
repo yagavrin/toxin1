@@ -1,14 +1,22 @@
 include ../buttons/buttons
+include ../input/input
 
 mixin sign-in
 
-    .sign-in
-        .sign-in__title Войти
-        .sign-in__form
-            input(type="text" value='Email')
-            input(type="text" value='Пароль')
-            .sign-in__container_btn
-                +buttonArrow('btn btn_arrow', 'войти')
-        .sign-in__container
-            p Нет аккаунта на Toxin?
-            +button('btn', 'Создать')
+  .sign-in
+    .sign-in__title Войти
+    form(action='').sign-in__form
+      .sign-in__input-container
+        +input({placeholder: 'Email'})
+      +input({placeholder: 'Пароль'})
+      .sign-in__btn-container
+        +button({
+          btnStyle: 'arrow',
+          name: 'войти',
+        })
+    .sign-in__reg-container
+      p Нет аккаунта на Toxin?
+      +button({
+        btnStyle: 'border',
+        name: 'создать',
+      })
