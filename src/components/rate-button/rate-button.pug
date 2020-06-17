@@ -1,21 +1,17 @@
 mixin rate-button(starsCount)
-    -
-        var i = 0
-        var n = 0
-        var emptyStarsCount = 5 - starsCount;
+  -
+    var emptyStarsCount = 5 - starsCount;
 
-    .rate-button
-        while i < starsCount
-            .stars= i++
-                +rating-star
-        while n < emptyStarsCount
-            .stars= n++
-                +empty-star
+  .rate-button
+    - for (var i = 0; i < starsCount; i++)
+      +star
+    - for (var i = 0; i < emptyStarsCount; i++)
+      +border-star
 
-mixin rating-star
+mixin star
 
-    img(src="/src/components/search-item/star.svg", alt='star')
+  .rate-button__star
 
-mixin empty-star
+mixin border-star
 
-    img(src="/src/components/search-item/star_border.svg", alt='empty_star')
+  .rate-button__border-star

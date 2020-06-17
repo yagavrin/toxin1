@@ -5,7 +5,12 @@ include ../buttons/buttons
 mixin booking
   .booking
     .booking__search-container
-      +search-item__room-number('888', '9 900', true, true)
+      +search-item__room-number({
+        roomNumber: '888',
+        roomPrice: '9 990',
+        isLux: true,
+        isBooking: true,
+      })
     +input({
       inputType: 'range-date',
       firstTitle: 'прибытие',

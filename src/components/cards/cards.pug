@@ -18,12 +18,23 @@ mixin cards
         +booking
         .cards__container
           +sign-in
-      //- .cards__block
-      //-   +calendar
-      //-   .cards__container
-      //-     +search-item('888', '9 990', true, false, 5)
-      //-   .cards__container
-      //-     +search-item('840', '9 900', false, false, 4)
+      .cards__block
+        //- +calendar
+        .cards__container
+          +search-item({
+            src: "/src/components/search-item/image.jpg",
+            roomNumber: '888',
+            roomPrice: '9 990',
+            isLux: true,
+            starsCount: 5,
+            reviewsCount: 145})
+        .cards__container
+          +search-item({
+            src: "/src/components/search-item/image_2.jpg",
+            roomNumber: '840',
+            roomPrice: '9 900',
+            starsCount: 4,
+            reviewsCount: 65})
 
 
                 

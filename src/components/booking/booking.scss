@@ -11,13 +11,13 @@
   color: rgba(31, 32, 65, 0.75);
 
   &__calculate {
-    margin-top: 20px;
+    margin-top: 18px;
     height: 179px;
     line-height: 24px;
   }
 
   &__search-container {
-    margin-bottom: 7px;
+    margin-bottom: 13px;
   }
 
   &__dropdown-container {
@@ -54,9 +54,6 @@
   &__divider {
     display: flex;
     flex: 1 1 auto;
-    // flex-shrink: 0.5;
-    // flex-basis: auto;
-    // width: 174px;
     height: 18px;
     margin-left: 5px;
     margin-right: 5px;

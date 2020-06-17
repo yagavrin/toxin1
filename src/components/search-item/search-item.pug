@@ -1,32 +1,48 @@
 include ../rate-button/rate-button
 
-mixin search-item(roomNumber, roomPrice, isLux, isLarge, starsCount)
+mixin search-item(searchItemOpts)
 
-    .search-item
-        .search-item__slider
-            img(src="/src/components/search-item/image.jpg", alt="room")
-        .search-item__block
-            +search-item__room-number(roomNumber, roomPrice, isLux, isLarge)
-            .search-item__divider
-            .search-item__container
-                +rate-button
-                .search-item__room-reviews <span>145</span> отзывов
+  .search-item
+    .search-item__slider(id='carousel')
+      button.search-item__nav-left
+      .search-item__gallery
+        ul
+          li.search-item__li
+            img(src=searchItemOpts.src, alt="hotel-room")
+          li.search-item__li
+            img(src=searchItemOpts.src, alt="hotel-room")
+          li.search-item__li
+            img(src=searchItemOpts.src, alt="hotel-room")
+          li.search-item__li
+            img(src=searchItemOpts.src, alt="hotel-room")
+      button.search-item__nav-right
+      .search-item__nav-dots-block
+        div(class= 'search-item__nav-dot search-item__nav-dot_active')
+        - for (i = 0; i < 3; i++)
+          .search-item__nav-dot
+    .search-item__block
+      +search-item__room-number(searchItemOpts)
+      .search-item__divider
+      .search-item__container
+        +rate-button(searchItemOpts.starsCount)
+        .search-item__room-reviews-count <span>#{searchItemOpts.reviewsCount}</span> Отзывов
 
-mixin search-item__room-number(roomNumber, roomPrice, isLux, isBooking)
-    -
-        var clsNameLux = 'search-item__lux'
-        var clsNameRoom = 'search-item__room'
-        var clsNameRoomNbr = 'search-item__room-number'
-        var clsNameRoomPrice = 'search-item__room-price'
-        clsNameLux += isLux ? '' : ' hidden'
-        clsNameRoom += isBooking ? ' increaseLineHeight' : ''
-        clsNameRoomPrice += isBooking ? ' increaseLineHeight' : ''
-        clsNameLux += isBooking ? ' increaseLineHeight' : ''
-        clsNameRoomNbr += isBooking ? ' large' : ''
-    .search-item__container
-        div(class= clsNameRoom) № 
-            p(class= clsNameRoomNbr) #{roomNumber}
-            div(class = clsNameLux) люкс
-        div(class= clsNameRoomPrice) <span>#{roomPrice}₽</span> в сутки
+mixin search-item__room-number(searchItemOpts)
+  -
+    var clsNameLux = 'search-item__lux'
+    var clsNameRoom = 'search-item__room'
+    var clsNameRoomNbr = 'search-item__room-number'
+    var clsNameRoomPrice = 'search-item__room-price'
+    clsNameLux += searchItemOpts.isLux ? '' : ' hidden'
+    clsNameRoom += searchItemOpts.isBooking ? ' increaseLineHeight' : ''
+    clsNameRoomPrice += searchItemOpts.isBooking ? ' increaseLineHeight' : ''
+    clsNameLux += searchItemOpts.isBooking ? ' increaseLineHeight' : ''
+    clsNameRoomNbr += searchItemOpts.isBooking ? ' large' : ''
+  .search-item__container
+    .search-item__room-nbr-container
+      div(class= clsNameRoom) № 
+      div(class= clsNameRoomNbr)= searchItemOpts.roomNumber
+      div(class = clsNameLux) люкс
+    div(class= clsNameRoomPrice) <span>#{searchItemOpts.roomPrice}₽</span> в сутки
     
 

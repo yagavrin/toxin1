@@ -48,4 +48,5 @@ expandableCheckbox ();
 pagination();
 input();
 booking();
+searchItem();
 

@@ -1,88 +1,192 @@
 
 .search-item {
-    background: #FFFFFF;
+  background: #FFFFFF;
+  width: 270px;
+  height: 257px;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  border-radius: 4px;
+
+  &__slider {
+    position: relative;
+    img {
+      width: 270px;
+      border-radius: 4px 4px 0 0 ;
+      display: block;
+    }
+  }
+
+  &__gallery {
     width: 270px;
-    height: 257px;
-    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-    border-radius: 4px;
-
-    &__block {
-        padding: 20px;
-        padding-top: 24px;
+    overflow: hidden;
+    ul {
+      width: 9999px;
+      list-style: none;
+      transition: margin-left 250ms;
+      margin: 0;
+      padding: 0;
+      font-size: 0;
     }
 
-    &__container {
-        display: flex;
-        justify-content: space-between;
+    li {
+      display: inline-block;
     }
+  }
 
-    &__divider {
-        height: 1px;
-        background: rgba(31, 32, 65, 0.1);
-        margin-bottom: 10px;
-    }
+  &__nav-left {
+    position: absolute;
+    top: 63px;
+    left: -100000px;
+    transform: rotate(90deg);
+    opacity: 0;
+    transition: opacity 0.5s;
+    background: none;
+    border: none;
+  }
 
-    &__room {
-        display: flex;
-        font-family: 'Open Sans', sans-serif;
-        font-weight: bold;
-        font-size: 14px;
-        line-height: 17px;
-        color: #1F2041;
-        margin-bottom: -3px;
+  &__nav-left_active {
+    left: 18px;
+    opacity: 1;
+    &::before {
+      font-family: 'Icomoon', sans-serif;
+      font-size: 8px;
+      content: '\e900';
+      color: #FFFFFF;
+      
     }
-        
-    &__room-number {
-        font-family: 'Open Sans', sans-serif;
-        padding-left: 7px;
-        font-size: 19px;
-        font-weight: bold;
-    }
+  }
 
-    &__lux {
-        margin-left: 5px;
-        font-weight: bold;
-        font-size: 12px;
-        line-height: 20px;
-        text-transform: uppercase;
-        color: #BC9CFF;
-    }
+  &__nav-right {
+    position: absolute;
+    top: 63px;
+    left: -100000px;
+    transform: rotate(-90deg);
+    opacity: 0;
+    transition: opacity 0.5s;
+    background: none;
+    border: none;
+  }
 
-    &__room-price {
-        font-size: 14px;
-        line-height: 19px;
-        color: rgba(31, 32, 65, 0.5);
-        span {
-            font-size: 14px;
-            font-weight: bold;
-            color: rgba(31, 32, 65, 0.5);
-        }
+  &__nav-right_active {
+    left: auto;
+    right: 18px;
+    opacity: 1;
+    &::before {
+      font-family: 'Icomoon', sans-serif;
+      font-size: 8px;
+      content: '\e900';
+      color: #FFFFFF;
+      
     }
+  }
 
-    
+  &__nav-dots-block {
+    bottom: 15px;
+    right: 15px;
+    position: absolute;
+    display: flex;
+    width: 41px;
+    justify-content: space-between;
+  }
 
-    &__room-reviews {
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 18px;
-        text-align: right;
-        color: rgba(31, 32, 65, 0.5);
-        span {
-            font-weight: bold;
-        }
+  &__nav-dot_active {
+    border: none;
+    background: #FFFFFF;
+  }
+
+  &__nav-dot {
+    border-radius: 50%;
+    width: 7.5px;
+    height: 7.5px;
+    border: 1px solid #FFFFFF;
+    box-shadow: 0px 5px 5px rgba(31, 32, 65, 0.3);
+    cursor: pointer;
+  }
+
+  &__block {
+    padding: 20px;
+    padding-top: 24px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__divider {
+    height: 1px;
+    background: rgba(31, 32, 65, 0.1);
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+
+  &__room-nbr-container {
+    display: flex;
+  }
+
+  &__room {
+    padding-top: 2px;
+    display: flex;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    color: #1F2041;
+      
+  }
+      
+  &__room-number {
+    font-family: 'Open Sans', sans-serif;
+    padding-left: 5px;
+    font-size: 19px;
+    font-weight: bold;
+    line-height: 0;
+    margin-top: 8px;
+  }
+
+  &__lux {
+    margin-top: 2px;
+    margin-left: 5px;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #BC9CFF;
+  }
+
+  &__room-price {
+    margin-top: -1px;
+    font-size: 12px;
+    color: rgba(31, 32, 65, 0.5);
+    span {
+      font-size: 14px;
+      font-weight: bold;
+      color: rgba(31, 32, 65, 0.5);
     }
+  }
+
+
+  &__room-reviews-count {
+    padding-top: 6px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: right;
+    color: rgba(31, 32, 65, 0.5);
+    span {
+      font-weight: bold;
+    }
+  }
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 .large {
-    font-size: 24px;
-    line-height: 30px
+  font-size: 24px;
+  margin-top: 14px;
 }
 
 .increaseLineHeight {
-    line-height: 36px
+  margin-top: 0;
+  line-height: 36px
 }
 
