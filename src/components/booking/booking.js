@@ -9,16 +9,25 @@ export default function booking () {
   }
 
   document.addEventListener('keyup', function(event) {
-    countDays(event);
+    countTotalSum(event);
   })
-
+ 
   document.addEventListener('click', function(event) {
-    countDays(event);
+    countTotalSum(event);
+
+    let dropdown = event.target.closest('.booking')
+    
+    if (dropdown) {
+      
+      let guestCountCell = dropdown.querySelector('.dropdown__subtitle');
+      let guestCount = parseInt(guestCountCell.textContent);
+      isNaN(guestCount) ? countTotalSum(event, 1) : countTotalSum(event, guestCount)
+    }
   })
   
-  function countDays(event) {
+  function countTotalSum(event, guestCount = 1) {
     let newDate, lastDate;
-    let parent = event.target.closest('.input__wrapper');
+    let parent = event.target.closest('.booking');
     if (parent) {
       let firstDate = parent.querySelector('.first_date'),
           secondDate = parent.querySelector('.second_date'),
@@ -28,7 +37,7 @@ export default function booking () {
           serviceCharge = document.querySelector('.booking__service-charge-price'),
           additionalServices = document.querySelector('.booking__add-services-price'),
           totalSum = document.querySelector('.booking__total-sum'),
-          totalPrice = document.querySelector('.booking__total-price');
+          totalPriceCell = document.querySelector('.booking__total-price');
 
     
       if (firstDate.value.length == 10) {
@@ -42,12 +51,20 @@ export default function booking () {
         lastDate = new Date (+year, +month-1, +day);
 
       }
+      let roomPrice = extractNum(priceCell);
       if (newDate && lastDate) {
         let daysCount = Math.abs(lastDate - newDate)/1000/60/60/24;
         daysCell.textContent = changeWordEnding(daysCount, daysDeclension);
-        let price = extractNum(priceCell)
-        totalPrice.textContent = (price * daysCount).toLocaleString('ru') + '₽';
-        totalSum.textContent = (price * daysCount - 
+        let totalPrice = roomPrice * daysCount * guestCount;
+        totalPriceCell.textContent = (totalPrice).toLocaleString('ru') + '₽';
+        totalSum.textContent = (totalPrice - 
+        extractNum(serviceChargeSale) +
+        extractNum(serviceCharge) + 
+        extractNum(additionalServices)).toLocaleString('ru') + '₽';
+      } else {
+        let totalPrice = roomPrice * guestCount;
+        totalPriceCell.textContent = (totalPrice).toLocaleString('ru') + '₽';
+        totalSum.textContent = (totalPrice - 
         extractNum(serviceChargeSale) +
         extractNum(serviceCharge) + 
         extractNum(additionalServices)).toLocaleString('ru') + '₽';
