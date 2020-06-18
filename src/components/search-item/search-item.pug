@@ -3,18 +3,18 @@ include ../rate-button/rate-button
 mixin search-item(searchItemOpts)
 
   .search-item
-    .search-item__slider(id='carousel')
+    .search-item__slider
       button.search-item__nav-left
       .search-item__gallery
         ul
           li.search-item__li
             img(src=searchItemOpts.src, alt="hotel-room")
           li.search-item__li
-            img(src=searchItemOpts.src, alt="hotel-room")
+            img(src='/src/components/search-item/image_2.jpg', alt="hotel-room")
           li.search-item__li
-            img(src=searchItemOpts.src, alt="hotel-room")
+            img(src='/src/components/search-item/image_3.jpg', alt="hotel-room")
           li.search-item__li
-            img(src=searchItemOpts.src, alt="hotel-room")
+            img(src='/src/components/search-item/image_4.jpg', alt="hotel-room")
       button.search-item__nav-right
       .search-item__nav-dots-block
         div(class= 'search-item__nav-dot search-item__nav-dot_active')
