@@ -5,7 +5,7 @@ export default function searchItem () {
 
   let position = 0; // положение ленты прокрутки
   
-  let i = 0;
+  let i = 0; 
 
   document.addEventListener('click', function(event) {
     let slider = event.target.closest('.search-item__slider');
@@ -78,7 +78,6 @@ export default function searchItem () {
 
         
         i++;
-        console.log(i);
         let dots = slider.querySelectorAll('.search-item__nav-dot');
         for (let dot of dots) {
           let num = dot.getAttribute('data-dot-number');
@@ -89,7 +88,6 @@ export default function searchItem () {
           };
 
           if (i > slides.length-1) {
-            console.log('dct ghbotw')
             dots[slides.length-1].classList.remove('search-item__nav-dot_active')
             i = 0;
             dots[0].classList.add('search-item__nav-dot_active')

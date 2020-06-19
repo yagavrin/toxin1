@@ -23,6 +23,7 @@ export default function input() {
       })
       
       $('.input__datepicker_range').datepicker({
+        minDate: new Date(),
         range: true,
         onSelect: function (fd, d, picker) { 
           $(".first_date").val(fd.split(" - ")[0]);
@@ -31,6 +32,7 @@ export default function input() {
       });
 
       $('.input__datepicker_filter').datepicker({
+        minDate: new Date(),
         range: true,
         dateFormat: 'dd M',
         onSelect: function (fd, d, picker) { 

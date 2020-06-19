@@ -1,91 +1,88 @@
 .header {
-    position: relative;
-    background-color: #ffff;
-    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-    &__wrapper {
-        width: 1160px;
-        margin: 0 auto;
-        height: 70px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
+  position: relative;
+  background-color: #ffff;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  &__wrapper {
+    width: 1160px;
+    margin: 0 auto;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 
 
 .menu {
+  display: flex;
+  &__list{
+    list-style-type: none;
     display: flex;
-    &__list{
-        list-style-type: none;
-        display: flex;
-        padding: 0;
-        margin: 0;
-    }
+    padding: 0;
+    margin: 0;
+  }
 
-    &__list_eng li:first-child{
-        font-weight: bold;
-    }
+  &__list li:first-child{
+    font-weight: bold;
+  }
 
-    &__list_eng li:nth-child(3):after{
-        margin-left: 5px;
-        font-family: 'icomoon', sans-serif;
-        content: "\e900";
-        font-size: 8px;
-        font-weight: normal;
-        color: rgba(31, 32, 65, 0.5);
-    }
+  &__list li:nth-child(2):after, li:nth-child(5):after{
+    margin-left: 7px;
+    font-family: 'icomoon', sans-serif;
+    content: "\e900";
+    font-size: 8px;
+    font-weight: normal;
+    color: rgba(31, 32, 65, 0.5);
+  }
 
-    &__list_eng li:nth-child(3){
-        margin-right: 20px;
-    }
+  &__list li:nth-child(3){
+    margin-right: 20px;
+  }
 
-    &__item {
-        margin-right: 20px;
-        img {
-           padding-left: 10px;
-        }
-    }
+  &__item {
+    margin-right: 24px;
+  }
 
-    &__item_eng {
-        margin-right: 30px;
-    }
+  &__link {
+    font-size: 14px;
+    line-height: 33px;
+    text-decoration: none;
+    color: rgba(31, 32, 65, 0.5);
+  }
 
-    &__link {
-        font-size: 14px;
-        line-height: 33px;
-        text-decoration: none;
-        color: rgba(31, 32, 65, 0.5);
-        
-    }
+  &__link:hover {
+    color: rgba(31, 32, 65, 0.5);
+  }
 
-    &__link:hover {
-        color: rgba(31, 32, 65, 0.5);
-    }
+  &__buttons{
+    width: 304px;
+    height: 34px;
+    display: flex;
+    justify-content: space-between;
+  }
 
-    &__link:nth-child(3){
-        
-    }
+  &__divider {
+    width: 1px;
+    height: 30px;
+    background: rgba(31, 32, 65, 0.1);
+    margin-right: 20px;
+  }
 
-    &__buttons{
-        width: 200px;
-        display: flex;
-    }
+  &__block {
+    width: 100px;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    line-height: 33px;
+  }
 
-    &__divider {
-        width: 1px;
-        height: 30px;
-        background: rgba(31, 32, 65, 0.1);
-        margin-right: 30px;
+  &__account {
+    color: rgba(31, 32, 65, 0.5);
+    &:hover {
+      color: rgba(31, 32, 65, 0.5);
     }
-
-    &__block {
-        display: flex;
-        align-items: center;
-        font-size: 14px;
-        line-height: 17px;
-        color: rgba(31, 32, 65, 0.5);
-    }
+  }
 }
 
 

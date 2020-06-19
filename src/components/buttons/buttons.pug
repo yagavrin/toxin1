@@ -2,8 +2,13 @@ mixin button(btnOptions)
 
   case btnOptions.btnStyle
     when "border"
-      button(class= 'btn btn_border')= btnOptions.name
+      - var className= 'btn btn_border'
+      - className += btnOptions.clsName ? btnOptions.clsName : ''
+      button(class= className)
+        .btn__container= btnOptions.name
     when "arrow"
+      - var className= 'btn btn_arrow'
+      - className += btnOptions.clsName ? btnOptions.clsName : ''
       button(
       class= 'btn btn_arrow'
       type= btnOptions.type
@@ -11,5 +16,7 @@ mixin button(btnOptions)
     when "noBorder"
       button(class= 'no-border-btn')= btnOptions.name
     default
-      button(class= 'btn')= btnOptions.name
+      - var className= 'btn'
+      - className += btnOptions.clsName ? btnOptions.clsName : ''
+      button(class= className)= btnOptions.name
       

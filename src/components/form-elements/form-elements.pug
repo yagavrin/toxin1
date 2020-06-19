@@ -79,7 +79,8 @@ mixin form-elements
         .form-elements__container
           div(class= 'form-elements__subtitle form-elements__subtitle_with-mr-bottom') Toggle
           +toggle({descr: 'Получать спецпредложения '})
-          +toggle({descr: 'Получать спецпредложения '})
+          .form-elements__toggle-container
+            +toggle({descr: 'Получать спецпредложения '})
         .form-elements__container
           div(class= 'form-elements__subtitle form-elements__subtitle_with-mr-bottom') like button
           .form-elements__like-container

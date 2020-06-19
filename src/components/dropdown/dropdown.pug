@@ -30,7 +30,7 @@ mixin dropdown(dropdownOptions)
           div(class="dropdown__input dropdown__input_room")
               div(class="dropdown__subtitle dropdown__subtitletitle_room") Выберите удобства
               span(class="dropdown__expand-more icon-expand_more")
-          div(class="dropdown__block dropdown__block_room" hidden)
+          div(class="dropdown__block dropdown__block_room")
             each value in roomValues
               .dropdown__item 
                 .dropdown__descr= value.descr

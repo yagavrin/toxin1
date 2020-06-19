@@ -18,6 +18,19 @@
     outline: none;
   }
 
+  &_entry {
+    height: auto;
+    width: 87px;
+    div {
+      line-height: 30px;
+    }
+  }
+
+  &_reg {
+    height: auto;
+    width: 196px;
+  }
+
   &_arrow {
     width: 100%;
     height: 44px;
@@ -36,50 +49,22 @@
 
   &_border {
     position: relative;
-    $border: 2px;
-    color: #BC9CFF;
-    background: #FFF;
-    background-clip: padding-box; /* !important */
-    border: solid $border transparent; /* !important */
-
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0; right: 0; bottom: 0; left: 0;
-      z-index: -1;
-      margin: -$border; /* !important */
-      border-radius: inherit; /* !important */
-      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    }
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   }
 
-  // &_border {
-  //   z-index: 0;
-  //   $border: 2px;
-  //   position: relative;
-  //   margin: -$border; /* !important */
-  //    /* !important */
-  //   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-
-  //   &::after {
-      
-  //     color: #BC9CFF;
-  //     background: #FFF;
-  //     background-clip: padding-box; /* !important */
-  //     border: solid $border transparent; /* !important */
-  //     content: '';
-  //     position: absolute;
-  //     border-radius: inherit;
-  //     top: 0; right: 0; bottom: 0; left: 0;
-  //     z-index: -1;
-     
-  //   }
-  // }
+  &__container {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    border-radius: inherit; 
+    color: #BC9CFF;
+    background: #FFF;
+    background-clip: padding-box; 
+    border: solid 2.5px transparent; 
+    line-height: 39px;
+  }
 
   &_border_toggled {
-    &::before {
-      opacity: 0.5;
-    }
+    background: rgba(188, 156, 255, .5);
   }
 }
 

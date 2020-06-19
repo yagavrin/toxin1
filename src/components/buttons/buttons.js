@@ -10,7 +10,7 @@ export default function buttons () {
 
       if (btn.classList.contains('btn_border')) {
         btn.classList.add('btn_border_toggled');
-        setTimeout( () => btn.classList.remove('btn_border_toggled'), 500);
+        setTimeout( () => btn.classList.remove('btn_border_toggled'), 600);
         return;
       }
 

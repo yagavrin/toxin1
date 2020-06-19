@@ -27,6 +27,7 @@
     }
 
     &__block {
+        z-index: 1;
         position: absolute;
         left: -1000000px;
         opacity: 0;

@@ -41,7 +41,7 @@ export default function datepicker() {
             selectOtherYears: true,
             moveToOtherYearsOnSelect: true,
 
-            minDate: new Date(),
+            minDate: '',
             maxDate: '',
             disableNavWhenOutOfRange: true,
 

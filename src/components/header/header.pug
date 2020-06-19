@@ -1,46 +1,35 @@
 include ../logo/logo
 include ../buttons/buttons
 
-mixin header(headerVersion)
-    -
-        var headerEngText = ['Home', 'About Us', 'Services', 'Careers', 'News', 'Documentation']
-    
-    .header
-        .header__wrapper
-            +logo  
-            .menu
-                case headerVersion
-                    when 'eng'
-                        ul(class= 'menu__list menu__list_eng')
-                            each item in headerEngText
-                                li(class= 'menu__item menu__item_eng')
-                                    a(href="#" class= 'menu__link menu__link_eng')= item
-                        .menu__buttons
-                            +buttonEntry('btn btn_entry', 'login')
-                            +button('btn btn_reg', 'register')
-                    when 'eng_v2'
-                        ul(class= 'menu__list menu__list_eng')
-                            each item in headerEngText
-                                li(class= 'menu__item menu__item_eng')
-                                    a(href="#" class= 'menu__link menu__link_eng')= item
-                        .menu__divider
-                        .menu__block Cosmin Negoita
-                    when 'ru'
-                        ul.menu__list
-                            li.menu__item
-                                a.menu__link О нас
-                            li.menu__item
-                                a.menu__link Услуги
-                                img(src='/src/components/header/expand_more.svg')
-                            li.menu__item
-                                a.menu__link Вакансии
-                            li.menu__item
-                                a.menu__link Новости
-                            li.menu__item
-                                a.menu__link Соглашения
-                                img(src='/src/components/header/expand_more.svg')
-                        .menu__buttons
-                            +button('btn btn_entry', 'Войти')
-                            +button('btn btn_reg', 'Зарегистрироваться')
+mixin header(headerOptions)
+  -
+    var headerLinks = [
+      {name: 'О нас', src: '#'},
+      {name: 'Услуги', src: '#'},
+      {name: 'Вакансии', src: '#'},
+      {name: 'Новости', src: '#'},
+      {name: 'Соглашения', src: '#'},
+      ];
+  
+  .header
+    .header__wrapper
+      +logo  
+      .menu
+        case headerOptions.headerVersion
+          when 'registred'
+            ul(class= 'menu__list')
+              each item in headerLinks
+                li(class= 'menu__item')
+                  a(href= item.src class= 'menu__link')= item.name
+            .menu__divider
+            .menu__block
+              a(href='#' class= 'menu__account') Юлий Цезарь
+          default
+            ul(class= 'menu__list')
+              each item in headerLinks
+                li(class= 'menu__item')
+                  a(href= item.src class= 'menu__link')= item.name
+            .menu__buttons
+              +button({btnStyle: 'border', clsName: ' btn_entry', name: 'Войти'})
+              +button({clsName: ' btn_reg', name: 'зарегистрироваться'})
 
-                
