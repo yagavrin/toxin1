@@ -19,7 +19,7 @@ import searchItem from "./components/search-item/search-item"
 import header from "./components/header/header"
 import footer from "./components/footer/footer"
 import logo from "./components/logo/logo"
-import promo from "./components/promo/promo"
+import landing from "./components/landing/landing"
 import filter from "./components/room-filter/filter"
 import searchPage from "./components/search-page/search-page"
 import roomDetails from "./components/room-details/room-details"
@@ -39,6 +39,7 @@ import roomReview from "./components/room-review/room-review"
 import rangeSlider from "./components/range-slider/range-slider"
 import pagination from "./components/pagination/pagination"
 import input from "./components/input/input"
+import regPage from "./components/reg-page/reg-page"
 
 buttons();
 likeButton();
@@ -49,4 +50,5 @@ pagination();
 input();
 booking();
 searchItem();
+header();
 

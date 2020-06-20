@@ -1,11 +1,11 @@
 include ./components/header/header
-include ./components/promo/promo
+include ./components/landing/landing
 include ./components/footer/footer
 include ./components/reg-form/reg-form
 include ./components/sign-in/sign-in
 include ./components/search-page/search-page
 include ./components/room-details/room-details
-
+include ./components/reg-page/reg-page
 include ./components/cards/cards
 include ./components/colors-and-types/colors-and-types
 include ./components/headers-and-footers/headers-and-footers
@@ -19,15 +19,14 @@ html(lang="en")
         title Toxin
         link(rel="stylesheet" type="text/css" href="bootstrap-reboot.min.css")
     body
-        //- +header
-        //-
-            +promo
-        //- +reg
+        +header({})
+        //- +landing-page
+        +reg-page
         //- +sign-in
-        //- +search_page
+        //- +search-page
         //- +room-details
-        //- +footer
+        +footer
         //- +cards
-        //- //- +colors-and-types
-        +headers-and-footers
+        //- +colors-and-types
+        //- +headers-and-footers
         //- +form-elements

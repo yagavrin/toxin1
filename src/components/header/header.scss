@@ -10,6 +10,10 @@
     align-items: center;
     justify-content: space-between;
   }
+
+  &__hamburger {
+    display: none;
+  }
 }
 
 
@@ -55,7 +59,7 @@
     color: rgba(31, 32, 65, 0.5);
   }
 
-  &__buttons{
+  &__buttons {
     width: 304px;
     height: 34px;
     display: flex;
@@ -86,5 +90,133 @@
 }
 
 
+@media (max-width: 991px) {
+  .header {
+    &__wrapper {
+      width: 95%;
+    }
+  }
+
+  .menu {
+    margin-left: 13px;
+    &__item {
+      margin-right: 10px;
+    }
+
+    &__link {
+      font-size: 12px;
+    }
+
+    &__list li:nth-child(2):after, li:nth-child(5):after {
+      margin-left: 2%;
+    }
+
+    &__list li:nth-child(3){
+      margin-right: 10px;
+    }
+
+    &__buttons {
+      margin-left: 13px;
+      width: 39.5%;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+
+}
+
+@media (max-width: 575px) {
+
+  .header {
+    &__wrapper {
+      height: 50px;
+      justify-content: space-between;
+    }
+
+    &__hamburger {
+      display: block;
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 25px;
+      height: 12px;
+      span {
+        display: block;
+        height: 2px;
+        width: 100%;
+        background-color: #000000;
+        margin-bottom: 4px;
+        transition: 0.5s all;
+      }
+    }
+
+    &__hamburger_active {
+      z-index: 2;
+      span {
+        margin-bottom: -2px;
+        &:nth-child(1) {
+          transform: translateY(3px) rotate(-45deg);
+        }		
+        &:nth-child(2) {
+          display: none;
+        }
+        &:nth-child(3) {
+          transform: translateY(3px) rotate(45deg);
+        }
+      }
+
+    }
+  }  
+  .menu {
+    padding-right: 10px;
+    flex: auto;
+    justify-content: flex-end;
+    margin-left: 0;
+    &__list {
+      position: absolute;
+      left: -10000px;
+      transition: left 0.5s;
+    }
+
+    &__buttons {
+      display: none;
+    }
+
+    &__list_active {
+      z-index: 1;
+      width: 50vw;
+      padding-top: 70px;
+
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(31, 32, 65, 0.10);
+      height: 100vh;
+    }
+    &__list li:first-child{
+      font-weight: normal;
+    }
+  
+    &__list li:nth-child(2):after, li:nth-child(5):after{
+      content: "";
+      margin: 0;
+    }
+
+    &__link {
+      display: block;
+      text-align: center;
+      font-size: 16px;
+      line-height: 2.5;
+    }
+    
+    &__buttons {
+      height: 25px;
+      width: 85%;
+    }
+  }
+}
 
 

@@ -80,5 +80,22 @@
   transition: color 0.5s;
 }
 
+@media (max-width: 991px) {
+  .btn {
+    font-size: 10px;
+    &_reg {
+      margin-left: 10px;
+    }
+  }
+}
 
-
+@media (max-width: 575px) {
+  .btn {
+    font-size: 12px;
+    &_entry {
+      div {
+        line-height: 21px;
+      }
+    }
+  }
+}

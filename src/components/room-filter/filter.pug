@@ -1,41 +1,55 @@
 mixin filter
 
-    .filter
-        form.filter__form
-            .filter__subtitle Даты пребывания в отеле
-            input(type="text").filter__item
-            .filter__subtitle Гости
-            input(type="text").filter__item
-            .filter__subtitle Диапазон цены
-            .filter__subtitle CHECKBOX BUTTONS
-            input(type="checkbox")
-            p Можно курить
-            input(type="checkbox")
-            p Можно с питомцами
-            input(type="checkbox")
-            p Можно пригласить гостей (до 10 человек)
-            .filter__subtitle Доступность
-            input(type="checkbox")
-            p Широкий коридор Ширина коридоров в номере не менее 91 см.
-            input(type="checkbox")
-            p Помощник для инвалидов На 1 этаже вас встретит специалист и проводит до номера.
-            .filter__subtitle Удобства номера
-            input(type="text").filter__item
-            .filter__subtitle Дополнительные Удобства
-            .filter__container
-                input(type="checkbox")
-                p Завтрак
-                input(type="checkbox")
-                p Письменный стол
-                input(type="checkbox")
-                p Стул для кормления
-                input(type="checkbox")
-                p Кроватка
-                input(type="checkbox")
-                p Телевизор
-                input(type="checkbox")
-                p Шампунь
-                input(type="checkbox")
-                p Телевизор
-                input(type="checkbox")
-                p Шампунь
+  .filter
+    .filter__form
+      .filter__input-container
+        +input({
+          title: 'Даты пребывания в отеле',
+          inputType: 'filter-date',
+          name: 'filter-date',
+        })
+      .filter__container
+        +dropdown({
+          title: 'Гости',
+          dropdownType: 'guest',
+        })
+      .filter__container
+        +range-slider({
+          title: 'Диапазон цены',
+        })
+        .range-slider__descr Стоимость за сутки пребывания в номере
+      .filter__container
+        .filter__subtitle checkbox buttons
+        +checkbox({
+          checkboxText: 'Можно курить',
+        })
+        .filter__checkbox-container
+          +checkbox({
+            checkboxText: 'Можно с питомцами',
+          })
+        .filter__checkbox-container
+          +checkbox({
+            checkboxText: 'Можно пригласить гостей (до 10 человек)',
+          })
+      .filter__container
+        .filter__subtitle Доступность
+        +checkbox({
+          isRich: true,
+          checkboxTitle: 'Широкий коридор',
+          checkboxText: 'Ширина коридоров в номере не менее 91 см.',
+        })
+        .filter__rich-checkbox-container
+          +checkbox({
+            isRich: true,
+            checkboxTitle: 'Помощник для инвалидов',
+            checkboxText: 'На 1 этаже вас встретит специалист и проводит до номера.',
+          })
+      .filter__container
+        +dropdown({
+          title: 'Удобства номера',
+          dropdownType: 'room',
+        })
+      .filter__container
+        +expandable-checkbox({
+          title: 'Дополнительные удобства'
+        })

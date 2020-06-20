@@ -13,3 +13,11 @@
     }
 }
 
+@media (max-width: 575px) {
+    .logo {
+        margin-left: 30px;
+        &__item {
+            display: none;
+        }
+    }
+}

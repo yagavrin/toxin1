@@ -2,7 +2,8 @@ mixin expandable-checkbox(expandableOptions)
   -
     var checkboxTextArr= ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь', 'Телевизор', 'Шампунь']
   .expandable-checkbox
-    .expandable-checkbox__btn= expandableOptions.descr
+    .expandable-checkbox__btn= expandableOptions.title
     .expandable-checkbox__block(hidden)
       each item in checkboxTextArr
-        +checkbox({checkboxText: item})
+        .expandable-checkbox__container
+          +checkbox({checkboxText: item})

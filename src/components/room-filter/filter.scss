@@ -1,27 +1,41 @@
 .filter {
+  width: 266px;
+  margin-top: 30px;
+  &__subtitle {
+    margin-bottom: 16px;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #1F2041;
+  }
+
+  &__input-container {
+    margin-bottom: 20.5px;
+  }
+
+  &__checkbox-container {
+    margin-top: 5px;
+  }
+
+  &__container {
+    margin-bottom: 29.5px;
+  }
+
+  &__rich-checkbox-container {
+    margin-top: 4px;
+  }
+
+  &__item {
     width: 266px;
-    margin-top: 30px;
-    &__subtitle {
-        font-weight: bold;
-        font-size: 12px;
-        line-height: 15px;
-        text-transform: uppercase;
-        color: #1F2041;
-    }
+    height: 44px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 4px;
+  }
+}
 
-    &__form {
-        p {
-            font-size: 14px;
-            line-height: 18px;
-            color: rgba(31, 32, 65, 0.5);
-        }
-    }
-
-    &__item {
-        width: 266px;
-        height: 44px;
-        border: 1px solid rgba(31, 32, 65, 0.25);
-        box-sizing: border-box;
-        border-radius: 4px;
-    }
+.range-slider__descr {
+  padding-top: 10px;
+  font-size: 12px;
 }
