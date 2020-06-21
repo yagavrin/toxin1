@@ -1,0 +1,30 @@
+.reg-page {
+  position: relative;
+  background: url('/src/components/reg-page/reg_bg.jpg') center (center / cover) no-repeat;
+  &__wrapper {
+    max-width: 380px;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    margin: 0 auto;
+    height: 684px;
+    &_sign-in {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .reg-page {
+    &__wrapper {
+      height: 100vh;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+
+}
+
+@media (max-width: 575px) {
+}

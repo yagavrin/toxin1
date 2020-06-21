@@ -1,44 +1,53 @@
 include ../booking/booking
 include ../like-button/like-button
+include ../room-details-item/room-details-item
+include ../bullet-list/bullet-list
 
 mixin room-details
 
-    .room-details
-        .room-details__gallery
-            .room-details__container
-                img(src="/src/components/room-details/image.jpg", alt="")
-                .room-details__container1
-                    img(src="/src/components/room-details/image\ 2.jpg", alt="")
-                    img(src="/src/components/room-details/image\ 3.jpg", alt="")
-        .room-details__wrapper
-            .room-details__block
-                .room-details__container
-                    .room-details
-                        .room-details__subtitle Сведения о номере
-
-
-
-                    .room-details__diagram
-                        .room-details__subtitle Впечатления от номера
-                        img(src="", alt="")
-                        ul
-                            li Великолепно
-                            li Хорошо
-                            li Удовлетворительно
-                            li Разочарован
-                .reviews
-                    .reviews__subtitle Отзывы посетителей номера
-                        p 2 отзыва
-                    
-
-                .room-details__container
-                    .room-details__rules
-                        .room-details__subtitle Правила
-                        ul
-                            li Нельзя с питомцами
-                            li Без вечеринок и мероприятий
-                            li Время прибытия — после 13:00, а выезд до 12:00
-                    .room-details__cancel
-                        .room-details__subtitle Отмена
-                        p Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
-            +booking
+  .room-details
+    .room-details__gallery
+      .room-details__container
+        img(src="/src/components/room-details/image.jpg", alt="")
+        .room-details__container1
+          img(src="/src/components/room-details/image\ 2.jpg", alt="")
+          img(src="/src/components/room-details/image\ 3.jpg", alt="")
+    .room-details__wrapper
+      .room-details__block
+        .room-details__subtitle Сведения о номере
+        +room-details-item('comfort')
+        +room-details-item('windows')
+        +room-details-item('fireplace')
+      .room-details__diagram
+        .room-details__subtitle Впечатления от номера
+        img(src="", alt="")
+        ul
+          li Великолепно
+          li Хорошо
+          li Удовлетворительно
+          li Разочарован
+      .room-details__reviews
+        .room-details__subtitle Отзывы посетителей номера
+          p 2 отзыва
+        +room-review({
+          avatarSrc: "/src/components/room-review/avatar1.jpg",
+          likeCount: 11,
+          authorName: 'Мурад Сарафанов',
+          reviewDate: '5 дней',
+          reviewDescr: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'
+        })
+        +room-review({
+          avatarSrc: "/src/components/room-review/avatar2.jpg",
+          likeCount: 2,
+          authorName: 'Патрисия Стёклышкова',
+          reviewDate: 'Неделю',
+          reviewDescr: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент.'
+        })
+      .room-details__rules
+        div(class='room-details__subtitle room-details__subtitle_rules').room-details__subtitle Правила
+        +bullet-list(['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])
+      .room-details__cancel
+          .room-details__subtitle Отмена
+          p Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+      .room-details__booking
+        +booking

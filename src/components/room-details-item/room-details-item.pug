@@ -5,15 +5,14 @@ mixin room-details-item(itemName)
       div(class= 'room-details-item room-details-item_comfort')
         div
           span Комфорт
-          p Шумопоглощающие стены
+          p.room-details-item__descr Шумопоглощающие стены
     when 'windows'
       div(class= 'room-details-item room-details-item_windows')
         div
           span Удобство
-          p Окно в каждой из спален
+          p.room-details-item__descr Окно в каждой из спален
     when 'fireplace'
       div(class= 'room-details-item room-details-item_fireplace')
-        img(src="/src/components/room-details/whatshot.svg", alt="fire")
         div
           span Уют
-          p Номер оснащен камином
+          p.room-details-item__descr Номер оснащен камином

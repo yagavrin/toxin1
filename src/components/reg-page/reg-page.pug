@@ -1,5 +1,13 @@
 include ../reg-form/reg-form
 
-mixin reg-page
+mixin reg-page(regPageOptions)
 
   .reg-page
+    case regPageOptions.type
+      when 'sign-in'
+        div(class='reg-page__wrapper reg-page__wrapper_sign-in')
+          +sign-in
+      default
+        .reg-page__wrapper
+          +reg-form
+    

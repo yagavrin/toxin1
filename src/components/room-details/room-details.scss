@@ -1,113 +1,101 @@
 .room-details {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    &__gallery {
-        margin: 0 auto;
-    }
-    &__wrapper {
-        padding-top: 70px;
-        display: flex;
-        margin: 0 auto;
-        width: 1160px;
-    }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &__gallery {
+    margin: 0 auto;
+  }
+  &__wrapper {
+    padding-top: 70px;
+    display: grid;
+    margin: 0 auto;
+    width: 1160px;
+    grid-template-areas:
+    'room-details diagram booking'
+    'reviews reviews booking'
+    'rules cancel booking';
+    grid-template-columns: 31% 1fr 380px;
+  }
 
-    &__block {
-        width: 780px;
+  
+
+  &__block {
+    grid-area: room-details;
+    & .room-details-item:last-child {
+      border-bottom: none;
     }
-
-    &__container {
-        display: flex;
+    & div:first-child {
+      margin-bottom: 0;
     }
-    &__container1 {
-        display: flex;
-        flex-direction: column;
+  }
+
+  &__container {
+      display: flex;
+  }
+  &__container1 {
+      display: flex;
+      flex-direction: column;
+  }
+
+  &__subtitle {
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 24px;
+    color: #1F2041;
+    margin-bottom: 20px;
+    &_rules {
+      margin-left: 19px;
+      margin-bottom: 18px;
     }
+  }
 
-    &__subtitle {
-        font-weight: bold;
-        font-size: 19px;
-        line-height: 24px;
-        color: #1F2041;
+  &__diagram {
+    grid-area: diagram;
+  }
+
+  &__reviews {
+    position: relative;
+    grid-area: reviews;
+    padding-top: 11px;
+    & .room-review__item:last-child {
+      margin-bottom: 33px;
     }
-
-
-
-    &__diagram {
-        padding-left: 82px;
-    }
-
-    &__rules {
-        padding-left: 20px;
-        ul {
-            padding: 0;
-            font-weight: normal;
-            font-size: 14px;
-            line-height: 24px;
-            color: rgba(31, 32, 65, 0.75);
-            li {
-                width: 242.56px;
-            }
-        }
-    }
-
-    &__cancel {
-        padding-left: 99px;
-        font-weight: normal;
+      p {
+        position: absolute;
+        margin: 0;
+        top: 19px;
+        right: 0;
         font-size: 14px;
-        line-height: 24px;
-        color: rgba(31, 32, 65, 0.75);
-    }
+        line-height: 14px;
+        text-align: right;
+        color: rgba(31, 32, 65, 0.5);
+      }
+    
+  }
+
+  &__rules {
+    grid-area: rules;
+  }
+
+  &__cancel {
+    grid-area: cancel;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(31, 32, 65, 0.75);
+  }
+
+  &__booking {
+    grid-area: booking;
+  }
 }
 
-.reviews {
-    padding-top: 11px;
+@media (max-width: 991px) {
+}
 
-    &__subtitle {
-        font-weight: bold;
-        font-size: 19px;
-        line-height: 24px;
-        color: #1F2041;
-        p {
-            position: relative;
-            margin: 0;
-            left: -71px;
-            top: -16px;
-            font-size: 14px;
-            line-height: 14px;
-            text-align: right;
-            color: rgba(31, 32, 65, 0.5);
-        }
-    }
+@media (max-width: 767px) {
 
-    &__item {
-        height: 153px;
-        padding-top: 8px;
-        display: flex;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 24px;
-        color: rgba(31, 32, 65, 0.75);
-    }
+}
 
-    &__block {
-        padding-left: 10px;
-    }
-    
-    &__avatar {
-        width: 47.67px;
-        height: 47.67px;
-        border: 2px solid #FFFFFF;
-        box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.1);
-        border-radius: 32px;
-        margin-bottom: 12px;
-    }
-
-    &__name {
-        font-weight: bold;
-    }
-
-    &__descr {
-        margin-top: 10px;
-    }
+@media (max-width: 575px) {
 }
