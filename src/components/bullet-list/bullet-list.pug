@@ -1,5 +1,13 @@
-mixin bullet-list(listItems)
+mixin bullet-list(listOptions)
 
-    ul.bullet-list
-        each item in listItems
-            li.bullet-list__item= item
+  - var coloredListArr = [{descr: 'Великолепно', class: 'bullet-list__item bullet-list__item_awesome'}, {descr: 'Хорошо', class: 'bullet-list__item bullet-list__item_good'}, {descr: 'Удовлетворительно', class: 'bullet-list__item bullet-list__item_normal'}, {descr: 'Разочарован', class: 'bullet-list__item bullet-list__item_bad'}]
+
+  case listOptions.style
+    when 'colored'
+      ul.bullet-list
+        each item in coloredListArr
+          li(class= item.class)= item.descr
+    default
+      ul.bullet-list
+        each item in listOptions.listItems
+          li.bullet-list__item= item

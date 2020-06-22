@@ -43,6 +43,7 @@
     line-height: 24px;
     color: #1F2041;
     margin-bottom: 20px;
+
     &_rules {
       margin-left: 19px;
       margin-bottom: 18px;
@@ -50,13 +51,30 @@
   }
 
   &__diagram {
-    grid-area: diagram;
+    margin-right: 29px;
+    &-container {
+      display: flex;
+    }
+    &-block {
+      grid-area: diagram;
+      ul {
+        margin-top: 27px;
+        width: 0;
+      }
+      li {
+        margin-bottom: 0;
+      }
+      li::before {
+        margin-right: 5px;
+      }
+    }
   }
 
   &__reviews {
     position: relative;
     grid-area: reviews;
     padding-top: 11px;
+    width: 91%;
     & .room-review__item:last-child {
       margin-bottom: 33px;
     }
@@ -65,6 +83,7 @@
         margin: 0;
         top: 19px;
         right: 0;
+        font-weight: normal;
         font-size: 14px;
         line-height: 14px;
         text-align: right;
@@ -98,4 +117,58 @@
 }
 
 @media (max-width: 575px) {
+}
+
+.chart {
+  width: 120px;
+  height: 120px;
+}
+.unit {
+  fill: none;
+  stroke-width: 1;
+}
+
+.unit:nth-child(1) {
+  stroke-dasharray: 49 100;
+  stroke-dashoffset: -25.5
+}
+
+.unit:nth-child(2) {
+  stroke-dasharray: 24 100;
+  stroke-dashoffset: 48.5;
+}
+
+.unit:nth-child(3) {
+  stroke-dasharray: 24 100;
+  stroke-dashoffset: -0.5;
+}
+
+.chart-text {
+  font-size: 16;
+  fill: #BC9CFF;;
+  -moz-transform: translateY(0.25em);
+  -ms-transform: translateY(0.25em);
+  -webkit-transform: translateY(0.25em);
+  transform: translateY(0.25em);
+}
+.chart-number {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.4em;
+  line-height: 1;
+  font-weight: bold;
+  text-anchor: middle;
+  -moz-transform: translateY(-0.68em);
+  -ms-transform: translateY(-0.68em);
+  -webkit-transform: translateY(-0.68em);
+  transform: translateY(-0.68em);
+}
+.chart-label {
+  font-size: 0.2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-anchor: middle;
+  -moz-transform: translateY(0.2em);
+  -ms-transform: translateY(0.2em);
+  -webkit-transform: translateY(0.2em);
+  transform: translateY(0.2em);
 }
