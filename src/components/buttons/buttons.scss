@@ -80,9 +80,8 @@
   transition: color 0.5s;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1160px) {
   .btn {
-    font-size: 10px;
     &_reg {
       margin-left: 10px;
     }

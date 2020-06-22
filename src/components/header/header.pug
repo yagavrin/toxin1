@@ -33,6 +33,7 @@ mixin header(headerOptions)
               each item in headerLinks
                 li(class= 'menu__item')
                   a(href= item.src class= 'menu__link')= item.name
+            button.menu__profile
             .menu__buttons
               +button({btnStyle: 'border', clsName: ' btn_entry', name: 'Войти'})
               +button({clsName: ' btn_reg', name: 'зарегистрироваться'})

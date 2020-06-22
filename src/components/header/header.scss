@@ -87,10 +87,22 @@
       color: rgba(31, 32, 65, 0.5);
     }
   }
+
+  &__profile {
+    display: none;
+    border: none;
+    background: #ffff;
+    &::before{
+      font-family: 'icomoon', sans-serif;
+      content: '\e972';
+      font-size: 20px;
+      color: #BC9CFF;
+    }
+  }
 }
 
 
-@media (max-width: 991px) {
+@media (max-width: 1160px) {
   .header {
     &__wrapper {
       width: 95%;
@@ -123,7 +135,14 @@
 }
 
 @media (max-width: 767px) {
-
+  .menu {
+    &__buttons {
+      display: none;
+    }
+    &__profile {
+      display: block;
+    }
+  }
 }
 
 @media (max-width: 575px) {
@@ -170,7 +189,6 @@
     }
   }  
   .menu {
-    padding-right: 10px;
     flex: auto;
     justify-content: flex-end;
     margin-left: 0;
@@ -178,10 +196,6 @@
       position: absolute;
       left: -10000px;
       transition: left 0.5s;
-    }
-
-    &__buttons {
-      display: none;
     }
 
     &__list_active {
@@ -213,8 +227,11 @@
     }
     
     &__buttons {
-      height: 25px;
-      width: 85%;
+      display: none;
+    }
+    &__profile {
+      display: block;
+      
     }
   }
 }
