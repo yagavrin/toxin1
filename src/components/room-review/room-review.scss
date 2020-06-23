@@ -1,36 +1,36 @@
 .room-review {
 
-    &__item {
-        margin-bottom: 23px;
-        display: flex;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 24px;
-        color: rgba(31, 32, 65, 0.75);
-    }
-    
-    &__block {
-        padding-left: 10px;
-    }
-    
-    &__avatar {
-        width: 47.67px;
-        height: 47.67px;
-        border: 2px solid #FFFFFF;
-        box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.1);
-        border-radius: 32px;
-        margin-bottom: 12px;
-    }
+  &__item {
+    margin-bottom: 23px;
+    display: flex;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(31, 32, 65, 0.75);
+  }
+  
+  &__block {
+    padding-left: 10px;
+  }
+  
+  &__avatar {
+    width: 47.67px;
+    height: 47.67px;
+    border: 2px solid #FFFFFF;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.1);
+    border-radius: 32px;
+    margin-bottom: 12px;
+  }
 
-    &__like-container {
-        padding-left: 4px;
-    }
+  &__like-container {
+    padding-left: 4px;
+  }
 
-    &__name {
-        font-weight: bold;
-    }
+  &__name {
+    font-weight: bold;
+  }
 
-    &__descr {
-        margin-top: 10px;
-    }
+  &__descr {
+    margin-top: 10px;
+  }
 }

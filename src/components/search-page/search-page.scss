@@ -1,40 +1,104 @@
 .search-page {
-    padding-bottom: 75px;
-    font-size: 14px;
-    color:rgba(31, 32, 65, 0.5);
+  padding-bottom: 75px;
+  font-size: 14px;
+  color:rgba(31, 32, 65, 0.5);
 
+  &__wrapper {
+    position: relative;
+    width: 1160px;
+    margin: 0 auto;
+    display: flex;
+  }
+
+  &__container {
+    width: 846px;
+    margin-left: 60px;
+    margin-top: 30px;
+  }
+
+  &__block {
+    margin-top: 21px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    row-gap: 20.5px;
+    column-gap: 10px;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    color: #1F2041;
+  }
+
+  &__page-number {
+    display: flex;
+    justify-content: center;
+    transform: translate(-0.9%);
+    margin-top: 42px;
+  }
+  
+}
+
+.show-filter {
+  display: none;
+}
+
+
+@media (max-width: 1160px) {
+  .search-page {
     &__wrapper {
-        width: 1160px;
-        margin: 0 auto;
-        display: flex;
+      width: 95%;
     }
-
-    &__container {
-        width: 846px;
-        margin-left: 60px;
-        margin-top: 30px;
-    }
-
     &__block {
-        margin-top: 21px;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-        row-gap: 20.5px;
-        column-gap: 10px;
+      justify-items: center;
     }
-
     &__title {
-        font-weight: bold;
-        font-size: 24px;
-        line-height: 30px;
-        color: #1F2041;
+      text-align: center;
     }
+  }
+}
 
-    &__page-number {
-        display: flex;
-        justify-content: center;
-        transform: translate(-0.9%);
-        margin-top: 42px;
+@media (max-width: 767px) {
+  .search-page {
+    padding-bottom: 0;
+    &__container {
+      margin-top: 15px;
+      margin-left: 0;
+      width: auto;
     }
+    &__wrapper {
+      display: block;
+    }
+  }
 
+  .filter {
+    display: none;
+    width: auto;
+    &__form {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(266px, 0.5fr));
+      justify-content: center;
+      column-gap: 10px;
+    }
+  }
+
+  .filter_dropdown {
+    display: block;
+  }
+
+  .show-filter {
+    margin-top: 15px;
+    display: block;
+    width: 100%;
+  }
+}
+
+@media (max-width: 320px) {
+  .search-page {
+    padding: 0 15px 0 15px;
+  }
+  .filter {
+    padding: 0 15px 0 15px;
+  }
 }

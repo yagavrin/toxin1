@@ -5,6 +5,7 @@ mixin search-page
 
   section.search-page
     .search-page__wrapper
+      +button({btnStyle: 'border', name: 'показать фильтры', clsName: ' show-filter'})
       +filter
       .search-page__container
         .search-page__title Номера, которые мы для вас подобрали
