@@ -8,6 +8,8 @@ mixin footer(footerVersion)
     var navigationEng = ['About Us', 'News', 'Support', 'Products']
     var aboutUsEng = ['Who we are', 'Our team', 'Careers', 'Investors']
     var supporEng = ['Documentation', 'Community', 'Get in Touch']
+
+  +footer-min
   section.footer
     .footer__wrapper
       .footer__logo
@@ -51,7 +53,7 @@ mixin social-links
 
 mixin footer-min
 
-  .footer-min
+  section.footer-min
     +logo
     .footer-min__descr Copyright © 2018 Toxin отель. Все права защищены.
     +social-links

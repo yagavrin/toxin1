@@ -14,7 +14,7 @@
   &__subtitle {
     position: absolute;
     bottom: 20px;
-    right: -5px;
+    right: 0;
     width: 297px;
     height: 48px;
     h2 {
@@ -29,7 +29,7 @@
 }
 
 
-@media (max-width: 991px) {
+@media (max-width: 1160px) {
   .landing {
     padding-top: 40px;
       &__wrapper {
@@ -45,7 +45,11 @@
   }
   
 @media (max-width: 767px) {
-
+  .landing {
+    &__subtitle {
+      display: none;
+    }
+  }
 }
 
 @media (max-width: 575px) {

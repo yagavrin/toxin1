@@ -26,7 +26,7 @@
   }
 
   &__block {
-    width: 320px;
+    width: auto;
     display: flex;
     justify-content: space-between;
   }
@@ -132,6 +132,24 @@
 
 }
 
-@media (max-width: 575px) {
-  
+@media (max-width: 450px) {
+  .input__container {
+    width: 45%;
+  }
+
+  .input__date {
+    width: 100%;
+    padding-left: 7px;
+  }
+
+  .input__datepicker {
+    width: 80%;
+  }
+}
+
+@media (max-width: 400px) {
+  .input__datepicker {
+    left: 0;
+    width: 100%;
+  }
 }
