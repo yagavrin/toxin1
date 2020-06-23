@@ -52,4 +52,5 @@ booking();
 searchItem();
 header();
 searchPage();
+roomDetails();
 
