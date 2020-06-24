@@ -14,18 +14,10 @@
   }
 }
 
-@media (max-width: 991px) {
-
-}
-
-
 @media (max-width: 380px) {
   .reg-page {
     &__wrapper {
       justify-content: center;
-    }
-    &__sign-in-container {
-      margin-top: 10px;
     }
   }
 }
