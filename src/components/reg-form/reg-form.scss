@@ -39,8 +39,36 @@
 
 }
 
+@media (max-width: 380px) {
+  .reg {
+    padding: 20px 15px 15px 15px;
+    height: auto;
+    width: 90%;
+    .input {
+      width: 100%;
+    }
 
+    &__sign-in-container {
+      margin-top: 10px;
 
+      p {
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .reg {
+    &__sign-in-container {
+      p {
+        margin-right: 0;
+        padding-top: 0;
+      }
+    }
+  }
+}
+  
   
 
 

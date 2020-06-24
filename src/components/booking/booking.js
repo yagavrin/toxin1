@@ -4,7 +4,6 @@ export default function booking () {
   let infoBlock;
   document.addEventListener('mouseover', function(event){
     let info = event.target.closest('.booking__info')
-    console.log(event.target);
     if (info) {
       let infoText = info.getAttribute('data-info');
       infoBlock = document.createElement('div');

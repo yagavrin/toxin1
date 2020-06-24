@@ -7,24 +7,25 @@
     padding-bottom: 19px;
     margin: 0 auto;
     height: 684px;
+    display: flex;
     &_sign-in {
-      display: flex;
       align-items: center;
     }
   }
 }
 
 @media (max-width: 991px) {
+
+}
+
+
+@media (max-width: 380px) {
   .reg-page {
     &__wrapper {
-      height: 100vh;
+      justify-content: center;
+    }
+    &__sign-in-container {
+      margin-top: 10px;
     }
   }
-}
-
-@media (max-width: 767px) {
-
-}
-
-@media (max-width: 575px) {
 }
