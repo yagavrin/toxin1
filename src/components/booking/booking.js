@@ -1,6 +1,38 @@
 import './booking.scss';
 
 export default function booking () {
+  let infoBlock;
+  document.addEventListener('mouseover', function(event){
+    let info = event.target.closest('.booking__info')
+    console.log(event.target);
+    if (info) {
+      let infoText = info.getAttribute('data-info');
+      infoBlock = document.createElement('div');
+      document.body.append(infoBlock);
+      infoBlock.textContent = infoText;
+      infoBlock.classList.add('info-block');
+      let coords = event.target.getBoundingClientRect();
+      console.log(coords.top);
+      infoBlock.style.top = coords.top - infoBlock.offsetHeight * 2 / 3 + 'px';
+      infoBlock.style.left = coords.right + 5 + 'px';
+      if (coords.top - 5 - infoBlock.offsetHeight < 0) {
+        infoBlock.style.top = coords.bottom + 'px';
+      }
+  
+      if (coords.right - infoBlock.offsetWidth/2 < 0) {
+        div.style.left = 0 + 'px';
+      }
+    }
+  })
+
+  document.addEventListener("mouseout", function (event) {
+    let info = event.target.closest('.booking__info')
+    if (info) {
+      infoBlock.remove();
+      infoBlock = null;
+    }
+  })
+
   
   let daysDeclension = {
     numDefault: 'суток',

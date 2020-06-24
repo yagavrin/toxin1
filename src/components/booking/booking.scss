@@ -34,10 +34,11 @@
     margin-left: 0.3em;
   }
 
+
   &__info {
-    width: 20px;
+    grid-area: i1;
+    min-width: 20px;
     height: 20px;
-    margin-left: 5px;
     border-radius: 50%;
     border: 1px solid rgba(31, 32, 65, 0.25);
     text-align: center;
@@ -48,10 +49,40 @@
   }
   
   &__service-charge {
-    display: flex;
+    grid-area: service-charge;
+    margin-right: 5px;
+  }
+
+  &__service-charge-price {
+    grid-area: service-charge-price;
+    text-align: right;
   }
 
   &__add-services {
+    grid-area: add-services;
+    line-height: 19px;
+  }
+
+  &__info2 {
+    grid-area: i2;
+  }
+
+  &__add-services-price {
+    grid-area: add-services-price;
+    text-align: right;
+  }
+
+  &__grid-container {
+    display: grid;
+    grid-template-areas:
+    'service-charge i1 service-charge-price'
+    'add-services i2 add-services-price';
+    grid-template-columns: 1fr 20px 25%;
+    row-gap: 10px;
+  }
+
+  &__service-charge-block {
+    flex-wrap: wrap;
     display: flex;
   }
 
@@ -68,7 +99,8 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
-    margin-top: 44px;
+    margin-top: 29px;
+    margin-bottom: 20px;
   }
 
   &__result, &__total-sum {
@@ -76,5 +108,35 @@
     font-weight: bold;
     font-size: 19px;
     color: #1F2041;
+  }
+}
+
+.info-block {
+  position: fixed;
+  z-index: 1;
+  background: #FFFFFF;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  color: rgba(31, 32, 65, 0.5);
+  font-size: 14px;
+  padding: 2px 5px 2px 5px;
+}
+
+@media (max-width: 450px) {
+  .booking {
+    padding: 20px 15px 15px 15px;
+    height: auto;
+    &__calculate {
+      line-height: 1.5;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    &__result-block {
+      margin-top: 0;
+    }
+
+    &__grid-container {
+      grid-template-columns: 70% 20px 1fr;
+    }
   }
 }

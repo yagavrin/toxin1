@@ -149,7 +149,10 @@
 
 @media (max-width: 400px) {
   .input__datepicker {
-    left: 0;
     width: 100%;
+  }
+
+  .input__datepicker_active {
+    left: 0;
   }
 }
