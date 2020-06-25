@@ -5,7 +5,24 @@
   justify-content: center;
   &__gallery {
     margin: 0 auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    cursor: pointer;
+  }
+
+  &__gallery-container {
     display: flex;
+    flex-direction: column;
+    img {
+      width: 100%;
+    }
+    
+  }
+  &__container {
+    img {
+      width: 100%;
+    }
   }
 
   &__background {
@@ -82,11 +99,6 @@
 
   &__container {
     display: flex;
-  }
-  &__gallery-container {
-    display: flex;
-    flex-direction: column;
-  
   }
 
   &__subtitle {
@@ -227,11 +239,13 @@
 
     &__gallery{
       width: 95%;
-      display: grid;
-      grid-template-columns: 2fr 1fr;
       img {
         width: 100%;
       }
+    }
+
+    &__gallery-container {
+      width: 100%;
     }
   }
 }

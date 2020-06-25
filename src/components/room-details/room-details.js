@@ -7,7 +7,6 @@ export default function roomDetails () {
   bookingBtn.onclick = function() {
     filter.classList.toggle('booking_dropdown');
     if (filter.classList.contains('booking_dropdown')) {
-      console.log('fdf');
       bookingBtn.firstElementChild.textContent = 'скрыть форму бронирования';
     } else {
       bookingBtn.firstElementChild.textContent = 'Забронировать номер';
@@ -24,7 +23,8 @@ export default function roomDetails () {
       background.classList.toggle('room-details__background_active');
       activeItem.src = item.src;
     }
-    if (event.target == background) {
+    
+    if (event.target == background || event.target.closest('.room-details__background-close')) {
       background.classList.toggle('room-details__background_active');
     }
   })
@@ -34,7 +34,6 @@ export default function roomDetails () {
   }
 
   activeItem.onmouseout = function() {
-    console.log('переход');
     closeBtn.classList.toggle('room-details__background-close_active')
   }
 
