@@ -11,7 +11,6 @@ export default function booking () {
       infoBlock.textContent = infoText;
       infoBlock.classList.add('info-block');
       let coords = event.target.getBoundingClientRect();
-      console.log(coords.top);
       infoBlock.style.top = coords.top - infoBlock.offsetHeight * 2 / 3 + 'px';
       infoBlock.style.left = coords.right + 5 + 'px';
       if (coords.top - 5 - infoBlock.offsetHeight < 0) {

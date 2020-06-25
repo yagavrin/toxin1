@@ -1,12 +1,15 @@
-import jquery from "./components/input/jquery.min";
-jquery();
-import maskedInput from "./components/calendar/jquery.maskedinput";
-maskedInput();
-import datepicker from "./components/calendar/datepicker";
-datepicker();
 import fonts from "./components/fonts/fonts"
-
 import "./scss/style.scss";
+
+import jquery from "./components/jquery/jquery.min";
+jquery();
+import maskedInput from "./components/maskedinput/jquery.maskedinput";
+maskedInput();
+import datepicker from "./components/datepicker/datepicker";
+datepicker();
+
+
+
 
 
 import searchForm from "./components/search-form/search-form"
@@ -20,7 +23,7 @@ import header from "./components/header/header"
 import footer from "./components/footer/footer"
 import logo from "./components/logo/logo"
 import landing from "./components/landing/landing"
-import filter from "./components/room-filter/filter"
+import roomFilter from "./components/room-filter/room-filter"
 import searchPage from "./components/search-page/search-page"
 import roomDetails from "./components/room-details/room-details"
 import colorsAndTypes from "./components/colors-and-types/colors-and-types"

@@ -1,18 +1,11 @@
 /* для элемента input c type="checkbox" */
 .checkbox {
-    display: flex;
-    width: 260px;
-    &__title {
-      font-weight: bold;
-      font-size: 14px;
-      color: rgba(31, 32, 65, 0.75);
-      margin-bottom: 6px;
-    }
+  display: flex;
 
-    &__descr_fz12 {
-      font-size: 12px;
-      line-height: 14px;
-    }
+  &__descr_fz12 {
+    font-size: 12px;
+    line-height: 14px;
+  }
 }
 
 .custom-checkbox {

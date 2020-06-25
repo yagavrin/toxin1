@@ -16,7 +16,6 @@ include ../pagination/pagination
 mixin form-elements
 
   +logo_gray
-  <span class="icon icon-star"></span>
   .form-elements
     div(class='form-elements__wrapper form-elements__wrapper_1')
       div(class='form-elements__block block1')
@@ -124,9 +123,9 @@ mixin form-elements
         +dropdown({dropdownType: 'guest', title: 'dropdown'})
     div(class='form-elements__wrapper form-elements__wrapper_3')
       div(class='form-elements__block block1')
-        +expandable-checkbox({descr: 'expandable checkbox list'})
+        +expandable-checkbox({title: 'expandable checkbox list'})
         .form-elements__expandable-container
-          +expandable-checkbox({descr: 'expandable checkbox list'})
+          +expandable-checkbox({title: 'expandable checkbox list'})
       div(class='form-elements__block block2')
         div(class= 'form-elements__subtitle form-elements__subtitle_with-mr-bottom') Rich Checkbox Buttons
         +checkbox({
@@ -139,16 +138,16 @@ mixin form-elements
       div(class='form-elements__block')
         div(class= 'form-elements__subtitle form-elements__subtitle_with-mr-bottom') Bullet list
         .form-elements__list-container
-          +bullet-list(['Нельзя с питомцами', 
-          'Без вечеринок и мероприятий', 
-          'Время прибытия — после 13:00, а выезд до 12:00'])
+        +bullet-list({listItems: ['Нельзя с питомцами', 
+        'Без вечеринок и мероприятий', 
+        'Время прибытия — после 13:00, а выезд до 12:00']})
     div(class='form-elements__wrapper form-elements__wrapper_4')
       div(class='form-elements__block block1')
         +room-details-item('comfort')
         +room-details-item('windows')
       div(class='form-elements__block review-block')
         +room-review({
-          avatarSrc: "/src/components/room-details/avatar1.jpg",
+          avatarSrc: "/src/components/room-review/avatar1.jpg",
           likeCount: 11,
           authorName: 'Мурад Сарафанов',
           reviewDate: '5 дней',

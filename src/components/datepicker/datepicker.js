@@ -58,8 +58,8 @@ export default function datepicker() {
 
             // navigation
             monthsField: 'monthsShort',
-            prevHtml: '<img src="/src/components/calendar/arrow_back.svg" class="calendar__prev" alt="prev">',
-            nextHtml: '<img src="/src/components/calendar/arrow_forward.svg" class="calendar__next" alt="next">',
+            prevHtml: '<img src="/src/components/datepicker/arrow_back.svg" class="calendar__prev" alt="prev">',
+            nextHtml: '<img src="/src/components/datepicker/arrow_forward.svg" class="calendar__next" alt="next">',
             navTitles: {
                 days: 'MM <i>yyyy</i>',
                 months: 'yyyy',
