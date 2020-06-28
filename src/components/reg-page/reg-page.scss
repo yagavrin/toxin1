@@ -1,6 +1,6 @@
 .reg-page {
   position: relative;
-  background: url('/src/components/reg-page/reg_bg.jpg') center (center / cover) no-repeat;
+  background: url('./reg_bg.jpg') center (center / cover) no-repeat;
   &__wrapper {
     max-width: 380px;
     padding-top: 19px;

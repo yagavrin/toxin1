@@ -65,6 +65,6 @@
   /* стили для чекбокса, находящегося в состоянии checked */
   .custom-checkbox>input:checked+span::before {
     border: 1px solid #BC9CFF;
-    background-image: url(/src/components/checkbox/Vector.svg);
+    background-image: url(./Vector.svg);
   }
   

@@ -1,4 +1,8 @@
-import './room-details.scss'
+import './room-details.scss';
+import './image_1.jpg';
+import './image_2.jpg';
+import './image_3.jpg';
+
 
 export default function roomDetails () {
   let bookingBtn = document.querySelector('.show-booking');

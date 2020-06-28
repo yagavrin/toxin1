@@ -25,6 +25,30 @@ module.exports = {
             }
         },
         {
+          test: /\.(png|svg|jpg|gif)$/,
+          use: [
+            {
+              loader: 'file-loader',
+              options: {
+                name: '[name].[ext]',
+                outputPath: './img/'
+              }
+            }
+          ]
+        },
+        {
+          test: /\.(ttf|woff|woff2|eot)$/,
+          use: [
+            {
+            loader: 'file-loader',
+            options: {
+                name: '[name].[ext]',
+                outputPath: './fonts/',
+            }
+          }
+        ]
+        },
+        {
             test: /\.scss$/,
             use: ExtractTextPlugin.extract(
               {
@@ -38,6 +62,7 @@ module.exports = {
     new HtmlWebpackPlugin({
         template: './src/index.pug',
         }),
-    new ExtractTextPlugin({filename: 'style.css'})
+    new ExtractTextPlugin({filename: 'style.css'}),
+    
   ]
 }

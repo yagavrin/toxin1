@@ -8,10 +8,10 @@ mixin room-details
   section.room-details
     .room-details__gallery
       .room-details__container
-        img(src="/src/components/room-details/image_1.jpg", alt="hotel" class= 'room-details__gallery-item' )
+        img(src="./img/image_1.jpg", alt="hotel" class= 'room-details__gallery-item' )
       .room-details__gallery-container
-        img(src="/src/components/room-details/image_2.jpg", alt="hotel" class= 'room-details__gallery-item')
-        img(src="/src/components/room-details/image_3.jpg", alt="hotel" class= 'room-details__gallery-item')
+        img(src="./img/image_2.jpg", alt="hotel" class= 'room-details__gallery-item')
+        img(src="./img/image_3.jpg", alt="hotel" class= 'room-details__gallery-item')
     +button({btnStyle: 'border', name: 'забронировать номер', clsName: ' show-booking'})
     .room-details__wrapper
       .room-details__booking
@@ -51,14 +51,14 @@ mixin room-details
         .room-details__subtitle Отзывы посетителей номера
           p 2 отзыва
         +room-review({
-          avatarSrc: "/src/components/room-review/avatar1.jpg",
+          avatarSrc: "./img/avatar1.jpg",
           likeCount: 11,
           authorName: 'Мурад Сарафанов',
           reviewDate: '5 дней',
           reviewDescr: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'
         })
         +room-review({
-          avatarSrc: "/src/components/room-review/avatar2.jpg",
+          avatarSrc: "./img/avatar2.jpg",
           likeCount: 2,
           authorName: 'Патрисия Стёклышкова',
           reviewDate: 'Неделю',

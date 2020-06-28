@@ -1,4 +1,6 @@
-import './datepicker.scss'
+import './datepicker.scss';
+import imgLeft from './arrow_back.svg';
+import imgRight from './arrow_forward.svg';
 
 export default function datepicker() {
     
@@ -58,8 +60,8 @@ export default function datepicker() {
 
             // navigation
             monthsField: 'monthsShort',
-            prevHtml: '<img src="/src/components/datepicker/arrow_back.svg" class="calendar__prev" alt="prev">',
-            nextHtml: '<img src="/src/components/datepicker/arrow_forward.svg" class="calendar__next" alt="next">',
+            prevHtml: '<img src="./img/arrow_back.svg" class="calendar__prev" alt="prev">',
+            nextHtml: '<img src="./img/arrow_forward.svg" class="calendar__next" alt="next">',
             navTitles: {
                 days: 'MM <i>yyyy</i>',
                 months: 'yyyy',

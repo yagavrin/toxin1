@@ -1,4 +1,16 @@
-import './search-item.scss'
+import './search-item.scss';
+import img350 from './350.jpg';
+import img352 from './352.jpg';
+import img444 from './444.jpg';
+import img450 from './450.jpg';
+import img666 from './666.jpg';
+import img678 from './678.jpg';
+import img740 from './740.jpg';
+import img840 from './840.jpg';
+import img856 from './856.jpg';
+import img888 from './888.jpg';
+import img980 from './980.jpg';
+import img982 from './982.jpg';
 
 export default function searchItem () {
   let width = 270; // ширина картинки
