@@ -4,22 +4,22 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin'); 
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
+const PATHS = {
+  src: path.join(__dirname, './src'),
+  dist: path.join(__dirname, './dist'),
+}
+
 module.exports = {
+
+  externals: {
+    path: PATHS
+  },
   entry: {
-    main: ['@babel/polyfill', './src/index.js'],
+    main: ['@babel/polyfill', PATHS.src],
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: PATHS.dist,
     filename: '[hash].[name].bundle.js'
-  },
-  optimization: {
-    splitChunks: {
-      chunks: 'all'
-    }
-  },
-  devServer: {
-    port: 5600,
-    hot: true
   },
   module: {
     rules: [
@@ -74,24 +74,45 @@ module.exports = {
         test: /\.scss$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: ['css-loader', 'sass-loader']
+          use: [
+            {
+              loader: 'css-loader',
+              options: { sourceMap: true}
+            },
+            {
+              loader: 'postcss-loader',
+              options: 
+              { 
+                sourceMap: true, 
+                config: {
+                  path: 'src/postcss.config.js'
+                } 
+              }
+            },
+            {
+              loader: 'sass-loader',
+              options: { sourceMap: true}
+            },
+          ]
         })
       }
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.pug',
+      template: `${PATHS.src}/index.pug`,
     }),
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, 'src/favicon.ico'),
-          to: path.resolve(__dirname, 'dist')
+          from: `${PATHS.src}/favicon.ico`,
+          to: PATHS.dist
         }
       ]
     }),
     // new CleanWebpackPlugin(),
-    new ExtractTextPlugin({filename: 'style.css'}),
+    new ExtractTextPlugin({
+      filename: '[hash].[name].css'
+    }),
   ]
 }
