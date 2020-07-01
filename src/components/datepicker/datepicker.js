@@ -60,8 +60,8 @@ export default function datepicker() {
 
             // navigation
             monthsField: 'monthsShort',
-            prevHtml: '<img src="./img/arrow_back.svg" class="calendar__prev" alt="prev">',
-            nextHtml: '<img src="./img/arrow_forward.svg" class="calendar__next" alt="next">',
+            prevHtml: '<img src="./img/arrow_back.svg" class="calendar__datepicker-prev" alt="prev">',
+            nextHtml: '<img src="./img/arrow_forward.svg" class="calendar__datepicker-next" alt="next">',
             navTitles: {
                 days: 'MM <i>yyyy</i>',
                 months: 'yyyy',
@@ -603,6 +603,15 @@ export default function datepicker() {
             this._setInputValue();
             if (this.opts.onSelect) {
                 this._triggerOnChange()
+            }
+            //При очистке переход к текущей дате
+            this.silent = true;
+            this.view = this.opts.minView;
+            this.silent = false;
+            this.date = new Date();
+
+            if (this.opts.todayButton instanceof Date) {
+                this.selectDate(this.opts.todayButton)
             }
         },
 

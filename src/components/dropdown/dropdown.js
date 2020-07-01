@@ -27,11 +27,18 @@ export default function dropdown() {
   };
 
   let guestSum = 0;
-  
+
   document.addEventListener('click', function(event) { 
     let parent = event.target.closest('.dropdown');
-    
+
     if (!parent) {
+      let blocks = document.querySelectorAll('.dropdown__block')
+      if (blocks) {
+        for (let block of blocks) {
+          block.classList.remove('dropdown__block_active');
+          block.previousElementSibling.style.borderColor= 'rgba(31, 32, 65, 0.25)'
+        }
+      }
       return
     }
 

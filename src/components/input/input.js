@@ -43,6 +43,19 @@ export default function input() {
       document.addEventListener('click', function(event) {
 
         let input = event.target.closest('.input__block');
+        
+        let inputWrapper = event.target.closest('.input__wrapper')
+        if (!inputWrapper && !event.target.classList.value.includes('datepicker')) {
+
+          let dateBlocks = document.querySelectorAll('.input__datepicker')
+          if (dateBlocks) {
+            for (let block of dateBlocks) {
+              block.classList.remove('input__datepicker_active');
+            }
+          }
+          return
+        }
+
         if (input) {
           input.nextElementSibling.classList.add('input__datepicker_active')
         }
