@@ -1,4 +1,4 @@
-import fonts from "./components/fonts/fonts"
+import fonts from "./fonts/fonts"
 import "./scss/style.scss";
 
 import jquery from "./components/jquery/jquery.min";

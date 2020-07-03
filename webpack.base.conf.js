@@ -42,7 +42,7 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
-        exclude: [path.resolve(__dirname, "/src/components/fonts")],
+        exclude: [path.resolve(__dirname, "./src/fonts")],
         use: [
           {
             loader: 'file-loader',
@@ -63,11 +63,14 @@ module.exports = {
         ]
       },
       {
-        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        test: /\.(woff(2)?|ttf|eot|svg)$/,
+        exclude: [path.resolve(__dirname, "./src/components")],
         use: [
           {
             loader: 'file-loader',
             options: {
+              url: false,
+              inject: false,
               name: '[name].[ext]',
               outputPath: './fonts/',
             }
