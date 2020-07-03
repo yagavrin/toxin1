@@ -1,4 +1,4 @@
-.search-page {
+.search-section {
   padding-bottom: 75px;
   font-size: 14px;
   color:rgba(31, 32, 65, 0.5);
@@ -46,7 +46,7 @@
 
 
 @media (max-width: 1160px) {
-  .search-page {
+  .search-section {
     &__wrapper {
       width: 95%;
     }
@@ -60,7 +60,7 @@
 }
 
 @media (max-width: 767px) {
-  .search-page {
+  .search-section {
     padding-bottom: 0;
     &__container {
       margin-top: 15px;
@@ -95,7 +95,7 @@
 }
 
 @media (max-width: 320px) {
-  .search-page {
+  .search-section {
     padding: 0 15px 0 15px;
   }
   .filter {

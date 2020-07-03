@@ -1,17 +1,18 @@
-include ../logo/logo
-include ../input/input
-include ../checkbox/checkbox
-include ../radio-buttons/radio-buttons
-include ../toggle/toggle
-include ../like-button/like-button
-include ../rate-button/rate-button
-include ../range-slider/range-slider
-include ../dropdown/dropdown
-include ../expandable-checkbox/expandable-checkbox
-include ../bullet-list/bullet-list
-include ../room-details-item/room-details-item
-include ../room-review/room-review
-include ../pagination/pagination
+include ../../components/logo/logo
+include ../../components/input/input
+include ../../components/checkbox/checkbox
+include ../../components/radio-buttons/radio-buttons
+include ../../components/toggle/toggle
+include ../../components/like-button/like-button
+include ../../components/rate-button/rate-button
+include ../../components/range-slider/range-slider
+include ../../components/dropdown/dropdown
+include ../../components/expandable-checkbox/expandable-checkbox
+include ../../components/bullet-list/bullet-list
+include ../../components/room-details-item/room-details-item
+include ../../components/room-review/room-review
+include ../../components/pagination/pagination
+include ../../components/buttons/buttons
 
 mixin form-elements
 
@@ -153,3 +154,13 @@ mixin form-elements
           reviewDate: '5 дней',
           reviewDescr: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'
         })
+
+doctype html
+html(lang="en")
+  head
+    meta(charset = 'utf-8')
+    meta(name='viewport', content="initial-scale=1.0, width=device-width")
+    link(rel="icon", href="favicon.ico" type='image/ico')
+    title Toxin
+  body
+    +form-elements

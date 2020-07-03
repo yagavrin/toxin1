@@ -1,0 +1,14 @@
+include ../reg-form/reg-form
+include ../sign-in/sign-in
+
+mixin reg-section(regSectionOptions)
+
+  section.reg-section
+    case regSectionOptions.type
+      when 'sign-in'
+        div(class='reg-section__wrapper reg-section__wrapper_sign-in')
+          +sign-in
+      default
+        .reg-section__wrapper
+          +reg-form
+    

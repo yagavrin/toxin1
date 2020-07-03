@@ -1,4 +1,4 @@
-.reg-page {
+.reg-section {
   position: relative;
   background: url('./reg_bg.jpg') center (center / cover) no-repeat;
   &__wrapper {
@@ -15,7 +15,7 @@
 }
 
 @media (max-width: 380px) {
-  .reg-page {
+  .reg-section {
     &__wrapper {
       justify-content: center;
     }

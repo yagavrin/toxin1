@@ -1,8 +1,10 @@
 @font-face {
   font-family: 'Montserrat';
   src: url('./Montserrat-Bold.eot');
-  src: local('Montserrat Bold'), url('./Montserrat-Bold.woff') format('woff'), url('./Montserrat-Bold.ttf') format('truetype'); 
-  // url('./Montserrat-Bold.svg') format('svg');
+  src: local('Montserrat Bold'),
+    url('./Montserrat-Bold.woff') format('woff'),
+    url('./Montserrat-Bold.ttf') format('truetype'),
+    url('./Montserrat-Bold.svg') format('svg');
   font-weight: bold;
   font-style: normal;
 }
@@ -10,8 +12,10 @@
 @font-face {
   font-family: 'Montserrat';
   src: url('./Montserrat-Regular.eot');
-  src: local('Montserrat Regular'), url('./Montserrat-Regular.woff') format('woff'), url('./Montserrat-Regular.ttf') format('truetype');
-  // url('./Montserrat-Regular.svg') format('svg');
+  src: local('Montserrat Regular'), 
+    url('./Montserrat-Regular.woff') format('woff'), 
+    url('./Montserrat-Regular.ttf') format('truetype'),
+    url('./Montserrat-Regular.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -22,8 +26,8 @@
   src: local('Open Sans Bold'), local('OpenSans-Bold'),
     url('./OpenSans-Bold.eot?#iefix') format('embedded-opentype'),
     url('./OpenSans-Bold.woff') format('woff'),
-    url('./OpenSans-Bold.ttf') format('truetype');
-    // url('/src/components/fonts/OpenSans-Bold.svg#OpenSans-Bold') format('svg');
+    url('./OpenSans-Bold.ttf') format('truetype'),
+    url('/src/components/fonts/OpenSans-Bold.svg#OpenSans-Bold') format('svg');
   font-weight: bold;
   font-style: normal;
 }
@@ -34,8 +38,8 @@
   src: local('Open Sans Regular'), local('OpenSans-Regular'),
     url('./OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
     url('./OpenSans-Regular.woff') format('woff'),
-    url('./OpenSans-Regular.ttf') format('truetype');
-    // url('/src/components/fonts/OpenSans-Regular.svg#OpenSans-Regular') format('svg');
+    url('./OpenSans-Regular.ttf') format('truetype'),
+    url('/src/components/fonts/OpenSans-Regular.svg#OpenSans-Regular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -45,8 +49,8 @@
   src:  url('./icomoon.eot?4x1kpl');
   src:  url('./icomoon.eot?4x1kpl#iefix') format('embedded-opentype'),
     url('./icomoon.ttf?4x1kpl') format('truetype'),
-    url('./icomoon.woff?4x1kpl') format('woff');
-    // url('./icomoon.svg?4x1kpl#icomoon') format('svg');
+    url('./icomoon.woff?4x1kpl') format('woff'),
+    url('./icomoon.svg?4x1kpl#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;

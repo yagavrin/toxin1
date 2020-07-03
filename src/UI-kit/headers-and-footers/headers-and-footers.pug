@@ -1,0 +1,27 @@
+include ../../components/logo/logo
+include ../../components/header/header
+include ../../components/footer/footer
+
+mixin headers-and-footers
+
+  .headers-and-footers
+    +logo_gray
+    .headers-and-footers__wrapper
+      .headers-and-footers__container
+        +header({})
+      .headers-and-footers__container
+        +header({headerVersion: 'registred'})
+      .headers-and-footers__container
+        +footer('eng')
+      .headers-and-footers__container
+        +footer-min
+
+doctype html
+html(lang="en")
+  head
+    meta(charset = 'utf-8')
+    meta(name='viewport', content="initial-scale=1.0, width=device-width")
+    link(rel="icon", href="favicon.ico" type='image/ico')
+    title Toxin
+  body
+    +headers-and-footers

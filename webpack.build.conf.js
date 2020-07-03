@@ -9,11 +9,11 @@ const buildWebpackConfig = merge(baseWebpackConfig, {
       chunks: 'all'
     }
   },
-  plugins: [
-    new CleanWebpackPlugin(),
-  ]
+  // plugins: [
+  //   new CleanWebpackPlugin(),
+  // ]
 })
 
 module.exports = new Promise((resolve, reject) => {
-    resolve(buildWebpackConfig)
+  resolve(buildWebpackConfig)
 })

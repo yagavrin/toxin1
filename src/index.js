@@ -9,11 +9,12 @@ import datepicker from "./components/datepicker/datepicker";
 datepicker();
 
 
-
-
+import cards from "./UI-kit/cards/cards"
+import colorsAndTypes from "./UI-kit/colors-and-types/colors-and-types"
+import formElements from "./UI-kit/form-elements/form-elements"
+import headersAndFooters from "./UI-kit/headers-and-footers/headers-and-footers"
 
 import searchForm from "./components/search-form/search-form"
-import cards from "./components/cards/cards"
 import regForm from "./components/reg-form/reg-form"
 import buttons from "./components/buttons/buttons"
 import signIn from "./components/sign-in/sign-in"
@@ -24,11 +25,8 @@ import footer from "./components/footer/footer"
 import logo from "./components/logo/logo"
 import landing from "./components/landing/landing"
 import roomFilter from "./components/room-filter/room-filter"
-import searchPage from "./components/search-page/search-page"
+import searchSection from "./components/search-section/search-section"
 import roomDetails from "./components/room-details/room-details"
-import colorsAndTypes from "./components/colors-and-types/colors-and-types"
-import headersAndFooters from "./components/headers-and-footers/headers-and-footers"
-import formElements from "./components/form-elements/form-elements"
 import checkbox from "./components/checkbox/checkbox"
 import radioButtons from "./components/radio-buttons/radio-buttons"
 import toggle from "./components/toggle/toggle"
@@ -42,7 +40,7 @@ import roomReview from "./components/room-review/room-review"
 import rangeSlider from "./components/range-slider/range-slider"
 import pagination from "./components/pagination/pagination"
 import input from "./components/input/input"
-import regPage from "./components/reg-page/reg-page"
+import regSection from "./components/reg-section/reg-section"
 
 buttons();
 likeButton();
@@ -54,6 +52,6 @@ input();
 booking();
 searchItem();
 header();
-searchPage();
+searchSection();
 roomDetails();
 

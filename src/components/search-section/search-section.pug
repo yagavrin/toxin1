@@ -1,15 +1,16 @@
 include ../room-filter/room-filter
 include ../search-item/search-item
+include ../pagination/pagination
 
-mixin search-page
+mixin search-section
 
-  section.search-page
-    .search-page__wrapper
+  section.search-section
+    .search-section__wrapper
       +button({btnStyle: 'border', name: 'показать фильтры', clsName: ' show-filter'})
       +filter
-      .search-page__container
-        .search-page__title Номера, которые мы для вас подобрали
-        .search-page__block
+      .search-section__container
+        .search-section__title Номера, которые мы для вас подобрали
+        .search-section__block
           +search-item({
             roomNumber: '888',
             isLux: true,
@@ -96,6 +97,5 @@ mixin search-page
             src: './img/352.jpg',
              starsCount: 3,
           })
-
-        .search-page__page-number
+        .search-section__page-number
           +pagination

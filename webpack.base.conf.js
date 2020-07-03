@@ -2,12 +2,15 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin'); 
-
+const fs = require('fs')
 
 const PATHS = {
   src: path.join(__dirname, './src'),
   dist: path.join(__dirname, './dist'),
 }
+
+const PAGES_DIR = `${PATHS.src}/pages`
+const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'))
 
 module.exports = {
 
@@ -25,7 +28,7 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        exclude: /node_modules/,
+        exclude: '/node_modules/',
         use: {
           loader: 'babel-loader',
         }
@@ -34,11 +37,12 @@ module.exports = {
         test: /\.pug$/,
         loader: 'pug-loader',
         options: {
-            pretty: true
-            }
+          pretty: true
+        }
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
+        exclude: [path.resolve(__dirname, "/src/components/fonts")],
         use: [
           {
             loader: 'file-loader',
@@ -59,7 +63,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(ttf|woff|woff2|eot)$/,
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
         use: [
           {
             loader: 'file-loader',
@@ -85,7 +89,7 @@ module.exports = {
               { 
                 sourceMap: true, 
                 config: {
-                  path: 'src/postcss.config.js'
+                  path: 'postcss.config.js'
                 } 
               }
             },
@@ -99,8 +103,29 @@ module.exports = {
     ]
   },
   plugins: [
+    ...PAGES.map(page => new HtmlWebpackPlugin({
+      template: `${PAGES_DIR}/${page}`,
+      filename: `./${page.replace(/\.pug/,'.html')}`
+    })),
     new HtmlWebpackPlugin({
       template: `${PATHS.src}/index.pug`,
+      filename: 'index.html',
+      inject: true
+    }),
+    new HtmlWebpackPlugin({
+      template: `${PATHS.src}/UI-kit/colors-and-types/colors-and-types.pug`,
+      filename: 'colors-and-types.html',
+      inject: true
+    }),
+    new HtmlWebpackPlugin({
+      template: `${PATHS.src}/UI-kit/form-elements/form-elements.pug`,
+      filename: 'form-elements.html',
+      inject: true
+    }),
+    new HtmlWebpackPlugin({
+      template: `${PATHS.src}/UI-kit/headers-and-footers/headers-and-footers.pug`,
+      filename: 'headers-and-footers.html',
+      inject: true
     }),
     new CopyWebpackPlugin({
       patterns: [

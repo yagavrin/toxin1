@@ -1,6 +1,6 @@
-import './search-page.scss'
+import './search-section.scss'
 
-export default function searchPage() {
+export default function searchSection() {
   let filterBtn = document.querySelector('.show-filter');
   let filter = document.querySelector('.filter');
   if (!filterBtn) return;
