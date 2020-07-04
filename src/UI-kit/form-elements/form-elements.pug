@@ -75,7 +75,7 @@ mixin form-elements
           +checkbox({checkboxText: 'Можно пригласить гостей (до 10 человек)'})
         .form-elements__container
           div(class= 'form-elements__subtitle form-elements__subtitle_with-mr-bottom') Radio Buttons
-          +radio-buttons({firstDescr: 'Мужчина', secondDescr: 'Женщина'})
+          +radio-buttons({firstDescr: 'Мужчина', secondDescr: 'Женщина', name: 'gender'})
         .form-elements__container
           div(class= 'form-elements__subtitle form-elements__subtitle_with-mr-bottom') Toggle
           +toggle({descr: 'Получать спецпредложения '})
